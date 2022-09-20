@@ -1,0 +1,12 @@
+name = "Portfolio"
+license = "MIT"
+licenselink = "https://gitlab.com/KLB0/portfolio/-/blob/main/themes/portfolio/LICENSE"
+description = ""
+homepage = ""
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Lorenzo Capalbo"
+  homepage = ""
