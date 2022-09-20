@@ -1,0 +1,15 @@
+<head>
+  <title>{{ .Site.Title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{- /* Styling */ -}}
+  {{ $css := resources.Get "css/style.css" }}
+
+  {{ if hugo.IsProduction }}
+  {{ $css = $css | minify | fingerprint | resources.PostProcess }}
+  {{ end }}
+  <link href="{{ $css.RelPermalink }}" rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons@4.29.0"></script>
+</head>
