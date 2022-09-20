@@ -1,0 +1,13 @@
+{
+  "name": "portfolio_theme",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css",
+    "watch": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/style.css --jit --watch"
+  }
+}

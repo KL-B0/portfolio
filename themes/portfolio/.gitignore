@@ -1,0 +1,5 @@
+# Node dependencies
+node_modules/
+
+# TailwindCSS output
+assets/css/style.css
