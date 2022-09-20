@@ -1,0 +1,39 @@
+image: node:16-alpine
+
+stages:
+  - build
+  - preview
+  - deploy
+
+build-css:
+    stage: build
+    artifacts:
+        untracked: false
+        expire_in: 3 days
+        name: "stylesheet-$CI_COMMIT_REF_NAME"
+        paths:
+            - themes/portfolio/assets/css/style.css
+    cache:
+        key:
+            files:
+                - yarn.lock
+        paths:
+            - .yarn
+            - node_modules/
+    script:
+        - cd themes/portfolio
+        - yarn install --cache-folder .yarn
+        - yarn build
+
+build:
+    stage: build
+    needs: ["build-css"]
+    image: klakegg/hugo:0.93.3-alpine-ci
+    artifacts:
+        untracked: false
+        expire_in: 7 days
+        name: "website-$CI_COMMIT_REF_NAME"
+        paths:
+            - public/
+    script:
+        - hugo
