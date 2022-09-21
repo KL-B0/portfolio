@@ -3,3 +3,47 @@ languageCode = 'en-us'
 title = 'Lorenzo Capalbo'
 
 theme = "portfolio"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "#"
+    weight = 1
+    [menu.main.params]
+      icon = "home"
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "#about"
+    weight = 2
+    [menu.main.params]
+      icon = "user"
+  [[menu.main]]
+    identifier = "skills"
+    name = "Skills"
+    url = "#skills"
+    weight = 3
+    [menu.main.params]
+      icon = "layers"
+  [[menu.main]]
+    identifier = "journey"
+    name = "Journey"
+    url = "#journey"
+    weight = 4
+    [menu.main.params]
+      icon = "compass"
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "#projects"
+    weight = 5
+    [menu.main.params]
+      icon = "briefcase"
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "#contact"
+    weight = 6
+    [menu.main.params]
+      icon = "send"

@@ -10,4 +10,16 @@
   {{- partial "footer.html" . -}}
 </body>
 
+<script>
+  feather.replace();
+</script>
+
+<!-- Menu interactivity -->
+{{ $menu_js := resources.Get "js/menu.js" }}
+
+{{ if hugo.IsProduction }}
+{{ $menu_js = $menu_js | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<script src="{{ $menu_js.RelPermalink }}"></script>
+
 </html>
