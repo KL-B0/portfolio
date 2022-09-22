@@ -47,3 +47,9 @@ theme = "portfolio"
     weight = 6
     [menu.main.params]
       icon = "send"
+
+[params]
+  githubUser = "KL-B0"
+  gitlabUser = "KLB0"
+  linkedinUser = "lorenzo-capalbo-0424b3229"
+  mail = "capalbo.lorenzo@tutanota.com"
