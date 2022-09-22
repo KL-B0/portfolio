@@ -1,32 +1,20 @@
-<header class="w-full fixed left-0 bottom-0 bg-background rounded-t-md sm:relative sm:rounded-none sm:rounded-b-md">
+<header class="w-full fixed left-0 bottom-0 sm:relative">
   <nav class="flex justify-between items-center h-20 px-6 py-4">
     <!-- Logo -->
     <a href="#" class="">
-      <svg class="stroke-2" width="40px" height="40px" version="1.1" viewBox="0 0 32 32"
-        xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#000">
-          <rect x="12.821" y="10.192" width="1.0156" height="11.6" fill-rule="evenodd" stroke-linejoin="round"
-            stroke-miterlimit="8" stroke-width=".977" style="font-variation-settings:'wght' 524" />
-          <rect x="12.821" y="21.089" width="6.3338" height=".7034" fill="#f00" fill-rule="evenodd"
-            stroke-linejoin="round" stroke-miterlimit="8" stroke-width=".998"
-            style="font-variation-settings:'wght' 524" />
-          <path
-            d="m29.991 16a13.991 13.991 0 0 1-13.989 13.991 13.991 13.991 0 0 1-13.993-13.986 13.991 13.991 0 0 1 13.984-13.996"
-            fill="none" stroke-linecap="round" stroke-width="1.8" />
-        </g>
-      </svg>
+      <img class="w-12 duration-500 ease-in-out hover:scale-110" src="/img/logo.svg" alt="personal logo">
     </a>
 
     <!-- Mobile menu -->
-    <div id="menu" class="w-full fixed left-0 bottom-menu mb-24 duration-500">
-      <div class="px-8 py-8 mx-4 bg-background shadow-menu rounded-2xl">
+    <div id="menu" class="w-full fixed left-0 bottom-menu mb-20 duration-500">
+      <div class="px-8 py-8 mx-4 bg-card shadow-menu rounded-2xl">
         <ul class="grid grid-cols-3 gap-6">
           {{- range .Site.Menus.main -}}
           {{- $url := .URL | relLangURL }}
           <li>
             <a href="{{ $url }}" class="menu-link flex flex-col items-center">
-              <i width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
-              {{ .Name }}
+              <i class="stroke-secondary" width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
+              <p class="text-text">{{ .Name }}</p>
             </a>
           </li>
           {{- end -}}
@@ -42,24 +30,25 @@
           {{- if ne .URL "#" -}}
           {{- $url := .URL | relLangURL }}
           <a href="{{ $url }}" class="menu-link flex flex-col items-center">
-            <p>{{ .Name }}</p>
+            <p class="text-text duration-200 hover:text-primary">{{ .Name }}</p>
           </a>
           {{- end -}}
           {{- end -}}
         </div>
       </div>
 
-      <!-- Theme toggler -->
+      <!-- Lang toggler -->
       <div class="mr-5 cursor-pointer sm:mr-0" id="toggle-theme">
-        <i width="32px" height="32px" data-feather="moon"></i>
+        <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+          data-feather="globe"></i>
       </div>
 
       <!-- Menu toggler -->
       <div id="menu-toggle" class="cursor-pointer sm:hidden">
-        <i width="32px" height="32px" data-feather="menu"></i>
+        <i class="stroke-text" width="32px" height="32px" data-feather="menu"></i>
       </div>
       <div class="cursor-pointer hidden" id="menu-close">
-        <i width="32px" height="32px" data-feather="x"></i>
+        <i class="stroke-text" width="32px" height="32px" data-feather="x"></i>
       </div>
     </div>
   </nav>

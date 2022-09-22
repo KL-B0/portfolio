@@ -2,9 +2,9 @@
 <html lang="{{ .Site.Language }}">
 {{- partial "head.html" . -}}
 
-<body>
+<body class="bg-background">
   {{- partial "header.html" . -}}
-  <main>
+  <main class="flex flex-col items-center">
     {{- block "main" . }}{{- end }}
   </main>
   {{- partial "footer.html" . -}}

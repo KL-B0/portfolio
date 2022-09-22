@@ -2,24 +2,24 @@
   <div class="mx-auto flex flex-row justify-center gap-4 mb-3 sm:hidden">
     {{ with .Site.Params.gitlabUser }}
     <a href="https://gitlab.com/{{ . }}">
-      <i data-feather="gitlab"></i>
+      <i class="stroke-text" data-feather="gitlab"></i>
     </a>
     {{ end }}
     {{ with .Site.Params.githubUser }}
     <a href="https://github.com/{{ . }}">
-      <i data-feather="github"></i>
+      <i class="stroke-text" data-feather="github"></i>
     </a>
     {{ end }}
     {{ with .Site.Params.linkedinUser }}
     <a href="https://www.linkedin.com/in/{{ . }}">
-      <i data-feather="linkedin"></i>
+      <i class="stroke-text" data-feather="linkedin"></i>
     </a>
     {{ end }}
     {{ with .Site.Params.mail }}
     <a href="mailto://{{ . }}">
-      <i data-feather="mail"></i>
+      <i class="stroke-text" data-feather="mail"></i>
     </a>
     {{ end }}
   </div>
-  <p class="mx-auto">&copy; {{ now.Format "2006" }} Lorenzo Capalbo</p>
+  <p class="mx-auto text-text">&copy; {{ now.Format "2006" }} Lorenzo Capalbo</p>
 </footer>

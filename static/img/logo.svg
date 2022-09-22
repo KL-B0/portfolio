@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.0px"
+   height="32.0px"
+   viewBox="0 0 32.0 32.0"
+   version="1.1"
+   id="SVGRoot"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10877" />
+  <g
+     id="layer1">
+    <rect
+       style="font-variation-settings:'wght' 524;fill:#000000;fill-rule:evenodd;stroke:#A8DADC;stroke-width:1.8;stroke-miterlimit:8;stroke-dasharray:none;fill-opacity:1;stroke-dashoffset:0;stroke-linejoin:round"
+       id="rect847"
+       width="1.0155793"
+       height="11.600065"
+       x="12.82059"
+       y="10.191876" />
+    <rect
+       style="font-variation-settings:'wght' 524;fill:#000000;fill-rule:evenodd;stroke:#A8DADC;stroke-width:1.8;stroke-miterlimit:8;stroke-dasharray:none;stroke-linejoin:round"
+       id="rect951"
+       width="6.3338356"
+       height="0.70340157"
+       x="12.82059"
+       y="21.088541" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#E63946;stroke-width:2.8;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2547"
+       d="M 29.991,15.999999 A 13.991,13.990917 0 0 1 16.002361,29.990916 13.991,13.990917 0 0 1 2.0090006,16.00472 13.991,13.990917 0 0 1 15.992918,2.0090836" />
+  </g>
+</svg>

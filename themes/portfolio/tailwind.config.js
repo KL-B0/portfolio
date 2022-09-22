@@ -2,11 +2,11 @@ module.exports = {
   content: ['content/**/*.md', 'layouts/**/*.html'],
   theme: {
     colors: {
-      'primary': '#588157',
-      'secondary': '#3A5A40',
-      'text': '#344E41',
-      'container': '#A3B18A',
-      'background': '#DAD7CD'
+      'primary': '#E63946',
+      'secondary': '#F1FAEE',
+      'text': '#A8DADC',
+      'card': '#457B9D',
+      'background': '#1D3557'
     },
     extend: {
       boxShadow: {
