@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['content/**/*.md', 'layouts/**/*.html'],
+  content: ['content/**/*.md', 'layouts/**/*.html', 'assets/js/**/*.js'],
   theme: {
     colors: {
       'primary': '#E63946',
