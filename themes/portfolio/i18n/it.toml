@@ -114,3 +114,10 @@ other = "Sei interessato a costruire qualcosa insieme?"
 
 [contact_2]
 other = "Mettiti in contatto"
+
+# == 404 page ==
+[404_title]
+other = "Qualcosa è andato storto"
+
+[404_button]
+other = "Torna alla home"

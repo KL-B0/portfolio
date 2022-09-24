@@ -57,24 +57,41 @@ theme = 'portfolio'
     languageName = 'Italiano'
     weight = 2
   [[languages.it.menu.main]]
+    name = 'Home'
+    url = '#'
+    weight = 2
+    [languages.it.menu.main.params]
+      icon = 'home'
+  [[languages.it.menu.main]]
     name = 'Chi sono'
     url = '#about'
     weight = 2
+    [languages.it.menu.main.params]
+      icon = 'user'
   [[languages.it.menu.main]]
     name = 'Competenze'
+    url = '#skills'
     weight = 3
+    [languages.it.menu.main.params]
+      icon = 'layers'
   [[languages.it.menu.main]]
     name = 'Percorso'
     url = '#journey'
     weight = 4
+    [languages.it.menu.main.params]
+      icon = 'compass'
   [[languages.it.menu.main]]
     name = 'Progetti'
     url = '#projects'
     weight = 5
+    [languages.it.menu.main.params]
+      icon = 'briefcase'
   [[languages.it.menu.main]]
     name = 'Contatta'
     url = '#contact'
     weight = 6
+    [languages.it.menu.main.params]
+      icon = 'send'
 [params]
   githubUser = 'KL-B0'
   gitlabUser = 'KLB0'
