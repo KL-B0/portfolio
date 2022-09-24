@@ -3,8 +3,8 @@
 {{- partial "head.html" . -}}
 
 <body class="bg-background">
-  {{- partial "header.html" . -}}
   {{- partial "social_desktop.html" . -}}
+  {{- partial "header.html" . -}}
   <main class="flex flex-col items-center mx-8 sm:mx-24">
     {{- block "main" . }}{{- end }}
   </main>
