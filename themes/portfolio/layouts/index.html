@@ -1,32 +1,24 @@
 {{- define "main" }}
 <section class="min-h-screen flex flex-col justify-center">
   <div class="mb-24 sm:mb-60">
-    <p class="text-xl font-light text-center text-primary mb-4 sm:text-2xl sm:mb-5">Greetings, I'm</p>
+    <p class="text-xl font-light text-center text-primary mb-4 sm:text-2xl sm:mb-5">{{ i18n "intro_1" }}</p>
     <h1 class="text-4xl font-semibold text-center text-secondary mb-5 sm:text-6xl sm:mb-8">Lorenzo Capalbo</h1>
-    <p class="text-lg text-center text-text sm:text-2xl">I design and build software products</p>
+    <p class="text-lg text-center text-text sm:text-2xl">{{ i18n "intro_2" }}</p>
   </div>
 </section>
 <section id="about" class="min-h-50 max-w-5xl pt-8 mb-20 flex flex-col">
-  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">Hi, I'm Lorenzo</h2>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">
-    I began my programming journey in middle school, driven by curiosity. Subsequently, I learned about networking and
-    web development in high school, mastering <b>Django</b> and <b>Bootstrap</b>.
-  </p>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">
-    Moving to this day, I'm enrolled in a <b>university degree</b>, seeking to expand my understanding of AI and become
-    a data scientist.
-  </p>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">
-    I'm genuinely curious, capable of teamwork and willful to improve along my experiences.
-  </p>
+  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "about_title" }}</h2>
+  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{ i18n "about_1" | safeHTML }}</p>
+  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{ i18n "about_2" | safeHTML }}</p>
+  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{ i18n "about_3" | safeHTML }}</p>
 </section>
 <section id="skills" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
-  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">Skills</h2>
+  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "skills_title" }}</h2>
   <div class="grid gap-4 sm:mx-20 lg:grid-cols-2">
     <div class="flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
       <div id="skill-toggle1" class="w-full flex flex-row gap-3 items-center p-4 cursor-pointer">
         <i class="stroke-secondary" data-feather="layout"></i>
-        <p class="text-lg text-center text-secondary sm:text-xl">Frontend developer</p>
+        <p class="text-lg text-center text-secondary sm:text-xl">{{ i18n "skills_1" }}</p>
         <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
         <i class="hidden stroke-secondary ml-auto" data-feather="chevron-up"></i>
       </div>
@@ -42,7 +34,7 @@
     <div class="flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
       <div id="skill-toggle2" class="w-full flex flex-row gap-3 items-center p-4 cursor-pointer">
         <i class="stroke-secondary" data-feather="database"></i>
-        <p class="text-lg text-center text-secondary sm:text-xl">Backend developer</p>
+        <p class="text-lg text-center text-secondary sm:text-xl">{{ i18n "skills_2" }}</p>
         <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
         <i class="hidden stroke-secondary ml-auto" data-feather="chevron-up"></i>
       </div>
@@ -59,7 +51,7 @@
     <div class="flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
       <div id="skill-toggle3" class="w-full flex flex-row gap-3 items-center p-4 cursor-pointer">
         <i class="stroke-secondary" data-feather="crosshair"></i>
-        <p class="text-lg text-center text-secondary sm:text-xl">Game developer</p>
+        <p class="text-lg text-center text-secondary sm:text-xl">{{ i18n "skills_3" }}</p>
         <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
         <i class="hidden stroke-secondary ml-auto" data-feather="chevron-up"></i>
       </div>
@@ -72,7 +64,7 @@
     <div class="flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
       <div id="skill-toggle4" class="w-full flex flex-row gap-3 items-center p-4 cursor-pointer">
         <i class="stroke-secondary" data-feather="settings"></i>
-        <p class="text-lg text-center text-secondary sm:text-xl">DevOps</p>
+        <p class="text-lg text-center text-secondary sm:text-xl">{{ i18n "skills_4" }}</p>
         <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
         <i class="hidden stroke-secondary ml-auto" data-feather="chevron-up"></i>
       </div>
@@ -90,17 +82,17 @@
   </div>
 </section>
 <section id="journey" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
-  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">Journey</h2>
+  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "journey_title" }}</h2>
   <div class="max-w-2xl grid grid-cols-journey gap-4 sm:w-full">
     <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
-      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">IT Technician</h3>
+      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_1_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
-        <p class="text-sm text-text sm:text-lg">ITT Ettore Molinari</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_1_2" }}</p>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="calendar"></i>
-        <p class="text-sm text-text sm:text-lg">2017 - 2019</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_1_3" }}</p>
       </div>
     </div>
     <div>
@@ -114,25 +106,25 @@
       <span class="block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
     </div>
     <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
-      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">Exchange student</h3>
+      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_2_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
-        <p class="text-sm text-text sm:text-lg">Denmark</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_2_2" }}</p>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="calendar"></i>
-        <p class="text-sm text-text sm:text-lg">2019 - 2020</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_2_3" }}</p>
       </div>
     </div>
     <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
-      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">IT Technician</h3>
+      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_3_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
-        <p class="text-sm text-text sm:text-lg">ITT Ettore Molinari</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_3_2" }}</p>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="calendar"></i>
-        <p class="text-sm text-text sm:text-lg">2020 - 2021</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_3_3" }}</p>
       </div>
     </div>
     <div>
@@ -145,78 +137,81 @@
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
     </div>
     <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
-      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">AI Engineer</h3>
+      <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_4_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
-        <p class="text-sm text-text sm:text-lg">University of Pavia</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_4_2" }}</p>
       </div>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="calendar"></i>
-        <p class="text-sm text-text sm:text-lg">2021 - now</p>
+        <p class="text-sm text-text sm:text-lg">{{ i18n "journey_4_3" }}</p>
       </div>
     </div>
   </div>
 </section>
 <section id="projects" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
-  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">Projects</h2>
+  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "projects_title" }}</h2>
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
     <div class="max-w-sm h-min p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl sm:text-lg">
       <div class="flex flex-row items-center">
-        <h3 class="text-xl text-secondary sm:text-2xl">Portfolio</h3>
+        <h3 class="text-xl text-secondary sm:text-2xl">{{ i18n "projects_1_title" }}</h3>
         <p class="ml-auto px-2 py-1 text-sm font-bold text-end text-primary bg-background rounded-xl sm:text-md">
           Featured
         </p>
       </div>
-      <p class="text-md text-text">
-        A pleasant presentation of my work, built to be responsive and quick to load.
-      </p>
-      <ul class="flex flex-row gap-4 text-sm text-text">
-        <li>TailwindCSS</li>
-        <li>Hugo</li>
-        <li>Netlify</li>
-      </ul>
-      <div class="mt-1 flex flex-row gap-4 justify-center">
-        <a href="https://gitlab.com/KLB0/portfolio">
-          <i class="stroke-text duration-200 hover:stroke-primary" data-feather="gitlab"></i>
-        </a>
-        <a href="#">
-          <i class="stroke-text duration-200 hover:stroke-primary" data-feather="link"></i>
-        </a>
-      </div>
-    </div>
-    <div class="max-w-sm h-min p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl sm:text-lg">
-      <div class="flex flex-row items-center">
-        <h3 class="text-xl text-secondary sm:text-2xl">Embothy</h3>
-        <p class="ml-auto px-2 py-1 text-sm font-bold text-end text-primary bg-background rounded-xl sm:text-md">
-          Featured
-        </p>
-      </div>
-      <p class="text-md text-text">
-        It's a smartphone game meant to teach the user empathy. It does so by implementing several minigames, each
-        presenting a particular trait while entertaining who's playing.
-      </p>
+      <p class="text-md text-text">{{ i18n "projects_1_description" }}</p>
       <ul class="flex flex-row gap-4 text-sm text-text">
         <li>Godot</li>
         <li>Android</li>
         <li>IOS</li>
       </ul>
       <div class="mt-1 flex flex-row gap-4 justify-center">
-        <a href="https://campbus.corriere.it/2020/">
+        {{- with (i18n "projects_1_gitlab") -}}
+        <a href="{{ . }}">
+          <i class="stroke-text duration-200 hover:stroke-primary" data-feather="gitlab"></i>
+        </a>
+        {{- end -}}
+        {{- with (i18n "projects_1_link") -}}
+        <a href="{{ . }}">
           <i class="stroke-text duration-200 hover:stroke-primary" data-feather="link"></i>
         </a>
+        {{- end -}}
       </div>
     </div>
     <div class="max-w-sm h-min p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl sm:text-lg">
       <div class="flex flex-row items-center">
-        <h3 class="text-xl text-secondary sm:text-2xl">Gestore Soci</h3>
+        <h3 class="text-xl text-secondary sm:text-2xl">{{ i18n "projects_2_title" }}</h3>
         <p class="ml-auto px-2 py-1 text-sm font-bold text-end text-primary bg-background rounded-xl sm:text-md">
           Featured
         </p>
       </div>
-      <p class="text-md text-text">
-        It's a desktop application I developed for the Linate Airport. I've designed it to help the administration
-        handle registration and provide services for employees at the Linate Airport.
-      </p>
+      <p class="text-md text-text">{{ i18n "projects_2_description" }}</p>
+      <ul class="flex flex-row gap-4 text-sm text-text">
+        <li>TailwindCSS</li>
+        <li>Hugo</li>
+        <li>Netlify</li>
+      </ul>
+      <div class="mt-1 flex flex-row gap-4 justify-center">
+        {{- with (i18n "projects_2_gitlab") -}}
+        <a href="{{ . }}">
+          <i class="stroke-text duration-200 hover:stroke-primary" data-feather="gitlab"></i>
+        </a>
+        {{- end -}}
+        {{- with (i18n "projects_2_link") -}}
+        <a href="{{ . }}">
+          <i class="stroke-text duration-200 hover:stroke-primary" data-feather="link"></i>
+        </a>
+        {{- end -}}
+      </div>
+    </div>
+    <div class="max-w-sm h-min p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl sm:text-lg">
+      <div class="flex flex-row items-center">
+        <h3 class="text-xl text-secondary sm:text-2xl">{{ i18n "projects_3_title" }}</h3>
+        <p class="ml-auto px-2 py-1 text-sm font-bold text-end text-primary bg-background rounded-xl sm:text-md">
+          Featured
+        </p>
+      </div>
+      <p class="text-md text-text">{{ i18n "projects_3_description" }}</p>
       <ul class="flex flex-row gap-4 text-sm text-text">
         <li>Swing</li>
         <li>Java</li>
@@ -226,13 +221,11 @@
   </div>
 </section>
 <section id="contact" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
-  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">Contact</h2>
-  <p class="text-lg text-center text-text mb-8 sm:text-xl sm:text-left">
-    Are you interested in building something together?
-  </p>
+  <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "contact_title" }}</h2>
+  <p class="text-lg text-center text-text mb-8 sm:text-xl sm:text-left">{{ i18n "contact_1" }}</p>
   {{ with .Site.Params.mail }}
   <a class="px-4 py-2 flex flex-col gap-3 bg-primary rounded-xl shadow-xl" href="mailto://{{ . }}">
-    <p class="text-lg text-center text-secondary sm:text-xl sm:text-left">Get in touch</p>
+    <p class="text-lg text-center text-secondary sm:text-xl sm:text-left">{{ i18n "contact_2" }}</p>
   </a>
   {{ end }}
 </section>

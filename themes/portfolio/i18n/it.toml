@@ -1,0 +1,116 @@
+# == Intro section ==
+[intro_1]
+other = "Salve, sono"
+
+[intro_2]
+other = "Progetto e sviluppo prodotti software"
+
+# == About section ==
+[about_title]
+other = "Ciao, sono Lorenzo"
+
+[about_1]
+other = "Ho iniziato a programmare quando ero ancora alle medie. Ho imparato lo sviluppo web e le reti durante la scuola superiore, padroneggiando <b>Django</b> e <b>Bootstrap</b>."
+
+[about_2]
+other = "Ad oggi, sono iscritto a un <b>corso universitario</b>, dove sto espandendo la mia conoscenza dell'IA e diventando un data scientist."
+
+[about_3]
+other = "Sono curioso, capace del lavoro di squadra e volenteroso di migliorare attraverso le mie esperienze."
+
+# == Skills section ==
+[skills_title]
+other = "Competenze"
+
+[skills_1]
+other = "Sviluppatore frontend"
+
+[skills_2]
+other = "Sviluppatore backend"
+
+[skills_3]
+other = "Sviluppatore di videogiochi"
+
+[skills_4]
+other = "DevOps"
+
+# == Journey section ==
+[journey_title]
+other = "Percorso"
+
+[journey_1_1]
+other = "Tecnico informatico"
+
+[journey_1_2]
+other = "ITT Ettore Molinari"
+
+[journey_1_3]
+other = "2017 - 2019"
+
+[journey_2_1]
+other = "Studente d'interscambio"
+
+[journey_2_2]
+other = "Danimarca"
+
+[journey_2_3]
+other = "2019 - 2020"
+
+[journey_3_1]
+other = "Tecnico informatico"
+
+[journey_3_2]
+other = "ITT Ettore Molinari"
+
+[journey_3_3]
+other = "2020 - 2021"
+
+[journey_4_1]
+other = "Ingegnere IA"
+
+[journey_4_2]
+other = "Università di Pavia"
+
+[journey_4_3]
+other = "2021 - adesso"
+
+# == Journey section ==
+[projects_title]
+other = "Progetti"
+
+[projects_1_title]
+other = "Embothy"
+
+[projects_1_description]
+other = "È un gioco per telefono progettato per insegnare l'empatia all'utente. Lo fa tramite diversi minigiochi, ognuno inerente un aspetto empatico particolare, mentre intrattiene chi sta giocando."
+
+[projects_1_link]
+other = "https://campbus.corriere.it/2020/"
+
+[projects_2_title]
+other = "Portfolio"
+
+[projects_2_description]
+other = "Una gradevole presentazione del mio lavoro, costruito per essere adattivo e rapido nel caricamento."
+
+[projects_2_gitlab]
+other = "https://gitlab.com/KLB0/portfolio"
+
+[projects_2_link]
+other = "#"
+
+[projects_3_title]
+other = "Gestore Soci"
+
+[projects_3_description]
+other = "È un applicativo desktop che ho sviluppato per l'Aeroporto di Linate. L'ho progettato per aiutare la segreteria nella registrazione e nell'erogazione dei servizi ai dipendenti aeroportuali."
+
+# == Journey section ==
+[contact_title]
+other = "Contatta"
+
+[contact_1]
+other = "Sei interessato a costruire qualcosa insieme?"
+
+[contact_2]
+other = "Mettiti in contatto"
