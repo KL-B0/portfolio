@@ -1,8 +1,8 @@
 <header class="w-full fixed left-0 bottom-0 sm:relative z-10">
-  <nav class="flex justify-between items-center h-20 px-6 py-4 bg-background">
+  <nav class="flex justify-between items-center h-20 px-6 py-4 bg-background sm:h-24 sm:px-8 sm:mt-2">
     <!-- Logo -->
     <a href="#" class="">
-      <img class="w-12 duration-500 ease-in-out hover:scale-110" src="/img/logo.svg" alt="personal logo">
+      <img class="w-12 duration-500 ease-in-out hover:scale-110 sm:w-14" src="/img/logo.svg" alt="personal logo">
     </a>
 
     <!-- Mobile menu -->
@@ -30,7 +30,7 @@
           {{- if ne .URL "#" -}}
           {{- $url := .URL | relLangURL }}
           <a href="{{ $url }}" class="menu-link flex flex-col items-center">
-            <p class="text-text duration-200 hover:text-primary">{{ .Name }}</p>
+            <p class="text-lg text-text duration-200 hover:text-primary">{{ .Name }}</p>
           </a>
           {{- end -}}
           {{- end -}}
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Lang toggler -->
-      <div class="mr-5 cursor-pointer sm:mr-0" id="toggle-theme">
+      <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
         <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
           data-feather="globe"></i>
       </div>
