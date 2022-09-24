@@ -38,10 +38,21 @@
       </div>
 
       <!-- Lang toggler -->
+      {{- if eq .Lang "it" -}}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
-          data-feather="globe"></i>
+        <a href="/">
+          <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+            data-feather="globe"></i>
+        </a>
       </div>
+      {{- else -}}
+      <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
+        <a href="/it">
+          <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+            data-feather="globe"></i>
+        </a>
+      </div>
+      {{- end -}}
 
       <!-- Menu toggler -->
       <div id="menu-toggle" class="cursor-pointer sm:hidden">

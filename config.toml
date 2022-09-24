@@ -1,55 +1,64 @@
 baseURL = 'http://example.org/'
+defaultContentLanguage = 'en'
 languageCode = 'en-us'
 title = 'Lorenzo Capalbo'
 
-theme = "portfolio"
+theme = 'portfolio'
 
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "#"
+    identifier = 'home'
+    name = 'Home'
+    url = '#'
     weight = 1
     [menu.main.params]
-      icon = "home"
+      icon = 'home'
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "#about"
+    identifier = 'about'
+    name = 'About'
+    url = '#about'
     weight = 2
     [menu.main.params]
-      icon = "user"
+      icon = 'user'
   [[menu.main]]
-    identifier = "skills"
-    name = "Skills"
-    url = "#skills"
+    identifier = 'skills'
+    name = 'Skills'
+    url = '#skills'
     weight = 3
     [menu.main.params]
-      icon = "layers"
+      icon = 'layers'
   [[menu.main]]
-    identifier = "journey"
-    name = "Journey"
-    url = "#journey"
+    identifier = 'journey'
+    name = 'Journey'
+    url = '#journey'
     weight = 4
     [menu.main.params]
-      icon = "compass"
+      icon = 'compass'
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "#projects"
+    identifier = 'projects'
+    name = 'Projects'
+    url = '#projects'
     weight = 5
     [menu.main.params]
-      icon = "briefcase"
+      icon = 'briefcase'
   [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "#contact"
+    identifier = 'contact'
+    name = 'Contact'
+    url = '#contact'
     weight = 6
     [menu.main.params]
-      icon = "send"
+      icon = 'send'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+  [languages.it]
+    languageName = 'Italiano'
+    weight = 2
 
 [params]
-  githubUser = "KL-B0"
-  gitlabUser = "KLB0"
-  linkedinUser = "lorenzo-capalbo-0424b3229"
-  mail = "capalbo.lorenzo@tutanota.com"
+  githubUser = 'KL-B0'
+  gitlabUser = 'KLB0'
+  linkedinUser = 'lorenzo-capalbo-0424b3229'
+  mail = 'capalbo.lorenzo@tutanota.com'
