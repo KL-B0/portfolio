@@ -9,6 +9,9 @@ module.exports = {
       'background': '#1D3557'
     },
     extend: {
+      gridTemplateColumns: {
+        'journey': '1fr max-content 1fr'
+      },
       boxShadow: {
         'menu': '0 -1px 20px rgba(0, 0, 0, 0.15)',
       },
