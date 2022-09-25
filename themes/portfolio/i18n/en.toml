@@ -78,6 +78,9 @@ other = "2021 - now"
 [projects_title]
 other = "Projects"
 
+[projects_featured]
+other = "Featured"
+
 [projects_1_title]
 other = "Embothy"
 
