@@ -9,8 +9,10 @@
     {{- block "main" . }}{{- end }}
   </main>
   {{- partial "footer.html" . -}}
+  {{- partial "scroll_up.html" . -}}
 </body>
 
+<!-- Icons -->
 <script>
   feather.replace();
 </script>
@@ -30,5 +32,13 @@
 {{ $skills_js = $skills_js | minify | fingerprint | resources.PostProcess }}
 {{ end }}
 <script src="{{ $skills_js.RelPermalink }}"></script>
+
+<!-- Scroll up interactivity -->
+{{ $scroll_up_js := resources.Get "js/scroll_up.js" }}
+
+{{ if hugo.IsProduction }}
+{{ $scroll_up_js = $scroll_up_js | minify | fingerprint | resources.PostProcess }}
+{{ end }}
+<script src="{{ $scroll_up_js.RelPermalink }}"></script>
 
 </html>
