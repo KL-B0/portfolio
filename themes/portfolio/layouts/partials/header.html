@@ -38,16 +38,19 @@
       </div>
 
       <!-- Lang toggler -->
+      {{ $url := .Permalink | relURL | string }}
       {{- if eq .Lang "it" -}}
+      {{ $url = replace $url "/it" "" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="/">
+        <a href="{{ $url }}">
           <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>
       </div>
       {{- else -}}
+      {{ $url = printf "%s" $url | printf "%s%s" "/it" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="/it">
+        <a href="{{ $url }}">
           <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>
