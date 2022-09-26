@@ -50,6 +50,6 @@ preview:
             - .yarn
     script:
         - yarn install --cache-folder .yarn
-        - netlify deploy --dir public/
+        - npx netlify deploy --dir public/
     rules:
         - if: $CI_COMMIT_BRANCH == "preview"
