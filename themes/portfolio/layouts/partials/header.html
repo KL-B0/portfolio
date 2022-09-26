@@ -1,7 +1,7 @@
 <header class="w-full fixed left-0 bottom-0 sm:relative z-10">
   <nav class="flex justify-between items-center h-20 px-6 py-4 bg-background sm:h-24 sm:px-8 sm:mt-2">
     <!-- Logo -->
-    <a href="/#">
+    <a href="/#" aria-label="Navigate back to the homepage">
       <img width="32px" height="32px" class="w-12 duration-500 ease-in-out hover:scale-110 sm:w-14" src="/img/logo.svg"
         alt="personal logo">
     </a>
@@ -13,7 +13,8 @@
           {{- range .Site.Menus.main -}}
           {{- $url := .URL | relLangURL }}
           <li>
-            <a href="{{ $url }}" class="menu-link flex flex-col items-center">
+            <a href="{{ $url }}" class="menu-link flex flex-col items-center"
+              aria-label="Navigate to the {{ .Identifier }} section">
               <i class="stroke-secondary" width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
               <p class="text-text">{{ .Name }}</p>
             </a>
@@ -30,7 +31,8 @@
           {{- range .Site.Menus.main -}}
           {{- if ne .URL "#" -}}
           {{- $url := .URL | relLangURL }}
-          <a href="{{ $url }}" class="menu-link flex flex-col items-center">
+          <a href="{{ $url }}" class="menu-link flex flex-col items-center"
+            aria-label="Navigate to the {{ .Identifier }} section">
             <p class="text-lg text-text duration-200 hover:text-primary">{{ .Name }}</p>
           </a>
           {{- end -}}
@@ -43,7 +45,7 @@
       {{- if eq .Lang "it" -}}
       {{ $url = replace $url "/it" "" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="{{ $url }}">
+        <a href="{{ $url }}" aria-label="Switch the language to italian">
           <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>
@@ -51,7 +53,7 @@
       {{- else -}}
       {{ $url = printf "%s" $url | printf "%s%s" "/it" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="{{ $url }}">
+        <a href="{{ $url }}" aria-label="Switch the language to english">
           <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>

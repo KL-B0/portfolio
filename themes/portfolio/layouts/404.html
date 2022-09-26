@@ -3,7 +3,8 @@
   <div class="mb-24 flex flex-col items-center sm:mb-60">
     <h2 class="mb-8 text-2xl text-center text-secondary sm:text-4xl sm:mb-14">{{ i18n "404_title" }}</h2>
     {{- with $url := "/" | relLangURL -}}
-    <a class="px-4 py-2 w-fit flex flex-col gap-3 bg-primary rounded-xl shadow-xl" href="{{ . }}">
+    <a class="px-4 py-2 w-fit flex flex-col gap-3 bg-primary rounded-xl shadow-xl" href="{{ . }}"
+      aria-label="Navigate back to the homepage">
       <p class="text-lg text-center text-secondary sm:text-xl sm:text-left">{{ i18n "404_button" }}</p>
     </a>
     {{- end -}}
