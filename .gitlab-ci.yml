@@ -37,3 +37,19 @@ build:
             - public/
     script:
         - hugo
+
+preview:
+    stage: preview
+    needs: ["build"]
+    cache:
+        key:
+        files:
+            - yarn.lock
+        paths:
+            - node_modules/
+            - .yarn
+    script:
+        - yarn install --cache-folder .yarn
+        - netlify deploy --dir public/
+    rules:
+        - if: $CI_COMMIT_BRANCH == "preview"
