@@ -43,8 +43,8 @@ preview:
     needs: ["build"]
     cache:
         key:
-        files:
-            - yarn.lock
+            files:
+                - yarn.lock
         paths:
             - node_modules/
             - .yarn
