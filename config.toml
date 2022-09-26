@@ -102,7 +102,7 @@ enableRobotsTXT = true
       icon = 'send'
 [params]
   author = 'Lorenzo Capalbo'
-  description = "Lorenzo Capalbo's portfolio"
+  description = "I design and build software products"
   og_image = 'img/og.png'
   twitter_image = 'img/twitter.png'
   mail = 'capalbo.lorenzo@tutanota.com'
