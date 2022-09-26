@@ -1,9 +1,10 @@
-baseURL = 'http://example.org/'
-defaultContentLanguage = 'en'
-languageCode = 'en-us'
+baseURL = 'https://lorenzocapalbo.com/'
 title = 'Lorenzo Capalbo'
-
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
 theme = 'portfolio'
+
+enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
@@ -93,7 +94,11 @@ theme = 'portfolio'
     [languages.it.menu.main.params]
       icon = 'send'
 [params]
+  author = 'Lorenzo Capalbo'
+  description = "Lorenzo Capalbo's portfolio"
+  og_image = 'img/og.png'
+  twitter_image = 'img/twitter.png'
+  mail = 'capalbo.lorenzo@tutanota.com'
   githubUser = 'KL-B0'
   gitlabUser = 'KLB0'
   linkedinUser = 'lorenzo-capalbo-0424b3229'
-  mail = 'capalbo.lorenzo@tutanota.com'

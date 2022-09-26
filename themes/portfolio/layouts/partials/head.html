@@ -1,7 +1,68 @@
-<head>
-  <title>{{ .Site.Title }}</title>
+<head itemscope itemtype="https://schema.org/WebPage">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <base href="{{ .Permalink }}" />
+
+  <!-- SEO -->
+  <title itemprop="name">{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Params.description }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="url" content="{{ .Permalink }}">
+  <meta name="language" content="{{ .Language.LanguageName }}">
+
+  <!-- Open graph -->
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Params.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:locale" content="{{ .Language.Lang }}">
+  {{- with .Site.Params.og_image }}
+  <meta name="og:image" content="{{ . | relURL }}">
+  {{- end -}}
+
+  <!-- Twitter -->
+  <meta name="twitter:title" content="{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ .Params.description }}">
+  <meta name="twitter:url" content="{{ .Permalink }}">
+  {{- with .Site.Params.twitter_image }}
+  <meta name="twitter:image" content="{{ . | relURL }}">
+  <meta name="twitter:image:src" content="{{ . | relURL }}">
+  {{- end -}}
+
+  <!-- Schema.org -->
+  <meta itemprop="name" content="{{ .Site.Title }}">
+  <meta itemprop="description" content="{{ .Params.description }}">
+  <link itemprop="url" rel="canonical" href="{{ .Permalink }}">
+  {{- with .Site.Params.og_image }}
+  <meta itemprop="image" content="{{ . | relURL }}">
+  {{- end -}}
+
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://lorenzocapalbo.com/",
+      "sameAs": [
+        "https://gitlab.com/{{ .Site.Params.gitlabUser }}",
+        "https://github.com/{{ .Site.Params.githubUser }}",
+        "https://www.linkedin.com/in/{{ .Site.Params.linkedinUser }}"
+      ],
+      "name": "{{ .Title }}"
+    }
+  </script>
+
+  <!-- Alternative languages -->
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+
+  <!-- Sitemap and Robots -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | relURL }}'>
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow" />
 
   <!-- Icons -->
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
@@ -19,12 +80,13 @@
   <link rel="apple-touch-icon" href="/img/favicon-180.png" type="image/png" sizes="180x180">
 
   <!-- Styling -->
-  {{ $css := resources.Get "css/style.css" }}
+  {{- $css := resources.Get "css/style.css" -}}
 
-  {{ if hugo.IsProduction }}
-  {{ $css = $css | minify | fingerprint | resources.PostProcess }}
-  {{ end }}
+  {{- if hugo.IsProduction -}}
+  {{- $css = $css | minify | fingerprint | resources.PostProcess -}}
+  {{- end -}}
   <link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
+  <!-- Feather icons -->
   <script src="https://unpkg.com/feather-icons@4.29.0"></script>
 </head>
