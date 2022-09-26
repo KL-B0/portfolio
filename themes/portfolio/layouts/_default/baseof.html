@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}">
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language.Lang }}">
 {{- partial "head.html" . -}}
 
 <body class="bg-background">
@@ -18,27 +18,27 @@
 </script>
 
 <!-- Menu interactivity -->
-{{ $menu_js := resources.Get "js/menu.js" }}
+{{- $menu_js := resources.Get "js/menu.js" -}}
 
-{{ if hugo.IsProduction }}
-{{ $menu_js = $menu_js | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+{{- if hugo.IsProduction -}}
+{{- $menu_js = $menu_js | minify | fingerprint | resources.PostProcess -}}
+{{- end -}}
 <script src="{{ $menu_js.RelPermalink }}"></script>
 
 <!-- Skill section interactivity -->
-{{ $skills_js := resources.Get "js/skills.js" }}
+{{- $skills_js := resources.Get "js/skills.js" -}}
 
-{{ if hugo.IsProduction }}
-{{ $skills_js = $skills_js | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+{{- if hugo.IsProduction -}}
+{{- $skills_js = $skills_js | minify | fingerprint | resources.PostProcess -}}
+{{- end -}}
 <script src="{{ $skills_js.RelPermalink }}"></script>
 
 <!-- Scroll up interactivity -->
-{{ $scroll_up_js := resources.Get "js/scroll_up.js" }}
+{{- $scroll_up_js := resources.Get "js/scroll_up.js" -}}
 
-{{ if hugo.IsProduction }}
-{{ $scroll_up_js = $scroll_up_js | minify | fingerprint | resources.PostProcess }}
-{{ end }}
+{{- if hugo.IsProduction -}}
+{{- $scroll_up_js = $scroll_up_js | minify | fingerprint | resources.PostProcess -}}
+{{- end -}}
 <script src="{{ $scroll_up_js.RelPermalink }}"></script>
 
 </html>

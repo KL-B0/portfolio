@@ -1,25 +1,25 @@
 <footer class="w-full h-24 flex flex-col justify-center p-2 mb-20 bg-background sm:h-16 sm:mb-0">
   <div class="mx-auto flex flex-row justify-center gap-4 mb-3 sm:hidden">
-    {{ with .Site.Params.gitlabUser }}
+    {{- with .Site.Params.gitlabUser -}}
     <a href="https://gitlab.com/{{ . }}">
       <i class="stroke-text" data-feather="gitlab"></i>
     </a>
-    {{ end }}
-    {{ with .Site.Params.githubUser }}
+    {{- end -}}
+    {{- with .Site.Params.githubUser -}}
     <a href="https://github.com/{{ . }}">
       <i class="stroke-text" data-feather="github"></i>
     </a>
-    {{ end }}
-    {{ with .Site.Params.linkedinUser }}
+    {{- end -}}
+    {{- with .Site.Params.linkedinUser -}}
     <a href="https://www.linkedin.com/in/{{ . }}">
       <i class="stroke-text" data-feather="linkedin"></i>
     </a>
-    {{ end }}
-    {{ with .Site.Params.mail }}
+    {{- end -}}
+    {{- with .Site.Params.mail -}}
     <a href="mailto://{{ . }}">
       <i class="stroke-text" data-feather="mail"></i>
     </a>
-    {{ end }}
+    {{- end -}}
   </div>
   <p class="mx-auto text-text">&copy; {{ now.Format "2006" }} Lorenzo Capalbo</p>
 </footer>
