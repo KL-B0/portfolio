@@ -2,6 +2,7 @@ image: node:16-alpine
 
 stages:
   - build
+  - preview
   - deploy
 
 build-css:
@@ -37,8 +38,9 @@ build:
     script:
         - hugo
 
-prepare:
-    stage: deploy
+preview:
+    stage: preview
+    needs: ["build"]
     cache:
         key:
             files:
@@ -48,22 +50,22 @@ prepare:
             - .yarn
     script:
         - yarn install --cache-folder .yarn
-    rules:
-        - if: $CI_COMMIT_BRANCH == "preview"
-        - if: $CI_COMMIT_BRANCH  =~ /v([0-9]+(\.[0-9]+)+)/
-
-preview:
-    stage: deploy
-    needs: ["build", "prepare"]
-    script:
         - npx netlify deploy --dir public/
     rules:
         - if: $CI_COMMIT_BRANCH == "preview"
 
 deploy:
     stage: deploy
-    needs: ["build", "prepare"]
+    needs: ["build"]
+    cache:
+        key:
+            files:
+                - yarn.lock
+        paths:
+            - node_modules/
+            - .yarn
     script:
+        - yarn install --cache-folder .yarn
         - npx netlify deploy --prod --dir public/
     rules:
         - if: $CI_COMMIT_BRANCH  =~ /v([0-9]+(\.[0-9]+)+)/
