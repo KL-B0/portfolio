@@ -17,6 +17,10 @@ module.exports = {
       },
       spacing: {
         'menu': '-20rem',
+      },
+      transitionDelay: {
+        '1200': '1200ms',
+        '2000': '2000ms'
       }
     },
   },

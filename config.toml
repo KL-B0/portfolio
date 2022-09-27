@@ -14,6 +14,7 @@ enableRobotsTXT = true
     weight = 1
     [menu.main.params]
       icon = 'home'
+      aria = 'home'
   [[menu.main]]
     identifier = 'about'
     name = 'About'
@@ -58,36 +59,42 @@ enableRobotsTXT = true
     languageName = 'Italiano'
     weight = 2
   [[languages.it.menu.main]]
+    identifier = 'home'
     name = 'Home'
     url = '#'
-    weight = 2
+    weight = 1
     [languages.it.menu.main.params]
       icon = 'home'
   [[languages.it.menu.main]]
+    identifier = 'about'
     name = 'Chi sono'
     url = '#about'
     weight = 2
     [languages.it.menu.main.params]
       icon = 'user'
   [[languages.it.menu.main]]
+    identifier = 'skills'
     name = 'Competenze'
     url = '#skills'
     weight = 3
     [languages.it.menu.main.params]
       icon = 'layers'
   [[languages.it.menu.main]]
+    identifier = 'journey'
     name = 'Percorso'
     url = '#journey'
     weight = 4
     [languages.it.menu.main.params]
       icon = 'compass'
   [[languages.it.menu.main]]
+    identifier = 'projects'
     name = 'Progetti'
     url = '#projects'
     weight = 5
     [languages.it.menu.main.params]
       icon = 'briefcase'
   [[languages.it.menu.main]]
+    identifier = 'contact'
     name = 'Contatta'
     url = '#contact'
     weight = 6
@@ -95,7 +102,7 @@ enableRobotsTXT = true
       icon = 'send'
 [params]
   author = 'Lorenzo Capalbo'
-  description = "Lorenzo Capalbo's portfolio"
+  description = "I design and build software products"
   og_image = 'img/og.png'
   twitter_image = 'img/twitter.png'
   mail = 'capalbo.lorenzo@tutanota.com'
