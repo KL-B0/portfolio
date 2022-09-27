@@ -28,8 +28,8 @@ The output will appear in the public folder.
 
 ## Roadmap
 
-- [ ] Homepage
-- [ ] 404 page
+- [x] Homepage
+- [x] 404 page
 - [ ] Projects page
 
 ## Contributing

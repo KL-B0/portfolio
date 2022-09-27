@@ -6,25 +6,27 @@
       {{ i18n "intro_1" }}
     </p>
     <h1 id="intro-2"
-      class="text-4xl font-semibold text-center text-secondary mb-5 opacity-0 delay-1200 duration-700 sm:text-6xl sm:mb-8">
+      class="text-4xl font-semibold text-center text-secondary mb-5 opacity-0 delay-1200 duration-500 sm:text-6xl sm:mb-8">
       Lorenzo
       Capalbo
     </h1>
-    <p id="intro-3" class="text-lg text-center text-text opacity-0 delay-2800 duration-1000 sm:text-2xl">{{ i18n
+    <p id="intro-3" class="text-lg text-center text-text opacity-0 delay-2000 duration-1000 sm:text-2xl">{{ i18n
       "intro_2" }}</p>
   </div>
 </section>
 <section id="about" class="min-h-50 max-w-5xl pt-8 mb-20 flex flex-col">
   <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "about_title" }}</h2>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
-    i18n "about_1" |
-    safeHTML }}</p>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
-    i18n "about_2" |
-    safeHTML }}</p>
-  <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
-    i18n "about_3" |
-    safeHTML }}</p>
+  <div class="max-w-4xl sm:ml-12">
+    <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
+      i18n "about_1" |
+      safeHTML }}</p>
+    <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
+      i18n "about_2" |
+      safeHTML }}</p>
+    <p class="text-lg text-center text-text mb-4 sm:text-xl sm:text-left sm:mb-6">{{
+      i18n "about_3" |
+      safeHTML }}</p>
+  </div>
 </section>
 <section id="skills" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
   <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "skills_title" }}</h2>

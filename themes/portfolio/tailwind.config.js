@@ -20,7 +20,7 @@ module.exports = {
       },
       transitionDelay: {
         '1200': '1200ms',
-        '2800': '2800ms'
+        '2000': '2000ms'
       }
     },
   },
