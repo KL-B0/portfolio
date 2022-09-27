@@ -2,8 +2,6 @@ image: node:16-alpine
 
 stages:
   - build
-  - prepare
-  - preview
   - deploy
 
 build-css:
@@ -40,7 +38,7 @@ build:
         - hugo
 
 prepare:
-    stage: prepare
+    stage: deploy
     cache:
         key:
             files:
@@ -55,7 +53,7 @@ prepare:
         - if: $CI_COMMIT_BRANCH  =~ /v([0-9]+(\.[0-9]+)+)/
 
 preview:
-    stage: preview
+    stage: deploy
     needs: ["build", "prepare"]
     script:
         - npx netlify deploy --dir public/
