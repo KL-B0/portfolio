@@ -241,7 +241,7 @@
   <p class="text-lg text-center text-text mb-8 sm:text-xl sm:text-left">{{ i18n "contact_1" }}</p>
   {{ with .Site.Params.mail }}
   <a class="px-4 py-2 flex flex-col gap-3 bg-primary rounded-xl shadow-xl duration-300 ease-in-out hover:scale-110"
-    href="mailto://{{ . }}" aria-label="Get in touch">
+    href="mailto:{{ . }}" aria-label="Get in touch">
     <p class="text-lg text-center text-secondary sm:text-xl sm:text-left">{{ i18n "contact_2" }}</p>
   </a>
   {{ end }}
