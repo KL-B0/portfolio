@@ -108,6 +108,9 @@ other = "Gestore Soci"
 [projects_3_description]
 other = "È un applicativo desktop che ho sviluppato per l'Aeroporto di Linate. L'ho progettato per aiutare la segreteria nella registrazione e nell'erogazione dei servizi ai dipendenti aeroportuali."
 
+[projects_more]
+other = "Altro"
+
 # == Journey section ==
 [contact_title]
 other = "Contatta"

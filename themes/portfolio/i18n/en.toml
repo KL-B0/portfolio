@@ -108,6 +108,9 @@ other = "Gestore Soci"
 [projects_3_description]
 other = "It's a desktop application I developed for the Linate Airport. I've designed it to help the administration handle registration and provide services for airport employees."
 
+[projects_more]
+other = "See more"
+
 # == Journey section ==
 [contact_title]
 other = "Contact"
