@@ -9,14 +9,14 @@
     <!-- Mobile menu -->
     <div id="menu" class="w-full fixed left-0 bottom-menu mb-14 flex justify-end duration-500">
       <div class="max-w-sm px-4 py-4 mx-4 bg-card shadow-menu rounded-2xl">
-        <ul class="grid grid-cols-3 gap-4">
+        <ul class="grid grid-cols-3 gap-2">
           {{- range .Site.Menus.main -}}
           {{- $url := .URL | relLangURL }}
-          <li class="px-2">
-            <a href="{{ $url }}" class="menu-link flex flex-col items-center"
+          <li class="mx-2">
+            <a href="{{ $url }}" class="w-14 menu-link flex flex-col items-center"
               aria-label="Navigate to the {{ .Identifier }} section">
               <i class="w-6 stroke-secondary" width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
-              <p class="text-text">{{ .Name }}</p>
+              <p class="text-sm text-text">{{ .Name }}</p>
             </a>
           </li>
           {{- end -}}
