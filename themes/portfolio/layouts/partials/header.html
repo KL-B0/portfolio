@@ -1,8 +1,8 @@
 <header class="w-full fixed left-0 bottom-0 sm:relative z-10">
-  <nav class="flex justify-between items-center h-20 px-6 py-4 bg-background sm:h-24 sm:px-8 sm:mt-2">
+  <nav class="flex justify-between items-center px-4 py-2 bg-background sm:h-24 sm:px-8">
     <!-- Logo -->
     <a href="/#" aria-label="Navigate back to the homepage">
-      <img width="32px" height="32px" class="w-12 duration-500 ease-in-out hover:scale-110 sm:w-14" src="/img/logo.svg"
+      <img width="32px" height="32px" class="w-10 duration-500 ease-in-out hover:scale-110 sm:w-12" src="/img/logo.svg"
         alt="personal logo">
     </a>
 
@@ -46,7 +46,7 @@
       {{ $url = replace $url "/it" "" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
         <a href="{{ $url }}" aria-label="Switch the language to italian">
-          <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>
       </div>
@@ -54,7 +54,7 @@
       {{ $url = printf "%s" $url | printf "%s%s" "/it" }}
       <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
         <a href="{{ $url }}" aria-label="Switch the language to english">
-          <i class="stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
             data-feather="globe"></i>
         </a>
       </div>
@@ -62,10 +62,10 @@
 
       <!-- Menu toggler -->
       <div id="menu-toggle" class="cursor-pointer sm:hidden">
-        <i class="stroke-text" width="32px" height="32px" data-feather="menu"></i>
+        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="menu"></i>
       </div>
       <div class="cursor-pointer hidden" id="menu-close">
-        <i class="stroke-text" width="32px" height="32px" data-feather="x"></i>
+        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="x"></i>
       </div>
     </div>
   </nav>
