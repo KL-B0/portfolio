@@ -7,15 +7,15 @@
     </a>
 
     <!-- Mobile menu -->
-    <div id="menu" class="w-full fixed left-0 bottom-menu mb-20 duration-500">
-      <div class="px-8 py-8 mx-4 bg-card shadow-menu rounded-2xl">
-        <ul class="grid grid-cols-3 gap-6">
+    <div id="menu" class="w-full fixed left-0 bottom-menu mb-14 flex justify-end duration-500">
+      <div class="max-w-sm px-4 py-4 mx-4 bg-card shadow-menu rounded-2xl">
+        <ul class="grid grid-cols-3 gap-4">
           {{- range .Site.Menus.main -}}
           {{- $url := .URL | relLangURL }}
-          <li>
+          <li class="px-2">
             <a href="{{ $url }}" class="menu-link flex flex-col items-center"
               aria-label="Navigate to the {{ .Identifier }} section">
-              <i class="stroke-secondary" width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
+              <i class="w-6 stroke-secondary" width="32px" height="32px" data-feather="{{ .Params.icon }}"></i>
               <p class="text-text">{{ .Name }}</p>
             </a>
           </li>
