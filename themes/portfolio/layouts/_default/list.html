@@ -1,24 +1,22 @@
 {{- define "main" }}
 <section class="min-h-50 w-full pt-8 mb-8 flex flex-col items-center">
-  <div class="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2 2xl:grid-cols-3">
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Built at</th>
+      <th>Year</th>
+      <th>Technologies</th>
+    </tr>
     {{ range .Pages.ByDate }}
     <a href="{{ .Permalink }}">
-      <div class="max-w-sm h-min p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl sm:text-lg">
-        <div class="flex flex-row items-center">
-          <h3 class="text-xl text-secondary sm:text-2xl">{{ .Title }}</h3>
-          <p class="ml-auto px-2 py-1 text-sm font-bold text-end text-secondary sm:text-md">
-            {{ .Date.Format "2006" }}
-          </p>
-        </div>
-        <p class="text-md text-text">{{ .Summary }}</p>
-        <ul class="flex flex-row gap-4 text-sm text-text">
-          <li>TailwindCSS</li>
-          <li>Hugo</li>
-          <li>Netlify</li>
-        </ul>
-      </div>
+      <tr>
+        <td>{{ .Title }}</td>
+        <td>Test</td>
+        <td>{{ .Date.Format "2006" }}</td>
+        <td>Angular</td>
+      </tr>
     </a>
     {{ end }}
-  </div>
+  </table>
 </section>
 {{- end -}}
