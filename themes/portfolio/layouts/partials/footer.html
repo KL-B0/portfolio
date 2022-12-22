@@ -1,4 +1,4 @@
-<footer class="w-full h-24 flex flex-col justify-center p-2 mb-20 bg-background sm:h-16 sm:mb-0">
+<footer class="w-full h-24 flex flex-col justify-center p-2 mb-12 bg-background sm:h-16 sm:mb-0">
   <div class="mx-auto flex flex-row justify-center gap-4 mb-3 sm:hidden">
     {{- with .Site.Params.gitlabUser -}}
     <a href="https://gitlab.com/{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Open my GitLab account">
@@ -11,7 +11,8 @@
     </a>
     {{- end -}}
     {{- with .Site.Params.linkedinUser -}}
-    <a href="https://www.linkedin.com/in/{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Open my LinkedIn profile">
+    <a href="https://www.linkedin.com/in/{{ . }}" target="_blank" rel="noopener noreferrer"
+      aria-label="Open my LinkedIn profile">
       <i class="stroke-text" data-feather="linkedin"></i>
     </a>
     {{- end -}}
