@@ -10,7 +10,8 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        'journey': '1fr max-content 1fr'
+        'journey': 'max-content 1fr',
+        'journey-md': '1fr max-content 1fr'
       },
       boxShadow: {
         'menu': '0 -1px 20px rgba(0, 0, 0, 0.15)',
