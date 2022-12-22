@@ -2,7 +2,7 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language.Lang }}">
 {{- partial "head.html" . -}}
 
-<body class="bg-background">
+<body class="bg-background" onload="feather.replace()">
   {{- partial "social_desktop.html" . -}}
   {{- partial "header.html" . -}}
   <main class="flex flex-col items-center mx-6 sm:mx-24">
@@ -12,17 +12,12 @@
   {{- partial "scroll_up.html" . -}}
 </body>
 
-<!-- Icons -->
-<script>
-  feather.replace();
-</script>
-
 <!-- Javascript -->
 {{- $main_js := resources.Get "js/main.js" -}}
 
 {{- if hugo.IsProduction -}}
 {{- $main_js = $main_js | minify | fingerprint | resources.PostProcess -}}
 {{- end -}}
-<script src="{{ $main_js.RelPermalink }}"></script>
+<script defer src="{{ $main_js.RelPermalink }}"></script>
 
 </html>
