@@ -31,7 +31,7 @@
 <section id="skills" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
   <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "skills_title" }}</h2>
   <div class="grid gap-4 sm:mx-20 lg:grid-cols-2">
-    <div class="flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
+    <div class="max-w-sm flex flex-col h-min bg-card rounded-xl shadow-xl sm:mb-0">
       <div id="skill-toggle-1" class="w-full flex flex-row gap-3 items-center p-4 cursor-pointer">
         <i class="stroke-secondary" data-feather="layout"></i>
         <p class="text-lg text-center text-secondary sm:text-xl">{{ i18n "skills_1" }}</p>
@@ -128,12 +128,12 @@
 </section>
 <section id="journey" class="min-h-50 w-full pt-8 mb-20 flex flex-col items-center">
   <h2 class="text-2xl text-center text-secondary mb-8 sm:text-4xl sm:mb-10">{{ i18n "journey_title" }}</h2>
-  <div class="w-full max-w-2xl grid grid-cols-journey gap-4 sm:w-full sm:grid-cols-journey-md">
-    <div class="sm:hidden">
+  <div class="w-full max-w-xs grid grid-cols-journey gap-4 md:w-full md:max-w-2xl md:grid-cols-journey-md">
+    <div class="md:hidden">
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
       <span class="block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
     </div>
-    <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
+    <div class="max-w-xs p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
       <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_1_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
@@ -154,7 +154,7 @@
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
       <span class="block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
     </div>
-    <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
+    <div class="max-w-xs p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
       <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_2_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
@@ -165,11 +165,11 @@
         <p class="text-md text-text sm:text-lg">{{ i18n "journey_2_3" }}</p>
       </div>
     </div>
-    <div class="sm:hidden">
+    <div class="md:hidden">
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
       <span class="block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
     </div>
-    <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
+    <div class="max-w-xs p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
       <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_3_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
@@ -182,14 +182,14 @@
     </div>
     <div>
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
-      <span class="hidden sm:block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
+      <span class="hidden md:block w-1 h-full bg-card translate-x-1.5 translate-y-3.5"></span>
     </div>
-    <span class="hidden sm:block"></span>
-    <span class="hidden sm:block"></span>
-    <div class="hidden sm:block">
+    <span class="hidden md:block"></span>
+    <span class="hidden md:block"></span>
+    <div class="hidden md:block">
       <span class="inline-block w-4 h-4 bg-primary rounded-md translate-y-5"></span>
     </div>
-    <div class="p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
+    <div class="max-w-xs p-4 flex flex-col gap-3 bg-card rounded-xl shadow-xl">
       <h3 class="mb-1 text-lg text-center text-secondary sm:text-xl">{{ i18n "journey_4_1" }}</h3>
       <div class="flex flex-row gap-2 items-center">
         <i class="w-5 stroke-secondary" data-feather="map-pin"></i>
