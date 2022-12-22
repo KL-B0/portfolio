@@ -1,0 +1,8 @@
+id = 5
+icon = 'pie-chart'
+sub_skills = [
+  'Pandas',
+  'RDF',
+  'SKLearn',
+  'Python'
+]

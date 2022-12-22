@@ -1,0 +1,10 @@
+id = 1
+icon = 'database'
+sub_skills = [
+  'Linux',
+  'Django',
+  'Python',
+  'Java',
+  'SQL',
+  'SPARQL'
+]

@@ -19,26 +19,26 @@ other = "Ad oggi, sono iscritto a un <b>corso universitario</b>, dove sto espand
 other = "Sono curioso, capace del lavoro di squadra e volenteroso di migliorare attraverso le mie esperienze."
 
 # == Skills section ==
-[skills_title]
+[skills]
 other = "Competenze"
 
-[skills_1]
-other = "Sviluppo frontend"
-
-[skills_2]
+[skill_1]
 other = "Sviluppo backend"
 
-[skills_3]
-other = "Sviluppo videogiochi"
-
-[skills_4]
+[skill_2]
 other = "DevOps"
 
-[skills_5]
+[skill_3]
+other = "Sviluppo frontend"
+
+[skill_4]
+other = "Sviluppo videogiochi"
+
+[skill_5]
 other = "Machine Learning"
 
-[skills_6]
-other = "Agile"
+[skill_6]
+other = "Scrum"
 
 # == Journey section ==
 [journey_title]

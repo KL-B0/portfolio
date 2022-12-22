@@ -1,0 +1,8 @@
+id = 3
+icon = 'layout'
+sub_skills = [
+  'HTML',
+  'Bootstrap',
+  'TailwindCSS',
+  'Javascript'
+]

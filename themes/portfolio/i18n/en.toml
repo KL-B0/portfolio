@@ -19,25 +19,25 @@ other = "Moving to this day, I'm enrolled in a <b>university degree</b>, seeking
 other = "I'm genuinely curious, capable of teamwork and willful to improve along my experiences."
 
 # == Skills section ==
-[skills_title]
+[skills]
 other = "Skills"
 
-[skills_1]
-other = "Frontend development"
-
-[skills_2]
+[skill_1]
 other = "Backend development"
 
-[skills_3]
-other = "Game development"
-
-[skills_4]
-other = "Machine Learning"
-
-[skills_5]
+[skill_2]
 other = "DevOps"
 
-[skills_6]
+[skill_3]
+other = "Frontend development"
+
+[skill_4]
+other = "Game development"
+
+[skill_5]
+other = "Machine Learning"
+
+[skill_6]
 other = "Scrum"
 
 # == Journey section ==
