@@ -23,16 +23,22 @@ other = "I'm genuinely curious, capable of teamwork and willful to improve along
 other = "Skills"
 
 [skills_1]
-other = "Frontend developer"
+other = "Frontend development"
 
 [skills_2]
-other = "Backend developer"
+other = "Backend development"
 
 [skills_3]
-other = "Game developer"
+other = "Game development"
 
 [skills_4]
+other = "Machile Learning"
+
+[skills_5]
 other = "DevOps"
+
+[skills_6]
+other = "Scrum"
 
 # == Journey section ==
 [journey_title]

@@ -45,7 +45,7 @@ const togglers = [];
 const cards = [];
 var states = [false, false, false, false]
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 6; i++) {
   togglers.push(document.getElementById('skill-toggle-' + i));
   cards.push(document.getElementById('skill-card-' + i));
 }
