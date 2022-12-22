@@ -41,43 +41,43 @@ other = "Machine Learning"
 other = "Scrum"
 
 # == Journey section ==
-[journey_title]
+[journey]
 other = "Percorso"
 
-[journey_1_1]
+[journey_1-1]
 other = "Tecnico informatico"
 
-[journey_1_2]
+[journey_1-2]
 other = "ITT Ettore Molinari"
 
-[journey_1_3]
+[journey_1-3]
 other = "2017 - 2019"
 
-[journey_2_1]
+[journey_2-1]
 other = "Studente d'interscambio"
 
-[journey_2_2]
+[journey_2-2]
 other = "Danimarca"
 
-[journey_2_3]
+[journey_2-3]
 other = "2019 - 2020"
 
-[journey_3_1]
+[journey_3-1]
 other = "Tecnico informatico"
 
-[journey_3_2]
+[journey_3-2]
 other = "ITT Ettore Molinari"
 
-[journey_3_3]
+[journey_3-3]
 other = "2020 - 2021"
 
-[journey_4_1]
+[journey_4-1]
 other = "Dottore IA"
 
-[journey_4_2]
+[journey_4-2]
 other = "Università di Pavia"
 
-[journey_4_3]
+[journey_4-3]
 other = "2021 - adesso"
 
 # == Journey section ==
