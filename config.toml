@@ -82,3 +82,6 @@ enableRobotsTXT = true
   linkedinUser = 'lorenzo-capalbo-0424b3229'
   
   analytics = 'G-3BG24WNV4C'
+
+[taxonomies]
+  tag = 'tags'
