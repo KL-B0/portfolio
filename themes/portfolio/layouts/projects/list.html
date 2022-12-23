@@ -1,0 +1,46 @@
+{{- define "main" }}
+<section class="min-h-50 w-full pt-8 mb-8 flex flex-col items-center">
+  <h2 class="text-3xl text-center text-secondary font-bold mb-8 sm:text-4xl sm:mb-10">{{ i18n "projects" }}</h2>
+  <div class="w-full max-w-sm flex flex-col sm:max-w-5xl">
+    <!-- Table head -->
+    <div class="w-full p-4 flex flex-row gap-4 items-center">
+      <div class="w-10 flex-none sm:w-14">
+        <p class="text-md text-text font-bold sm:text-xl">{{ i18n "year" }}</p>
+      </div>
+      <div class="flex-1">
+        <p class="text-md text-text font-bold sm:text-xl">{{ i18n "title" }}</p>
+      </div>
+      <div class="flex-1">
+        <i class="w-5 stroke-text md:w-6" width="32px" height="32px" data-feather="map-pin"></i>
+      </div>
+      <div class="flex-1 hidden md:block">
+        <i class="w-5 stroke-text md:w-6" width="32px" height="32px" data-feather="layers"></i>
+      </div>
+    </div>
+    {{- range (where .Site.RegularPages "Type" "projects") -}}
+    <a class="w-full p-4 flex flex-row gap-4 hover:bg-card hover:rounded-xl hover:shadow-xl" href="{{ .Permalink }}">
+      <div class="w-10 flex-none sm:w-14">
+        <p class="text-md text-primary sm:text-xl">{{ .Date.Format "2006" }}</p>
+      </div>
+      <div class="flex-1">
+        <p class="text-md text-secondary font-bold sm:text-xl">{{ .Title }}</p>
+      </div>
+      <div class="flex-1">
+        {{- if eq .Params.location "" }}
+        <p class="text-md text-secondary sm:text-lg">-</p>
+        {{- else -}}
+        <p class="text-md text-secondary sm:text-lg">{{ .Params.location }}</p>
+        {{- end -}}
+      </div>
+      <div class="flex-1 hidden md:block">
+        <ul class="flex flex-row gap-4 text-sm text-secondary">
+          {{- range (.GetTerms "tags") }}
+          <li class="text-lg text-secondary">{{ .LinkTitle }}</li>
+          {{- end -}}
+        </ul>
+      </div>
+    </a>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}

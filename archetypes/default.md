@@ -4,13 +4,16 @@ date: {{ .Date }}
 lastmod: {{ .Date }}
 draft: true
 description: ""
+location: ""
 images: []
+externalLink: ""
+gitlabLink: ""
+githubLink: ""
 
 tags: []
-categories: []
 
 featuredImage: ""
 
-hiddenFromHome: false
+hiddenFromHome: true
 ---
 

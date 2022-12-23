@@ -27,51 +27,6 @@ if (menu && toggle && close) {
   }));
 }
 
-/* == Intro section == */
-const intros = [];
-
-for (let i = 1; i <= 3; i++) {
-  intros.push(document.getElementById('intro-' + i));
-}
-
-window.addEventListener('load', () => {
-  for (let i = 0; i < intros.length; i++) {
-    intros[i].classList.remove('opacity-0');
-  }
-});
-
-/* == Skills section == */
-const togglers = [];
-const cards = [];
-var states = [false, false, false, false]
-
-for (let i = 1; i <= 6; i++) {
-  togglers.push(document.getElementById('skill-toggle-' + i));
-  cards.push(document.getElementById('skill-card-' + i));
-}
-
-if (togglers && cards && states) {
-  for (let i = 0; i < togglers.length; i++) {
-    togglers[i].addEventListener('click', () => {
-      if (!states[i]) {
-        states[i] = true;
-
-        cards[i].classList.remove('hidden');
-        //togglers[i].classList.remove('h-16');
-        togglers[i].childNodes[5].classList.add('hidden');
-        togglers[i].childNodes[7].classList.remove('hidden');
-      } else {
-        states[i] = false;
-
-        cards[i].classList.add('hidden');
-        //togglers[i].classList.add('h-16');
-        togglers[i].childNodes[5].classList.remove('hidden');
-        togglers[i].childNodes[7].classList.add('hidden');
-      }
-    });
-  }
-}
-
 /* == Scroll up == */
 const scroll = document.getElementById('scroll-up');
 
@@ -89,4 +44,52 @@ if (scroll) {
       scroll.classList.remove('sm:bottom-0');
     }
   });
+}
+
+// Execute only if in homepage
+if (window.location.pathname == '/') {
+  /* == Intro section == */
+  const intros = [];
+
+  for (let i = 1; i <= 3; i++) {
+    intros.push(document.getElementById('intro-' + i));
+  }
+
+  window.addEventListener('load', () => {
+    for (let i = 0; i < intros.length; i++) {
+      intros[i].classList.remove('opacity-0');
+    }
+  });
+
+  /* == Skills section == */
+  const togglers = [];
+  const cards = [];
+  var states = [false, false, false, false]
+
+  for (let i = 1; i <= 6; i++) {
+    togglers.push(document.getElementById('skill-toggle-' + i));
+    cards.push(document.getElementById('skill-card-' + i));
+  }
+
+  if (togglers && cards && states) {
+    for (let i = 0; i < togglers.length; i++) {
+      togglers[i].addEventListener('click', () => {
+        if (!states[i]) {
+          states[i] = true;
+
+          cards[i].classList.remove('hidden');
+          //togglers[i].classList.remove('h-16');
+          togglers[i].childNodes[5].classList.add('hidden');
+          togglers[i].childNodes[7].classList.remove('hidden');
+        } else {
+          states[i] = false;
+
+          cards[i].classList.add('hidden');
+          //togglers[i].classList.add('h-16');
+          togglers[i].childNodes[5].classList.remove('hidden');
+          togglers[i].childNodes[7].classList.add('hidden');
+        }
+      });
+    }
+  }
 }

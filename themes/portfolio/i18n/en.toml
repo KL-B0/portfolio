@@ -82,7 +82,7 @@ other = "2021 - now"
 
 # == Journey section ==
 [projects_title]
-other = "Projects"
+other = "Featured projects"
 
 [projects_featured]
 other = "Featured"
@@ -126,6 +126,16 @@ other = "Are you interested in building something together?"
 
 [contact_2]
 other = "Get in touch"
+
+# == 404 page ==
+[projects]
+other = "Projects"
+
+[year]
+other = "Year"
+
+[title]
+other = "Title"
 
 # == 404 page ==
 [404_title]
