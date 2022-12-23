@@ -9,7 +9,7 @@
     <!-- Mobile menu -->
     <div id="menu" class="w-full fixed left-0 bottom-menu mb-14 flex justify-end duration-500">
       <div class="max-w-sm px-4 py-4 mx-4 bg-card shadow-menu rounded-2xl">
-        <ul class="grid grid-cols-3 gap-2">
+        <ul class="grid grid-cols-2 gap-4">
           {{- range .Site.Menus.main -}}
           {{- $url := .URL | relLangURL }}
           <li class="mx-2">
