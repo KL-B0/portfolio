@@ -1,9 +1,0 @@
-id = 2
-icon = 'settings'
-sub_skills = [
-  'CI/CD',
-  'Docker',
-  'Git',
-  'GitHub',
-  'GitLab'
-]

@@ -1,49 +1,54 @@
-# Portfolio
+# Astro Starter Kit: Basics
 
-My personal website, featuring projects that I've worked at.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f5bd4038-68b5-4ffc-ba5e-d331dc060ee4/deploy-status)](https://app.netlify.com/sites/lorenzo-capalbo/deploys)
-
-## Requirements
-
-You'll need the following dependencies in order to build the website:
-- Hugo
-- Yarn
-
-## Installation
-
-After cloning the repo, you have to generate the Tailwind CSS styles:
-```bash
-$ cd themes/portfolio
-$ yarn install
-$ yarn build
+```
+npm create astro@latest -- --template basics
 ```
 
-Then, you can build the website from the root folder:
-```bash
-$ hugo
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-The output will appear in the public folder.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## Roadmap
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-- [x] Homepage
-- [x] 404 page
-- [ ] Projects page
+Any static assets, like images, can be placed in the `public/` directory.
 
-## Contributing
+## 🧞 Commands
 
-Feel free to open any issue [here](https://gitlab.com/KLB0/portfolio/-/issues).
+All commands are run from the root of the project, from a terminal:
 
-## Acknowledgment
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-Huge thanks to the following projects, which have made mine possible:
-- [Feather icons](https://feathericons.com/)
-- [Hugo](https://gohugo.io/)
-- [Netlify](https://www.netlify.com/)
-- [TailwindCSS](https://tailwindcss.com/)
+## 👀 Want to learn more?
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
