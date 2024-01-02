@@ -1,0 +1,59 @@
+image: node:18-alpine
+
+stages:
+  - build
+  - preview
+  - deploy
+
+build-css:
+    stage: build
+    artifacts:
+        untracked: false
+        expire_in: 3 days
+        name: "stylesheet-$CI_COMMIT_REF_NAME"
+        paths:
+            - themes/portfolio/assets/css/style.css
+    cache:
+        key:
+            files:
+                - yarn.lock
+        paths:
+            - .yarn
+            - node_modules/
+    script:
+        - cd themes/portfolio
+        - yarn install --cache-folder .yarn
+        - yarn build
+
+build:
+    stage: build
+    cache:
+        key: 
+            files:
+                - package-lock.json
+        paths:
+          - node_modules/ 
+    artifacts:
+        untracked: false
+        expire_in: 7 days
+        name: "website-$CI_COMMIT_REF_NAME"
+        paths:
+            - dist/
+    script:
+        - npm install
+        - npm run build
+
+deploy:
+    stage: deploy
+    needs: ["build"]
+    cache:
+        key: 
+            files:
+                - package-lock.json
+        paths:
+          - node_modules/ 
+    script:
+        - npm install
+        - npx netlify deploy --prod --dir dist/
+    rules:
+        - if: $CI_COMMIT_BRANCH  =~ /v([0-9]+(\.[0-9]+)+)/
