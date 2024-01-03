@@ -5,26 +5,6 @@ stages:
   - preview
   - deploy
 
-build-css:
-    stage: build
-    artifacts:
-        untracked: false
-        expire_in: 3 days
-        name: "stylesheet-$CI_COMMIT_REF_NAME"
-        paths:
-            - themes/portfolio/assets/css/style.css
-    cache:
-        key:
-            files:
-                - yarn.lock
-        paths:
-            - .yarn
-            - node_modules/
-    script:
-        - cd themes/portfolio
-        - yarn install --cache-folder .yarn
-        - yarn build
-
 build:
     stage: build
     cache:
