@@ -14,7 +14,7 @@ npm install
 
 ## Usage
 
-Use the following command to run a local development server at `localhost:300`.
+Use the following command to run a local development server at `localhost:4321`.
 
 ```bash
 npm run dev
@@ -28,7 +28,7 @@ npm run build
 
 ## Contributing
 
-Feel free to open any issue [here](https://gitlab.com/KLB0/portfolio/-/issues).
+Feel free to open any issue [here](https://gitlab.com/KL-B0/portfolio/-/issues).
 
 ## Acknowledgment
 
