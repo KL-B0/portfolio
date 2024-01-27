@@ -1,11 +1,63 @@
 ---
+import { Icon } from "astro-icon/components";
 import "../styles/global.css";
+
+import { MAIL, GITHUB_USER, GITLAB_USER, LINKEDIN_USER } from "../config";
 
 const today = new Date();
 ---
 
 <footer>
-  <div></div>
+  <div>
+    {
+      GITLAB_USER && (
+        <a
+          href={"https://gitlab.com/" + GITLAB_USER}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open my GitLab profile"
+        >
+          <Icon class="icon" name="gitlab" />
+        </a>
+      )
+    }
+    {
+      GITHUB_USER && (
+        <a
+          href={"https://github.com/" + GITHUB_USER}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open my GitHub profile"
+        >
+          <Icon class="icon" name="github" />
+        </a>
+      )
+    }
+    {
+      LINKEDIN_USER && (
+        <a
+          href={"https://linkedin.com/in/" + LINKEDIN_USER}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open my Linkedin profile"
+        >
+          <Icon class="icon" name="linkedin" />
+        </a>
+      )
+    }
+    {
+      MAIL && (
+        <a
+          href={"mailto:" + MAIL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Write me an email"
+        >
+          <Icon class="icon" name="mail" />
+        </a>
+      )
+    }
+  </div>
   <p class="copyright">&copy; {today.getFullYear()} Lorenzo Capalbo</p>
 </footer>
 
@@ -24,6 +76,26 @@ const today = new Date();
     background-color: var(--background);
   }
 
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .icon {
+    color: var(--text);
+
+    transition-duration: 200ms;
+  }
+
+  .icon:hover {
+    color: var(--primary);
+  }
+
   .copyright {
     margin-left: auto;
     margin-right: auto;
@@ -33,6 +105,10 @@ const today = new Date();
     footer {
       height: 4rem;
       margin-bottom: 0rem;
+    }
+
+    div {
+      display: none;
     }
   }
 </style>
