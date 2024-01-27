@@ -1,0 +1,22 @@
+:root {
+    --primary: #E63946;
+    --secondary: #000000;
+    --text: #000000;
+    --background: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --secondary: #FFFFFF;
+        --text: #A6ADBB;
+        --background: #191E24;
+    }
+}
+
+h1 {
+    color: var(--secondary)
+}
+
+p {
+    color: var(--text);
+}

@@ -1,0 +1,49 @@
+---
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const { title } = Astro.props;
+---
+
+<!-- Change lang -->
+<html prefix="og: http://ogp.me/ns#" lang="en">
+  <!-- Insert custom meta head -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Insert social links (desktop) -->
+    <!-- Insert header -->
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <!-- Insert scroll_up -->
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: var(--background);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    main {
+      margin-left: 6rem;
+      margin-right: 6rem;
+    }
+  }
+</style>
