@@ -1,0 +1,115 @@
+---
+import { MENU_ITEMS } from "@config";
+import { Icon } from "astro-icon/components";
+---
+
+<header class="fixed bottom-0 left-0 z-10 w-full sm:relative">
+  <nav
+    class="bg-background flex h-14 items-center justify-between px-4 py-2 sm:h-24 sm:px-8"
+  >
+    <!-- Logo -->
+    <a href="/#" aria-label="Navigate back to the homepage">
+      <img
+        width="32px"
+        height="32px"
+        class="w-10 duration-500 ease-in-out hover:scale-105 sm:w-12"
+        src="/img/logo.svg"
+        alt="personal logo"
+      />
+    </a>
+
+    <!-- Mobile menu -->
+    <div
+      id="menu"
+      class="fixed bottom-menu left-0 mb-14 flex w-full justify-end duration-500"
+    >
+      <div class="bg-card mx-4 max-w-sm rounded-2xl px-4 py-4 shadow-menu">
+        <ul class="grid grid-cols-2 gap-4">
+          {
+            MENU_ITEMS.map(item => (
+              <li class="mx-2">
+                <a
+                  href={item.url}
+                  class="menu-link flex w-14 flex-col items-center"
+                  aria-label={`Navigate to the ${item.name} section`}
+                >
+                  <Icon class="w-6 text-skin-base" name={item.icon} />
+                  <p class="text-text text-sm">{item.name}</p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex justify-between">
+      <!-- Desktop menu -->
+      <div class="hidden sm:flex sm:flex-col sm:justify-center">
+        <div class="mr-8 flex flex-row gap-6">
+          {
+            MENU_ITEMS.map(item => (
+              <a
+                href={item.url}
+                class="menu-link flex flex-col items-center"
+                aria-label={`Navigate to the ${item.name} section`}
+              >
+                <p class="text-lg text-skin-base duration-200 hover:text-skin-accent hover:underline">
+                  {item.name}
+                </p>
+              </a>
+            ))
+          }
+
+          <!-- Desktop locale toggler -->
+          <Icon
+            class="text-skin-base duration-200 hover:text-skin-accent"
+            name="lucide:languages"
+          />
+
+          <!-- Desktop theme toggler -->
+          <button
+            id="theme-button"
+            class="focus-outline"
+            title="Toggles light & dark modes"
+            aria-label="auto"
+            aria-live="polite"
+          >
+            <Icon
+              id="sun-svg"
+              class="text-skin-base duration-200 hover:text-skin-accent"
+              name="lucide:sun"
+            />
+            <Icon
+              id="moon-svg"
+              class="text-skin-base duration-200 hover:text-skin-accent"
+              name="lucide:moon"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
+        <a href="{{ $url }}" aria-label="Switch the language to italian">
+          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+            data-feather="globe"></i>
+        </a>
+      </div>
+
+      <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
+        <a href="{{ $url }}" aria-label="Switch the language to english">
+          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
+            data-feather="globe"></i>
+        </a>
+      </div> -->
+
+      <!-- Menu toggler -->
+      <!-- <div id="menu-toggle" class="cursor-pointer sm:hidden">
+        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="menu"></i>
+      </div>
+      <div class="cursor-pointer hidden" id="menu-close">
+        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="x"></i>
+      </div> -->
+    </div>
+  </nav>
+</header>

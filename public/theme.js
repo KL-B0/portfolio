@@ -38,10 +38,21 @@ function reflectPreference() {
 reflectPreference();
 
 window.onload = () => {
-  reflectPreference();
+  function setThemeFeature() {
+    // Set early for screen readers
+    reflectPreference();
+
+    // Setup the theme switcher
+    document.querySelector("#theme-button")?.addEventListener("click", () => {
+      themeValue = themeValue === "light" ? "dark" : "light";
+      setPreference();
+    });
+  }
+
+  setThemeFeature();
 
   // Reflect theme preference between view transitions
-  document.addEventListener("astro:after-swap", reflectPreference);
+  document.addEventListener("astro:after-swap", setThemeFeature);
 };
 
 // Synchronize with system preference changes

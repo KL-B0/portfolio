@@ -25,4 +25,12 @@
   body {
     @apply bg-skin-fill;
   }
+  #sun-svg,
+  html[data-theme="dark"] #moon-svg {
+    display: none;
+  }
+  #moon-svg,
+  html[data-theme="dark"] #sun-svg {
+    display: block;
+  }
 }

@@ -1,4 +1,4 @@
-import type { Site, SocialObjects } from "types";
+import type { MenuItems, Site, SocialObjects } from "types";
 
 export const SITE: Site = {
   website: "https://lorenzocapalbo.com/",
@@ -11,6 +11,24 @@ export const LOCALE = {
   lang: "en",
   langTag: ["en-EN"],
 } as const;
+
+export const MENU_ITEMS: MenuItems = [
+  {
+    name: "Projects",
+    url: "projects",
+    icon: "briefcase",
+  },
+  {
+    name: "Tags",
+    url: "tags",
+    icon: "tag",
+  },
+  {
+    name: "Contact",
+    url: "#contact",
+    icon: "send",
+  },
+];
 
 export const SOCIALS: SocialObjects = [
   {
