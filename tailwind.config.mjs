@@ -1,10 +1,5 @@
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`;
-    }
-    return `rgb(var(${variableName}))`;
-  };
+function color(variableName) {
+  return `var(${variableName})`;
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -14,36 +9,36 @@ export default {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-fill"),
+          base: color("--color-text-base"),
+          accent: color("--color-accent"),
+          inverted: color("--color-fill"),
         },
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity("--color-fill"),
-          accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-text-base"),
-          card: withOpacity("--color-card"),
-          "card-muted": withOpacity("--color-card-muted"),
+          fill: color("--color-fill"),
+          accent: color("--color-accent"),
+          inverted: color("--color-text-base"),
+          card: color("--color-card"),
+          "card-muted": color("--color-card-muted"),
         },
       },
       outlineColor: {
         skin: {
-          fill: withOpacity("--color-accent"),
+          fill: color("--color-accent"),
         },
       },
       borderColor: {
         skin: {
-          line: withOpacity("--color-border"),
-          fill: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
+          line: color("--color-border"),
+          fill: color("--color-text-base"),
+          accent: color("--color-accent"),
         },
       },
       fill: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
+          base: color("--color-text-base"),
+          accent: color("--color-accent"),
         },
         transparent: "transparent",
       },

@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="bg-background mb-12 flex h-24 w-full flex-col justify-center p-2 sm:mb-0 sm:h-16"
+  class="mb-12 flex h-24 w-full flex-col justify-center bg-skin-fill p-2 sm:mb-0 sm:h-16"
 >
   <div class="mx-auto mb-3 flex flex-row justify-center gap-4 sm:hidden">
     {
@@ -19,5 +19,5 @@ const currentYear = new Date().getFullYear();
       ))
     }
   </div>
-  <p class="text-text mx-auto">&copy; {currentYear} {SITE.author}</p>
+  <p class="mx-auto text-skin-base">&copy; {currentYear} {SITE.author}</p>
 </footer>
