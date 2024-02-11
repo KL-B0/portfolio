@@ -16,38 +16,38 @@ export const MENU_ITEMS: MenuItems = [
   {
     name: "Projects",
     url: "projects",
-    icon: "briefcase",
+    icon: "lucide:briefcase",
   },
   {
     name: "Tags",
     url: "tags",
-    icon: "tag",
+    icon: "lucide:tag",
   },
   {
     name: "Contact",
     url: "#contact",
-    icon: "send",
+    icon: "lucide:send",
   },
 ];
 
 export const SOCIALS: SocialObjects = [
   {
-    icon: "github",
+    icon: "lucide:github",
     href: "https://github.com/KL-B0",
     linkTitle: `${SITE.author} on GitHub`,
   },
   {
-    icon: "gitlab",
+    icon: "lucide:gitlab",
     href: "https://gitlab.com/KL-B0",
     linkTitle: `${SITE.author} on GitLab`,
   },
   {
-    icon: "linkedin",
+    icon: "lucide:linkedin",
     href: "https://www.linkedin.com/in/lorenzo-capalbo-0424b3229/",
     linkTitle: `${SITE.author} on LinkedIn`,
   },
   {
-    icon: "mail",
+    icon: "lucide:mail",
     href: "mailto:capalbo.lorenzo@tutanota.com",
     linkTitle: `Send an email to ${SITE.author}`,
   },

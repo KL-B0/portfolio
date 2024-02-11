@@ -1,0 +1,18 @@
+---
+import { SOCIALS } from "@config";
+import LinkButton from "./LinkButton.astro";
+---
+
+<div
+  class="mx-auto hidden h-full flex-col justify-center gap-5 sm:fixed sm:bottom-0 sm:left-10 sm:flex"
+>
+  {
+    SOCIALS.map(social => (
+      <LinkButton
+        href={social.href}
+        aria-label={social.linkTitle}
+        icon={social.icon}
+      />
+    ))
+  }
+</div>
