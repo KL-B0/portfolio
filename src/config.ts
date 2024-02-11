@@ -32,14 +32,14 @@ export const MENU_ITEMS: MenuItems = [
 
 export const SOCIALS: SocialObjects = [
   {
-    icon: "lucide:github",
-    href: "https://github.com/KL-B0",
-    linkTitle: `${SITE.author} on GitHub`,
-  },
-  {
     icon: "lucide:gitlab",
     href: "https://gitlab.com/KL-B0",
     linkTitle: `${SITE.author} on GitLab`,
+  },
+  {
+    icon: "lucide:github",
+    href: "https://github.com/KL-B0",
+    linkTitle: `${SITE.author} on GitHub`,
   },
   {
     icon: "lucide:linkedin",

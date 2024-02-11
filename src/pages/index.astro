@@ -1,9 +1,47 @@
 ---
+import { SITE } from "@config";
+
+import Main from "@layouts/Main.astro";
+import Section from "@components/Section.astro";
 import SocialDesktop from "@components/SocialDesktop.astro";
 import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Lorenzo Capalbo">
-  <SocialDesktop />
-  <h1>Lorenzo Capalbo</h1>
+  <Main>
+    <SocialDesktop />
+    <section class="flex min-h-screen flex-col justify-center">
+      <div class="mb-24 sm:mb-60">
+        <p
+          class="mb-4 text-center text-xl font-light text-skin-accent sm:mb-5 sm:text-2xl"
+        >
+          Greetings, I'm
+        </p>
+        <h1
+          class="mb-5 text-center text-4xl font-semibold text-skin-base sm:mb-8 sm:text-6xl"
+        >
+          {SITE.author}
+        </h1>
+        <p class="text-center text-lg text-skin-base sm:text-2xl">
+          I design and build software products
+        </p>
+      </div>
+    </section>
+    <Section title="Hi, I'm Lorenzo">
+      <div class="max-w-4xl sm:ml-12">
+        <p
+          class="mb-4 text-center text-lg text-skin-base sm:mb-6 sm:text-left sm:text-xl"
+        >
+          I began my programming journey in middle school, driven by curiosity.
+          Subsequently, I learned about networking and web development in high
+          school, mastering <b>Django </b>and <b>Bootstrap</b>.<br />
+          Moving to this day, I'm enrolled in a <b>university degree</b>,
+          seeking to expand my understanding of AI and become a data scientist.<br
+          />
+          I'm genuinely curious, capable of teamwork and willful to improve along
+          my experiences.
+        </p>
+      </div>
+    </Section>
+  </Main>
 </Base>
