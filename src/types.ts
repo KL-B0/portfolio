@@ -4,11 +4,10 @@ export type Site = {
   description: string;
   title: string;
   ogImage?: string;
-}
+};
 
 export type SocialObjects = {
-  // name: keyof typeof socialIcons;
-  name: string;
+  icon: string;
   href: string;
   linkTitle: string;
 }[];
