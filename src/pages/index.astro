@@ -84,5 +84,21 @@ import { Icon } from "astro-icon/components";
         />
       </div>
     </Section>
+    <Section title="Contact">
+      <p
+        class="mb-8 text-center text-lg text-skin-base sm:text-left sm:text-xl"
+      >
+        Are you interested in building something together?
+      </p>
+      <a
+        class="flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110"
+        href={`mailto:${SITE.mail}`}
+        aria-label="Get in touch"
+      >
+        <p class="text-center text-lg text-skin-base sm:text-left sm:text-xl">
+          Get in touch
+        </p>
+      </a>
+    </Section>
   </Main>
 </Base>

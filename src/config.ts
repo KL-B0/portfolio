@@ -3,6 +3,7 @@ import type { MenuItems, Site, SocialObjects } from "types";
 export const SITE: Site = {
   website: "https://lorenzocapalbo.com/",
   author: "Lorenzo Capalbo",
+  mail: "capalbo.lorenzo@tutanota.com",
   description: "I design and build software products",
   title: "Lorenzo Capalbo",
 };

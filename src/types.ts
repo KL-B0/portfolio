@@ -1,6 +1,7 @@
 export type Site = {
   website: string;
   author: string;
+  mail: string;
   description: string;
   title: string;
   ogImage?: string;
