@@ -1,0 +1,42 @@
+---
+import Milestone from "./Milestone.astro";
+
+export interface Props {
+  title: string;
+  location: string;
+  date: string;
+  last?: boolean;
+}
+
+const { title, location, date, last } = Astro.props;
+---
+
+{
+  !last ? (
+    <>
+      <div class="md:hidden">
+        <span class="inline-block h-4 w-4 translate-y-5 rounded-md bg-skin-accent" />
+        <span class="block h-full w-1 translate-x-1.5 translate-y-3.5 bg-skin-card" />
+      </div>
+      <span class="hidden md:block" />
+      <span class="hidden md:block" />
+      <div class="hidden md:block">
+        <span class="inline-block h-4 w-4 translate-y-5 rounded-md bg-skin-accent" />
+        <span class="block h-full w-1 translate-x-1.5 translate-y-3.5 bg-skin-card" />
+      </div>
+      <Milestone title={title} location={location} date={date} />
+    </>
+  ) : (
+    <>
+      <div class="md:hidden">
+        <span class="inline-block h-4 w-4 translate-y-5 rounded-md bg-skin-accent" />
+      </div>
+      <span class="hidden md:block" />
+      <span class="hidden md:block" />
+      <div class="hidden md:block">
+        <span class="inline-block h-4 w-4 translate-y-5 rounded-md bg-skin-accent" />
+      </div>
+      <Milestone title={title} location={location} date={date} />
+    </>
+  )
+}

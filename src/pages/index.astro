@@ -1,6 +1,8 @@
 ---
 import { SITE } from "@config";
 
+import LeftMilestone from "@components/milestone/LeftMilestone.astro";
+import RightMilestone from "@components/milestone/RightMilestone.astro";
 import Main from "@layouts/Main.astro";
 import Section from "@components/Section.astro";
 import SocialsDesktop from "@components/SocialsDesktop.astro";
@@ -45,7 +47,7 @@ import { Icon } from "astro-icon/components";
         </p>
       </div>
     </Section>
-    <Section title="Skills">
+    <!-- <Section title="Skills">
       <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
         <Skill name="Test">
           <Icon name="lucide:briefcase" />
@@ -54,6 +56,33 @@ import { Icon } from "astro-icon/components";
       </div>
 
       <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
+    </Section> -->
+    <Section title="Journey">
+      <div
+        class="grid w-full max-w-xs grid-cols-journey gap-4 md:max-w-2xl md:grid-cols-journey-md"
+      >
+        <LeftMilestone
+          title="IT Technitian"
+          location="ITT Ettore Molinari"
+          date="2017 - 2019"
+        />
+        <RightMilestone
+          title="Exchange student"
+          location="Denmark"
+          date="2019 - 2020"
+        />
+        <LeftMilestone
+          title="IT Technitian"
+          location="ITT Ettore Molinari"
+          date="2020 - 2021"
+        />
+        <RightMilestone
+          title="AI Doctor"
+          location="University of Pavia"
+          date="2021 - now"
+          last
+        />
+      </div>
     </Section>
   </Main>
 </Base>
