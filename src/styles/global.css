@@ -5,21 +5,21 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: #ffffff;
-    --color-text-base: #000000;
-    --color-accent: #e63946;
-    --color-card: #191e24;
-    --color-card-muted: #191e24;
-    --color-border: #191e24;
+    --color-fill: #dcdfe5;
+    --color-text-base: #23272f;
+    --color-accent: #e62e3d;
+    --color-card: #f6f7f9;
+    --color-card-muted: #f6f7f9;
+    --color-border: #ffffff0d;
   }
 
   html[data-theme="dark"] {
-    --color-fill: #191e24;
-    --color-text-base: #a6adbb;
-    --color-accent: #e63946;
-    --color-card: #191e24;
-    --color-card-muted: #191e24;
-    --color-border: #191e24;
+    --color-fill: #191c22;
+    --color-text-base: #f6f7f9;
+    --color-accent: #cc3340;
+    --color-card: #23272f;
+    --color-card-muted: #23272f;
+    --color-border: #ffffff0d;
   }
 
   body {

@@ -10,7 +10,9 @@ export interface Props {
 const { title, location, date } = Astro.props;
 ---
 
-<div class="flex max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl">
+<div
+  class="flex max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl"
+>
   <h3 class="mb-1 text-center text-lg font-bold text-skin-base sm:text-xl">
     {title}
   </h3>
