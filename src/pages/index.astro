@@ -7,8 +7,7 @@ import Main from "@layouts/Main.astro";
 import Section from "@components/Section.astro";
 import SocialsDesktop from "@components/SocialsDesktop.astro";
 import Base from "../layouts/Base.astro";
-import Skill from "@components/Skill";
-import { Icon } from "astro-icon/components";
+import Skill from "@components/Skill.astro";
 ---
 
 <Base title="Lorenzo Capalbo">
@@ -47,16 +46,53 @@ import { Icon } from "astro-icon/components";
         </p>
       </div>
     </Section>
-    <!-- <Section title="Skills">
+    <Section title="Skills">
       <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
-        <Skill name="Test">
-          <Icon name="lucide:briefcase" />
-          <Icon name="lucide:chevron-down" />
-        </Skill>
+        <Skill
+          id="backend"
+          name="Backend developer"
+          icon="lucide:database"
+          items={["Linux", "Django", "Python", "Java", "SQL"]}
+        />
+        <Skill
+          id="frontend"
+          name="Frontend developer"
+          icon="lucide:layout-template"
+          items={[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "TailwindCSS",
+            "Bootstrap",
+          ]}
+        />
+        <Skill
+          id="dev_ops"
+          name="DevOps"
+          icon="lucide:container"
+          items={["CI/CD", "Docker", "Git", "GitHub", "GitLab"]}
+        />
+        <Skill
+          id="gamedev"
+          name="Game development"
+          icon="lucide:gamepad-2"
+          items={["Godot", "C++", "Pygame"]}
+        />
+        <Skill
+          id="machine_learning"
+          name="Machine Learning"
+          icon="lucide:brain-circuit"
+          items={["Pandas", "NumPy", "SKLearn", "RDF", "SPARQL", "Python"]}
+        />
+        <Skill
+          id="scrum"
+          name="Scrum"
+          icon="lucide:users"
+          items={["Product owner", "Scrum master"]}
+        />
       </div>
-
-      <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
-    </Section> -->
+    </Section>
     <Section title="Journey">
       <div
         class="grid w-full max-w-xs grid-cols-journey gap-4 md:max-w-2xl md:grid-cols-journey-md"

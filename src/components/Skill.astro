@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+  id: string;
+  name: string;
+  icon: string;
+  items: string[];
+}
+
+const { id, name, icon, items } = Astro.props;
+---
+
+<div
+  {id}
+  class="flex h-min max-w-sm flex-col rounded-xl bg-skin-card shadow-xl sm:mb-0"
+>
+  <div
+    id={"skill-toggle-" + id}
+    class="flex w-full cursor-pointer flex-row items-center gap-3 p-4"
+  >
+    <Icon slot="icon" class="text-skin-base" name={icon} />
+    <p class="text-center text-lg text-skin-base sm:text-xl">{name}</p>
+    <Icon
+      id={"skill-arrow-" + id}
+      slot="arrow"
+      class="ml-auto text-skin-base duration-100"
+      name="lucide:chevron-down"
+    />
+  </div>
+  <div id={"skill-items-" + id} class="hidden px-12 pb-4">
+    <ul class="list-disc text-lg text-skin-base sm:text-xl">
+      {items.map(item => <li class="text-skin-base">{item}</li>)}
+    </ul>
+  </div>
+</div>
+
+<script define:vars={{ id }}>
+  const toggle = document.getElementById(`skill-toggle-${id}`);
+  const arrow = document.getElementById(`skill-arrow-${id}`);
+  const items = document.getElementById(`skill-items-${id}`);
+
+  toggle?.addEventListener("click", () => {
+    items?.classList.toggle("hidden");
+    arrow?.classList.toggle("rotate-180");
+  });
+</script>
