@@ -3,13 +3,15 @@ import { SITE } from "@config";
 
 import Main from "@layouts/Main.astro";
 import Section from "@components/Section.astro";
-import SocialDesktop from "@components/SocialDesktop.astro";
+import SocialsDesktop from "@components/SocialsDesktop.astro";
 import Base from "../layouts/Base.astro";
+import Skill from "@components/Skill";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base title="Lorenzo Capalbo">
   <Main>
-    <SocialDesktop />
+    <SocialsDesktop />
     <section class="flex min-h-screen flex-col justify-center">
       <div class="mb-24 sm:mb-60">
         <p
@@ -42,6 +44,16 @@ import Base from "../layouts/Base.astro";
           my experiences.
         </p>
       </div>
+    </Section>
+    <Section title="Skills">
+      <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
+        <Skill name="Test">
+          <Icon name="lucide:briefcase" />
+          <Icon name="lucide:chevron-down" />
+        </Skill>
+      </div>
+
+      <i class="stroke-secondary ml-auto" data-feather="chevron-down"></i>
     </Section>
   </Main>
 </Base>

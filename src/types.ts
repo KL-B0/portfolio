@@ -9,7 +9,6 @@ export type Site = {
 export type MenuItems = {
   name: string;
   url: string;
-  icon: string;
 }[];
 
 export type SocialObjects = {
@@ -18,3 +17,7 @@ export type SocialObjects = {
   linkTitle: string;
 }[];
 
+export type SkillObjects = {
+  name: string;
+  items: string[];
+}[];

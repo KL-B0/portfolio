@@ -1,115 +1,191 @@
 ---
 import { MENU_ITEMS } from "@config";
 import { Icon } from "astro-icon/components";
+
+export interface Props {
+  activeNav?: "projects" | "tags";
+}
+
+const { activeNav } = Astro.props;
 ---
 
-<header class="fixed bottom-0 left-0 z-10 w-full sm:relative">
-  <nav
-    class="bg-background flex h-14 items-center justify-between px-4 py-2 sm:h-24 sm:px-8"
-  >
-    <!-- Logo -->
-    <a href="/#" aria-label="Navigate back to the homepage">
-      <img
-        width="32px"
-        height="32px"
-        class="w-10 duration-500 ease-in-out hover:scale-105 sm:w-12"
-        src="/img/logo.svg"
-        alt="personal logo"
-      />
-    </a>
+<header>
+  <a id="skip-to-content" href="#main-content">Skip to content</a>
+  <div class="nav-container">
+    <div class="top-nav-wrap">
+      <a
+        href="/#"
+        class="logo whitespace-nowrap"
+        aria-label="Navigate back to the homepage"
+      >
+        <img
+          width="32px"
+          height="32px"
+          src="/img/logo.svg"
+          alt="personal logo"
+        />
+      </a>
 
-    <!-- Mobile menu -->
-    <div
-      id="menu"
-      class="fixed bottom-menu left-0 mb-14 flex w-full justify-end duration-500"
-    >
-      <div class="bg-card mx-4 max-w-sm rounded-2xl px-4 py-4 shadow-menu">
-        <ul class="grid grid-cols-2 gap-4">
-          {
-            MENU_ITEMS.map(item => (
-              <li class="mx-2">
-                <a
-                  href={item.url}
-                  class="menu-link flex w-14 flex-col items-center"
-                  aria-label={`Navigate to the ${item.name} section`}
-                >
-                  <Icon class="w-6 text-skin-base" name={item.icon} />
-                  <p class="text-text text-sm">{item.name}</p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-
-    <div class="flex justify-between">
-      <!-- Desktop menu -->
-      <div class="hidden sm:flex sm:flex-col sm:justify-center">
-        <div class="mr-8 flex flex-row gap-6">
-          {
-            MENU_ITEMS.map(item => (
-              <a
-                href={item.url}
-                class="menu-link flex flex-col items-center"
-                aria-label={`Navigate to the ${item.name} section`}
-              >
-                <p class="text-lg text-skin-base duration-200 hover:text-skin-accent hover:underline">
-                  {item.name}
-                </p>
-              </a>
-            ))
-          }
-
-          <!-- Desktop locale toggler -->
-          <Icon
-            class="text-skin-base duration-200 hover:text-skin-accent"
-            name="lucide:languages"
-          />
-
-          <!-- Desktop theme toggler -->
-          <button
-            id="theme-button"
-            class="focus-outline"
-            title="Toggles light & dark modes"
-            aria-label="auto"
-            aria-live="polite"
+      <nav id="nav-menu">
+        <button
+          class="hamburger-menu focus-outline"
+          aria-label="Open Menu"
+          aria-expanded="false"
+          aria-controls="menu-items"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="menu-icon"
           >
+            <line x1="4" x2="20" y1="12" y2="12" class="line"></line>
+            <line x1="4" x2="20" y1="6" y2="6" class="line"></line>
+            <line x1="4" x2="20" y1="18" y2="18" class="line"></line>
+            <path d="M18 6 6 18" class="close"></path>
+            <path d="m6 6 12 12" class="close"></path>
+          </svg>
+        </button>
+        <div id="menu-items" class="hidden sm:flex">
+          <!-- Navigation items -->
+          <ul>
+            {
+              MENU_ITEMS.map(item => (
+                <li>
+                  <a
+                    href={item.url}
+                    class={activeNav === item.name ? "active" : ""}
+                    aria-label={`Navigate to the ${item.name} section`}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div>
+            <!-- Locale toggler -->
             <Icon
-              id="sun-svg"
               class="text-skin-base duration-200 hover:text-skin-accent"
-              name="lucide:sun"
+              name="lucide:languages"
             />
-            <Icon
-              id="moon-svg"
-              class="text-skin-base duration-200 hover:text-skin-accent"
-              name="lucide:moon"
-            />
-          </button>
+
+            <!-- Theme toggler -->
+            <button
+              id="theme-button"
+              class="focus-outline"
+              title="Toggles light & dark modes"
+              aria-label="auto"
+              aria-live="polite"
+            >
+              <Icon
+                id="sun-svg"
+                class="text-skin-base duration-200 hover:text-skin-accent"
+                name="lucide:sun"
+              />
+              <Icon
+                id="moon-svg"
+                class="text-skin-base duration-200 hover:text-skin-accent"
+                name="lucide:moon"
+              />
+            </button>
+          </div>
         </div>
-      </div>
-
-      <!-- <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="{{ $url }}" aria-label="Switch the language to italian">
-          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
-            data-feather="globe"></i>
-        </a>
-      </div>
-
-      <div class="mr-5 cursor-pointer sm:mr-2" id="toggle-theme">
-        <a href="{{ $url }}" aria-label="Switch the language to english">
-          <i class="w-7 stroke-text duration-200 hover:stroke-primary sm:w-8" width="32px" height="32px"
-            data-feather="globe"></i>
-        </a>
-      </div> -->
-
-      <!-- Menu toggler -->
-      <!-- <div id="menu-toggle" class="cursor-pointer sm:hidden">
-        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="menu"></i>
-      </div>
-      <div class="cursor-pointer hidden" id="menu-close">
-        <i class="w-8 stroke-text" width="32px" height="32px" data-feather="x"></i>
-      </div> -->
+      </nav>
     </div>
-  </nav>
+  </div>
 </header>
+
+<style>
+  #skip-to-content {
+    @apply absolute -top-full left-4 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
+  }
+  .nav-container {
+    @apply mx-auto flex flex-col items-center justify-between sm:flex-row;
+  }
+  .top-nav-wrap {
+    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+  }
+  .logo {
+    @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
+  }
+  .hamburger-menu {
+    @apply self-end p-2 sm:hidden;
+  }
+  .hamburger-menu svg {
+    @apply h-6 w-6 scale-125;
+  }
+
+  nav {
+    @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:px-4 sm:py-0;
+  }
+  nav div ul,
+  nav div div {
+    @apply mt-4 flex w-40 flex-row items-center justify-center gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+  }
+  nav div ul li {
+    @apply flex items-center justify-center;
+  }
+  nav div ul li a {
+    @apply w-full px-4 py-3 text-center text-xl font-medium text-skin-base duration-75 hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+  }
+  nav div div {
+    @apply gap-x-4 sm:ml-6 sm:gap-x-6;
+  }
+  nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+
+  nav button {
+    @apply p-1;
+  }
+  #theme-btn {
+    @apply p-3 sm:p-1;
+  }
+
+  .menu-icon line,
+  .menu-icon path {
+    @apply transition-opacity duration-75 ease-in-out;
+  }
+  .menu-icon .close {
+    opacity: 0;
+  }
+  .menu-icon.is-active .line {
+    @apply opacity-0;
+  }
+  .menu-icon.is-active .close {
+    @apply opacity-100;
+  }
+</style>
+
+<script>
+  function toggleNav() {
+    // Toggle menu
+    const menuBtn = document.querySelector(".hamburger-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const menuItems = document.querySelector("#menu-items");
+
+    menuBtn?.addEventListener("click", () => {
+      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuIcon?.classList.toggle("is-active");
+      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+      menuBtn.setAttribute(
+        "aria-label",
+        menuExpanded ? "Open Menu" : "Close Menu"
+      );
+      menuItems?.classList.toggle("hidden");
+    });
+  }
+
+  toggleNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", toggleNav);
+</script>

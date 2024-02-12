@@ -25,12 +25,33 @@
   body {
     @apply bg-skin-fill;
   }
+
+  a {
+    @apply focus-outline;
+  }
+
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;
   }
+
   #moon-svg,
   html[data-theme="dark"] #sun-svg {
     display: block;
+  }
+}
+
+@layer components {
+  svg {
+    stroke: var(--color-text-base);
+    transition-duration: 75ms;
+  }
+
+  svg:hover {
+    stroke: var(--color-accent);
+  }
+
+  .focus-outline {
+    @apply rounded-md outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline;
   }
 }

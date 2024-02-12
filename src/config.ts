@@ -15,18 +15,11 @@ export const LOCALE = {
 export const MENU_ITEMS: MenuItems = [
   {
     name: "Projects",
-    url: "projects",
-    icon: "lucide:briefcase",
+    url: "/projects/",
   },
   {
     name: "Tags",
-    url: "tags",
-    icon: "lucide:tag",
-  },
-  {
-    name: "Contact",
-    url: "#contact",
-    icon: "lucide:send",
+    url: "/tags/",
   },
 ];
 

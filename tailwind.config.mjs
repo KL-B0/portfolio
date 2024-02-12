@@ -50,16 +50,6 @@ export default {
         'journey': 'max-content 1fr',
         'journey-md': '1fr max-content 1fr'
       },
-      boxShadow: {
-        'menu': '0 -1px 20px rgba(0, 0, 0, 0.15)',
-      },
-      spacing: {
-        'menu': '-20rem',
-      },
-      transitionDelay: {
-        '1200': '1200ms',
-        '2000': '2000ms'
-      },
 
       typography: {
         DEFAULT: {
