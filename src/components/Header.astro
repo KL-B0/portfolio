@@ -15,7 +15,9 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a
-        href="/#"
+        href={Astro.currentLocale == "en"
+          ? getRelativeLocaleUrl("en", "")
+          : getRelativeLocaleUrl("it", "")}
         class="logo whitespace-nowrap"
         aria-label="Navigate back to the homepage"
       >
