@@ -16,8 +16,8 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a
         href={Astro.currentLocale == "en"
-          ? getRelativeLocaleUrl("en", "")
-          : getRelativeLocaleUrl("it", "")}
+          ? getRelativeLocaleUrl("en", "/")
+          : getRelativeLocaleUrl("it", "/")}
         class="logo whitespace-nowrap"
         aria-label="Navigate back to the homepage"
       >
@@ -72,8 +72,8 @@ const { activeNav } = Astro.props;
             <!-- Locale toggler -->
             <a
               href={Astro.currentLocale == "en"
-                ? getRelativeLocaleUrl("it", "")
-                : getRelativeLocaleUrl("en", "")}
+                ? getRelativeLocaleUrl("it", Astro.url.pathname)
+                : getRelativeLocaleUrl("en", Astro.url.pathname.slice(3))}
               aria-label="Switch language"
               class="focus-outline p-1"
             >

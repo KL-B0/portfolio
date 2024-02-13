@@ -1,0 +1,63 @@
+---
+import { SITE } from "@config";
+import Base from "@layouts/Base.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import { Icon } from "astro-icon/components";
+
+import { getRelativeLocaleUrl } from "astro:i18n";
+---
+
+<Base
+  title={Astro.currentLocale == "en"
+    ? `404 Not Found | ${SITE.title}`
+    : `404 Non Trovato | ${SITE.title}`}
+>
+  <Header />
+
+  <main id="main-content">
+    <div class="not-found-wrapper">
+      <Icon
+        class="mb-4 h-16 w-16 text-skin-accent sm:mb-6 sm:h-20 sm:w-20"
+        name="lucide:file-question"
+      />
+      {
+        Astro.currentLocale == "en" ? (
+          <>
+            <h1 aria-label="404 Not Found">Looks like you're lost</h1>
+            <a href={getRelativeLocaleUrl("en", "")}>
+              <p>Go back home</p>
+            </a>
+          </>
+        ) : (
+          <>
+            <h1 aria-label="404 Non Trovato">Sembra tu ti sia perso</h1>
+            <a href={getRelativeLocaleUrl("it", "")}>
+              <p>Torna alla home</p>
+            </a>
+          </>
+        )
+      }
+    </div>
+  </main>
+</Base>
+
+<Footer />
+
+<style>
+  #main-content {
+    @apply mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center;
+  }
+  .not-found-wrapper {
+    @apply mb-14 flex flex-col items-center justify-center;
+  }
+  .not-found-wrapper h1 {
+    @apply mb-5 text-center text-3xl font-semibold text-skin-base sm:mb-12 sm:text-5xl;
+  }
+  .not-found-wrapper a {
+    @apply flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110;
+  }
+  .not-found-wrapper p {
+    @apply text-center text-lg text-skin-base sm:text-left sm:text-xl;
+  }
+</style>
