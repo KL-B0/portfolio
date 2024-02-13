@@ -1,33 +1,96 @@
 ---
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import ScrollUp from "@components/ScrollUp.astro";
+import { LOCALE, SITE } from "@config";
 import "@styles/global.css";
+import { ViewTransitions } from "astro:transitions";
 
-const { title } = Astro.props;
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+
+export interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  publicationDate?: Date;
+  modificationDate?: Date | null;
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.description,
+  ogImage = SITE.ogImage,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  publicationDate,
+  modificationDate,
+} = Astro.props;
+
+const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
 ---
 
-<!-- Change lang -->
-<html prefix="og: http://ogp.me/ns#" lang="en">
-  <!-- Insert custom meta head -->
+<html lang=`${Astro.currentLocale ?? "en"}` class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
     <meta name="generator" content={Astro.generator} />
+
+    <!-- General tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
+    <!-- Open Graph tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- Article publication and modification times -->
+    {
+      publicationDate && (
+        <meta
+          property="article:published_time"
+          content={publicationDate.toISOString()}
+        />
+      )
+    }
+    {
+      modificationDate && (
+        <meta
+          property="article:modified_time"
+          content={modificationDate.toISOString()}
+        />
+      )
+    }
+
+    <!-- Twitter tags -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- Google Tag verification -->
+    {
+      googleSiteVerification && (
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
+      )
+    }
+
+    <!-- Website specific -->
     <meta name="theme-color" content="" />
-
+    <ViewTransitions />
     <script is:inline src="/theme.js"></script>
   </head>
   <body>
-    <!-- Insert social links (desktop) -->
-    <!-- Insert header -->
-    <Header />
     <slot />
-    <Footer />
-    <ScrollUp />
-    <!-- Insert scroll_up -->
   </body>
 </html>

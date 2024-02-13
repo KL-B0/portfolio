@@ -1,17 +1,22 @@
 ---
 import { SITE } from "@config";
 
-import LeftMilestone from "@components/milestone/LeftMilestone.astro";
-import RightMilestone from "@components/milestone/RightMilestone.astro";
-import Main from "@layouts/Main.astro";
+import Base from "@layouts/Base.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import ScrollUp from "@components/ScrollUp.astro";
+
 import Section from "@components/Section.astro";
 import SocialsDesktop from "@components/SocialsDesktop.astro";
-import Base from "@layouts/Base.astro";
+
 import Skill from "@components/Skill.astro";
+import LeftMilestone from "@components/milestone/LeftMilestone.astro";
+import RightMilestone from "@components/milestone/RightMilestone.astro";
 ---
 
-<Base title="Lorenzo Capalbo">
-  <Main>
+<Base>
+  <Header />
+  <main class="mx-6 flex flex-col items-center sm:mx-24">
     <SocialsDesktop />
     <section class="flex min-h-screen flex-col justify-center">
       <div class="mb-24 sm:mb-60">
@@ -137,5 +142,7 @@ import Skill from "@components/Skill.astro";
         </p>
       </a>
     </Section>
-  </Main>
+  </main>
+  <Footer />
+  <ScrollUp />
 </Base>
