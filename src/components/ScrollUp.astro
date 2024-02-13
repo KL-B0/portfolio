@@ -7,6 +7,8 @@ import { Icon } from "astro-icon/components";
   class="fixed -bottom-full right-4 rounded-xl bg-skin-card p-2 opacity-70 shadow-xl duration-300 ease-in-out hover:scale-110 sm:right-8"
   href="#"
   aria-label="Scroll to the top of the page"
+  transition:persist
+  transition:animate="fade"
 >
   <Icon class="text-skin-base" name="lucide:chevron-up" />
 </a>
@@ -14,6 +16,7 @@ import { Icon } from "astro-icon/components";
 <script>
   const scroll = document.getElementById("scroll-up");
   window.addEventListener("scroll", () => {
+    console.log(window.scrollY, scroll);
     if (window.scrollY <= 360) {
       scroll?.classList.remove("bottom-4");
       scroll?.classList.remove("sm:bottom-8");

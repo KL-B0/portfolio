@@ -14,6 +14,7 @@ const { id, name, icon, items } = Astro.props;
 <div
   {id}
   class="flex h-min max-w-sm flex-col rounded-xl bg-skin-card shadow-xl sm:mb-0"
+  transition:persist
 >
   <div
     id={"skill-toggle-" + id}
