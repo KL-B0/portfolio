@@ -25,13 +25,15 @@ import { getRelativeLocaleUrl } from "astro:i18n";
         Astro.currentLocale == "en" ? (
           <>
             <h1 aria-label="404 Not Found">Looks like you're lost</h1>
+            <p>The page you're looking for doesn't exist</p>
             <a href={getRelativeLocaleUrl("en", "")}>
               <p>Go back home</p>
             </a>
           </>
         ) : (
           <>
-            <h1 aria-label="404 Non Trovato">Sembra tu ti sia perso</h1>
+            <h1 aria-label="404 Non Trovato">Sembra che tu ti sia perso</h1>
+            <p>La pagina che stai cercando non esiste</p>
             <a href={getRelativeLocaleUrl("it", "")}>
               <p>Torna alla home</p>
             </a>
@@ -52,10 +54,10 @@ import { getRelativeLocaleUrl } from "astro:i18n";
     @apply mb-14 flex flex-col items-center justify-center;
   }
   .not-found-wrapper h1 {
-    @apply mb-5 text-center text-3xl font-semibold text-skin-base sm:mb-12 sm:text-5xl;
+    @apply mb-4 text-center text-3xl font-semibold text-skin-base sm:mb-6 sm:text-5xl;
   }
   .not-found-wrapper a {
-    @apply flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110;
+    @apply mt-5 flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110 sm:mt-8;
   }
   .not-found-wrapper p {
     @apply text-center text-lg text-skin-base sm:text-left sm:text-xl;
