@@ -54,17 +54,29 @@ const { activeNav } = Astro.props;
           <!-- Navigation items -->
           <ul>
             {
-              MENU_ITEMS.map(item => (
-                <li>
-                  <a
-                    href={item.url}
-                    class={activeNav === item.name ? "active" : ""}
-                    aria-label={`Navigate to the ${item.name} section`}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))
+              Astro.currentLocale == "en"
+                ? MENU_ITEMS.map(item => (
+                    <li>
+                      <a
+                        href={getRelativeLocaleUrl("en", item.url)}
+                        class={activeNav === item.name ? "active" : ""}
+                        aria-label={`Navigate to the ${item.name} section`}
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))
+                : MENU_ITEMS.map(item => (
+                    <li>
+                      <a
+                        href={getRelativeLocaleUrl("it", item.url)}
+                        class={activeNav === item.name ? "active" : ""}
+                        aria-label={`Naviga alla sezione ${item.name_it}`}
+                      >
+                        {item.name_it}
+                      </a>
+                    </li>
+                  ))
             }
           </ul>
 
