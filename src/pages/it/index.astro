@@ -18,7 +18,7 @@ import Skill from "@components/Skill.astro";
         <p
           class="mb-4 text-center text-xl font-light text-skin-accent sm:mb-5 sm:text-2xl"
         >
-          Greetings, I'm
+          Salve, sono
         </p>
         <h1
           class="mb-5 text-center text-4xl font-semibold text-skin-base sm:mb-8 sm:text-6xl"
@@ -26,37 +26,38 @@ import Skill from "@components/Skill.astro";
           {SITE.author}
         </h1>
         <p class="text-center text-lg text-skin-base sm:text-2xl">
-          I design and build software products
+          Progetto e sviluppo prodotti software
         </p>
       </div>
     </section>
-    <Section title="Hi, I'm Lorenzo">
+    <Section title="Ciao, sono Lorenzo">
       <div class="max-w-4xl sm:ml-12">
         <p
           class="mb-4 text-center text-lg text-skin-base sm:mb-6 sm:text-left sm:text-xl"
         >
-          I began my programming journey in middle school, driven by curiosity.
-          Subsequently, I learned about networking and web development in high
-          school, mastering <b>Django </b>and <b>Bootstrap</b>.<br />
-          Moving to this day, I'm enrolled in a <b>university degree</b>,
-          seeking to expand my understanding of AI and become a data scientist.<br
+          Ho iniziato a programmare quando ero ancora alle medie. Ho imparato lo
+          sviluppo web e le reti durante la scuola superiore, padroneggiando <b
+            >Django</b
+          > e <b>Bootstrap</b>.<br />
+          Ad oggi, sono iscritto a un <b>corso universitario</b>, dove sto
+          espandendo la mia conoscenza dell'IA e diventando un data scientist.<br
           />
-          I'm genuinely curious, capable of teamwork and willful to improve along
-          my experiences.
+          Sono curioso, capace del lavoro di squadra e volenteroso di migliorare
+          attraverso le mie esperienze.
         </p>
       </div>
     </Section>
-    <Section title="Skills">
+    <Section title="Competenze">
       <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
         <Skill
           id="backend"
-          name="Backend developer"
+          name="Sviluppo backend"
           icon="lucide:database"
           items={["Linux", "Django", "Python", "Java", "SQL"]}
         />
         <Skill
           id="frontend"
-          name="Frontend developer"
+          name="Sviluppo frontend"
           icon="lucide:layout-template"
           items={[
             "HTML",
@@ -75,7 +76,7 @@ import Skill from "@components/Skill.astro";
         />
         <Skill
           id="gamedev"
-          name="Game development"
+          name="Sviluppo videogiochi"
           icon="lucide:gamepad-2"
           items={["Godot", "C++", "Pygame"]}
         />
@@ -93,46 +94,46 @@ import Skill from "@components/Skill.astro";
         />
       </div>
     </Section>
-    <Section title="Journey">
+    <Section title="Percorso">
       <div
         class="grid w-full max-w-xs grid-cols-journey gap-4 md:max-w-2xl md:grid-cols-journey-md"
       >
         <LeftMilestone
-          title="IT Technitian"
+          title="Tecnico informatico"
           location="ITT Ettore Molinari"
           date="2017 - 2019"
         />
         <RightMilestone
-          title="Exchange student"
-          location="Denmark"
+          title="Studente d'interscambio"
+          location="Danimarca"
           date="2019 - 2020"
         />
         <LeftMilestone
-          title="IT Technitian"
+          title="Tecnico informatico"
           location="ITT Ettore Molinari"
           date="2020 - 2021"
         />
         <RightMilestone
-          title="AI Doctor"
-          location="University of Pavia"
-          date="2021 - now"
+          title="Dottore I.A."
+          location="Università di Pavia"
+          date="2021 - adesso"
           last
         />
       </div>
     </Section>
-    <Section title="Contact">
+    <Section title="Contatti">
       <p
         class="mb-8 text-center text-lg text-skin-base sm:text-left sm:text-xl"
       >
-        Are you interested in building something together?
+        Sei interessato a costruire qualcosa insieme?
       </p>
       <a
         class="flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110"
         href={`mailto:${SITE.mail}`}
-        aria-label="Get in touch"
+        aria-label="Contattami"
       >
         <p class="text-center text-lg text-skin-base sm:text-left sm:text-xl">
-          Get in touch
+          Contattami
         </p>
       </a>
     </Section>

@@ -1,6 +1,7 @@
 ---
 import { MENU_ITEMS } from "@config";
 import { Icon } from "astro-icon/components";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export interface Props {
   activeNav?: "projects" | "tags";
@@ -67,10 +68,17 @@ const { activeNav } = Astro.props;
 
           <div>
             <!-- Locale toggler -->
-            <Icon
-              class="text-skin-base duration-200 hover:text-skin-accent"
-              name="lucide:languages"
-            />
+            <a
+              href={Astro.currentLocale == "en"
+                ? getRelativeLocaleUrl("it", "")
+                : getRelativeLocaleUrl("en", "")}
+              aria-label="Switch language"
+            >
+              <Icon
+                class="text-skin-base duration-200 hover:text-skin-accent"
+                name="lucide:languages"
+              />
+            </a>
 
             <!-- Theme toggler -->
             <button
