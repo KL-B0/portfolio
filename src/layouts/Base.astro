@@ -1,6 +1,7 @@
 ---
 import Header from "@components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "@components/Footer.astro";
+import ScrollUp from "@components/ScrollUp.astro";
 import "@styles/global.css";
 
 const { title } = Astro.props;
@@ -26,6 +27,7 @@ const { title } = Astro.props;
     <Header />
     <slot />
     <Footer />
+    <ScrollUp />
     <!-- Insert scroll_up -->
   </body>
 </html>
