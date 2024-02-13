@@ -18,12 +18,7 @@ const { activeNav } = Astro.props;
         class="logo whitespace-nowrap"
         aria-label="Navigate back to the homepage"
       >
-        <img
-          width="32px"
-          height="32px"
-          src="/img/logo.svg"
-          alt="personal logo"
-        />
+        <Icon class="h-full w-full text-skin-accent" name="logo" />
       </a>
 
       <nav id="nav-menu">
@@ -111,10 +106,10 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full flex-row items-start justify-center p-4 sm:items-center sm:py-8;
   }
   .logo {
-    @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
+    @apply z-50 h-10 w-10 py-1 sm:h-12 sm:w-12;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;
@@ -124,7 +119,7 @@ const { activeNav } = Astro.props;
   }
 
   nav {
-    @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:px-4 sm:py-0;
+    @apply flex h-full w-full flex-col items-center py-1 sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:px-4 sm:py-0;
   }
   nav div ul,
   nav div div {
