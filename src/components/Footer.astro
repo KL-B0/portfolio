@@ -1,17 +1,15 @@
 ---
 import { SITE, SOCIALS } from "@config";
-import LinkButton from "./LinkButton.astro";
+import SocialButton from "./SocialButton.astro";
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer
-  class="flex h-24 w-full flex-col justify-center bg-skin-fill p-2 sm:h-16"
->
-  <div class="mx-auto mb-3 flex flex-row justify-center gap-4 sm:hidden">
+<footer>
+  <div>
     {
       SOCIALS.map(social => (
-        <LinkButton
+        <SocialButton
           href={social.href}
           aria-label={social.linkTitle}
           icon={social.icon}
@@ -19,5 +17,17 @@ const currentYear = new Date().getFullYear();
       ))
     }
   </div>
-  <p class="mx-auto text-skin-base">&copy; {currentYear} {SITE.author}</p>
+  <p>&copy; {currentYear} {SITE.author}</p>
 </footer>
+
+<style>
+  footer {
+    @apply flex h-24 w-full flex-col justify-center bg-skin-fill p-2 sm:h-16;
+  }
+  div {
+    @apply mx-auto mb-3 flex flex-row justify-center gap-4 sm:hidden;
+  }
+  p {
+    @apply mx-auto text-skin-base;
+  }
+</style>

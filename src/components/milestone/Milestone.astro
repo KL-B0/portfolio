@@ -10,18 +10,29 @@ export interface Props {
 const { title, location, date } = Astro.props;
 ---
 
-<div
-  class="flex max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl"
->
-  <h3 class="mb-1 text-center text-lg font-bold text-skin-base sm:text-xl">
-    {title}
-  </h3>
-  <div class="flex flex-row items-center gap-2">
+<div class="milestone-container">
+  <h3>{title}</h3>
+  <div class="info-container">
     <Icon class="w-5 text-skin-base sm:w-8" name="lucide:map-pin" />
-    <p class="text-md text-skin-base sm:text-lg">{location}</p>
+    <p>{location}</p>
   </div>
-  <div class="flex flex-row items-center gap-2">
+  <div class="info-container">
     <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar" />
-    <p class="text-md text-skin-base sm:text-lg">{date}</p>
+    <p>{date}</p>
   </div>
 </div>
+
+<style>
+  .milestone-container {
+    @apply flex max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
+  }
+  .milestone-container h3 {
+    @apply mb-1 text-center text-lg font-bold text-skin-base sm:text-xl;
+  }
+  .info-container {
+    @apply flex flex-row items-center gap-2;
+  }
+  .info-container p {
+    @apply text-skin-base sm:text-lg;
+  }
+</style>

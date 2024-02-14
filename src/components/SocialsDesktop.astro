@@ -1,14 +1,12 @@
 ---
 import { SOCIALS } from "@config";
-import LinkButton from "./LinkButton.astro";
+import SocialButton from "./SocialButton.astro";
 ---
 
-<div
-  class="mx-auto hidden h-full flex-col justify-center gap-5 sm:fixed sm:bottom-0 sm:left-10 sm:flex"
->
+<div>
   {
     SOCIALS.map(social => (
-      <LinkButton
+      <SocialButton
         href={social.href}
         aria-label={social.linkTitle}
         icon={social.icon}
@@ -16,3 +14,9 @@ import LinkButton from "./LinkButton.astro";
     ))
   }
 </div>
+
+<style>
+  div {
+    @apply mx-auto hidden h-full flex-col justify-center gap-5 sm:fixed sm:bottom-0 sm:left-10 sm:flex;
+  }
+</style>

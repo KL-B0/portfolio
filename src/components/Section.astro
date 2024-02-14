@@ -2,11 +2,16 @@
 const { title } = Astro.props;
 ---
 
-<section
-  class="min-h-50 max-w-8xl mb-20 flex w-full flex-col items-center pt-8"
->
-  <h2 class="mb-8 text-center text-2xl text-skin-base sm:mb-10 sm:text-4xl">
-    {title}
-  </h2>
+<section>
+  <h2>{title}</h2>
   <slot />
 </section>
+
+<style>
+  section {
+    @apply mb-20 flex w-full flex-col items-center pt-8;
+  }
+  h2 {
+    @apply mb-8 text-center text-2xl text-skin-base sm:mb-10 sm:text-4xl;
+  }
+</style>
