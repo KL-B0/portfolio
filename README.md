@@ -35,9 +35,11 @@ Feel free to open any issue [here](https://gitlab.com/KL-B0/portfolio/-/issues).
 Huge thanks to the following projects, which have made mine possible:
 
 - [Astro](https://astro.build/)
+- [Astro Icon](https://www.astroicon.dev/)
 - [AstroPaper](https://astro-paper.pages.dev/)
 - [Lucide icons](https://lucide.dev/)
 - [Netlify](https://www.netlify.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## License
 
