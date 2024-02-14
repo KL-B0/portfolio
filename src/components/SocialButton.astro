@@ -7,3 +7,9 @@ const { href, ariaLabel, icon } = Astro.props;
 <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
   <Icon class="text-skin-base hover:text-skin-accent" name={icon} />
 </a>
+
+<style>
+  a {
+    @apply focus-outline p-1;
+  }
+</style>

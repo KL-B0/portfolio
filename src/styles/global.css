@@ -78,7 +78,7 @@
   }
 
   .focus-outline {
-    @apply rounded-md outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline;
+    @apply rounded-md outline-4 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline;
   }
 
   .milestone-dot {
