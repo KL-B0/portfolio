@@ -5,7 +5,6 @@
     "jsxImportSource": "react",
     "baseUrl": "src",
     "paths": {
-      "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
       "@components/*": ["components/*"],
       "@content/*": ["content/*"],

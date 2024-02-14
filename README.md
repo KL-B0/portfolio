@@ -39,6 +39,9 @@ Huge thanks to the following projects, which have made mine possible:
 - [AstroPaper](https://astro-paper.pages.dev/)
 - [Lucide icons](https://lucide.dev/)
 - [Netlify](https://www.netlify.com/)
+- [React](https://react.dev/)
+- [resvg-js](https://github.com/yisibl/resvg-js)
+- [Satori](https://github.com/vercel/satori)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## License

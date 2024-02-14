@@ -43,7 +43,7 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        serif: ["IBM Plex Serif", "serif"],
       },
 
       gridTemplateColumns: {

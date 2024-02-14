@@ -27,4 +27,9 @@ export default defineConfig({
     }),
   ],
   site: SITE.website,
+  vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
 });
