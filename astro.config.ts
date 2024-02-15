@@ -26,6 +26,7 @@ export default defineConfig({
       },
     }),
   ],
+  scopedStyleStrategy: "where",
   site: SITE.website,
   vite: {
     optimizeDeps: {

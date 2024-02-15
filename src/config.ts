@@ -16,12 +16,12 @@ export const LOCALE = {
 export const MENU_ITEMS: MenuItems = [
   {
     name: "Projects",
-    name_it: "Progetti",
+    nameIt: "Progetti",
     url: "/projects/",
   },
   {
     name: "Tags",
-    name_it: "Tags",
+    nameIt: "Tags",
     url: "/tags/",
   },
 ];

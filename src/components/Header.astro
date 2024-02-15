@@ -50,38 +50,36 @@ const { activeNav } = Astro.props;
             <path d="m6 6 12 12" class="close"></path>
           </svg>
         </button>
-        <div id="menu-items" class="hidden sm:flex">
-          <!-- Navigation items -->
-          <ul>
-            {
-              Astro.currentLocale == "en"
-                ? MENU_ITEMS.map(item => (
-                    <li>
-                      <a
-                        href={getRelativeLocaleUrl("en", item.url)}
-                        class={activeNav === item.name ? "active" : ""}
-                        aria-label={`Navigate to the ${item.name} section`}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))
-                : MENU_ITEMS.map(item => (
-                    <li>
-                      <a
-                        href={getRelativeLocaleUrl("it", item.url)}
-                        class={activeNav === item.name ? "active" : ""}
-                        aria-label={`Naviga alla sezione ${item.name_it}`}
-                      >
-                        {item.name_it}
-                      </a>
-                    </li>
-                  ))
-            }
-          </ul>
+        <!-- Navigation items -->
+        <ul id="menu-items" class="hidden sm:flex">
+          {
+            Astro.currentLocale == "en"
+              ? MENU_ITEMS.map(item => (
+                  <li>
+                    <a
+                      href={getRelativeLocaleUrl("en", item.url)}
+                      class={activeNav === item.name ? "active" : ""}
+                      aria-label={`Navigate to the ${item.name} section`}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))
+              : MENU_ITEMS.map(item => (
+                  <li>
+                    <a
+                      href={getRelativeLocaleUrl("it", item.url)}
+                      class={activeNav === item.name ? "active" : ""}
+                      aria-label={`Naviga alla sezione ${item.nameIt}`}
+                    >
+                      {item.nameIt}
+                    </a>
+                  </li>
+                ))
+          }
 
-          <div>
-            <!-- Locale toggler -->
+          <!-- Locale toggler -->
+          <li>
             <a
               href={Astro.currentLocale == "en"
                 ? getRelativeLocaleUrl("it", Astro.url.pathname)
@@ -90,12 +88,14 @@ const { activeNav } = Astro.props;
               class="focus-outline p-1"
             >
               <Icon
-                class="text-skin-base duration-200 hover:text-skin-accent"
+                class="text-skin-base duration-75 hover:text-skin-accent"
                 name="lucide:languages"
               />
             </a>
+          </li>
 
-            <!-- Theme toggler -->
+          <!-- Theme toggler -->
+          <li>
             <button
               id="theme-button"
               class="focus-outline"
@@ -105,17 +105,17 @@ const { activeNav } = Astro.props;
             >
               <Icon
                 id="sun-svg"
-                class="text-skin-base duration-200 hover:text-skin-accent"
+                class="text-skin-base duration-75 hover:text-skin-accent"
                 name="lucide:sun"
               />
               <Icon
                 id="moon-svg"
-                class="text-skin-base duration-200 hover:text-skin-accent"
+                class="text-skin-base duration-75 hover:text-skin-accent"
                 name="lucide:moon"
               />
             </button>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
     </div>
   </div>
@@ -129,7 +129,7 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-screen-2xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full flex-row items-start justify-center p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start justify-center p-4 sm:items-center sm:py-8;
   }
   .logo {
     @apply z-50 h-10 w-10 py-1 sm:h-12 sm:w-12;
@@ -142,20 +142,23 @@ const { activeNav } = Astro.props;
   }
 
   nav {
-    @apply flex h-full w-full flex-col items-center py-1 sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:px-4 sm:py-0;
+    @apply flex w-full flex-col items-center pt-1 sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:px-4 sm:pt-0;
   }
-  nav div ul,
-  nav div div {
-    @apply mt-4 flex w-40 flex-row items-center justify-center gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+  nav ul {
+    @apply mt-4 grid w-44 grid-cols-2 grid-rows-3 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
   }
-  nav div ul li {
-    @apply flex items-center justify-center;
+  nav ul li {
+    @apply col-span-2 flex items-center justify-center;
   }
-  nav div ul li a {
+  nav ul li a {
     @apply w-full px-4 py-3 text-center text-xl font-medium text-skin-base duration-75 hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
   }
-  nav div div {
-    @apply gap-x-4 sm:ml-6 sm:gap-x-6;
+  nav ul li:nth-last-child(2) a {
+    @apply w-auto;
+  }
+  nav ul li:nth-last-child(1),
+  nav ul li:nth-last-child(2) {
+    @apply col-span-1;
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;

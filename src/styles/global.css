@@ -68,14 +68,6 @@
 }
 
 @layer components {
-  svg {
-    stroke: var(--color-text-base);
-    transition-duration: 75ms;
-  }
-
-  svg:hover {
-    stroke: var(--color-accent);
-  }
 
   .focus-outline {
     @apply rounded-md outline-4 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline;
@@ -87,5 +79,14 @@
 
   .milestone-bar {
     @apply block h-full w-1 translate-x-1.5 translate-y-3.5 bg-skin-card;
+  }
+
+  svg {
+    stroke: var(--color-text-base);
+    transition-duration: 75ms;
+  }
+
+  svg:hover {
+    stroke: var(--color-accent);
   }
 }
