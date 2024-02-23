@@ -12,6 +12,14 @@ import SocialsDesktop from "@components/SocialsDesktop.astro";
 import Skill from "@components/Skill.astro";
 import LeftMilestone from "@components/milestone/LeftMilestone.astro";
 import RightMilestone from "@components/milestone/RightMilestone.astro";
+import LinkButton from "@components/LinkButton.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+import { getCollection } from "astro:content";
+
+const featuredProjects = await getCollection(
+  "projects",
+  ({ data }) => data.featured
+);
 ---
 
 <Base>
@@ -126,21 +134,41 @@ import RightMilestone from "@components/milestone/RightMilestone.astro";
         />
       </div>
     </Section>
+    <Section title="Progetti in evidenza">
+      <div
+        class="mb-6 grid w-full max-w-xs grid-cols-1 gap-4 sm:mb-8 xl:max-w-xl xl:grid-cols-2 2xl:max-w-6xl 2xl:grid-cols-3"
+      >
+        {
+          featuredProjects.map(({ data, slug }) => (
+            <ProjectCard
+              href={`/projects/${slug}`}
+              title={data.title}
+              description={data.description}
+              tags={data.tags}
+              websiteLink={data.websiteLink}
+              gitlabLink={data.gitlabLink}
+              githubLink={data.githubLink}
+            />
+          ))
+        }
+      </div>
+      <LinkButton
+        text="Scopri di più"
+        href="/projects/it"
+        ariaLabel="Scopri altri progetti"
+      />
+    </Section>
     <Section title="Contatti">
       <p
         class="mb-8 text-center text-lg text-skin-base sm:text-left sm:text-xl"
       >
         Sei interessato a costruire qualcosa insieme?
       </p>
-      <a
-        class="flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110"
+      <LinkButton
+        text="Contattami"
         href={`mailto:${SITE.mail}`}
-        aria-label="Contattami"
-      >
-        <p class="text-center text-lg text-skin-base sm:text-left sm:text-xl">
-          Contattami
-        </p>
-      </a>
+        ariaLabel="Contattami"
+      />
     </Section>
   </main>
   <Footer />

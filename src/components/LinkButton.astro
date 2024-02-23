@@ -1,0 +1,24 @@
+---
+export interface Props {
+  text: string;
+  href: string;
+  ariaLabel: string;
+}
+
+const { text, href, ariaLabel } = Astro.props;
+---
+
+<a href={href} aria-label={ariaLabel}>
+  <p>
+    {text}
+  </p>
+</a>
+
+<style>
+  a {
+    @apply flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110;
+  }
+  p {
+    @apply text-center text-lg text-skin-inverted sm:text-left sm:text-xl;
+  }
+</style>
