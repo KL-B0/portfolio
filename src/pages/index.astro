@@ -1,5 +1,6 @@
 ---
 import { SITE } from "@config";
+import { getCollection } from "astro:content";
 
 import Base from "@layouts/Base.astro";
 import Footer from "@components/Footer.astro";
@@ -12,6 +13,12 @@ import SocialsDesktop from "@components/SocialsDesktop.astro";
 import Skill from "@components/Skill.astro";
 import LeftMilestone from "@components/milestone/LeftMilestone.astro";
 import RightMilestone from "@components/milestone/RightMilestone.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+
+const featuredProjects = await getCollection(
+  "projects",
+  ({ data }) => data.featured
+);
 ---
 
 <Base>
@@ -124,6 +131,34 @@ import RightMilestone from "@components/milestone/RightMilestone.astro";
           last
         />
       </div>
+    </Section>
+    <Section title="Featured projects">
+      <div
+        class="grid w-full max-w-xs grid-cols-1 gap-4 xl:max-w-xl xl:grid-cols-2 2xl:max-w-6xl 2xl:grid-cols-3"
+      >
+        {
+          featuredProjects.map(({data, slug}) => (
+            <ProjectCard
+              href={`/projects/${slug}`}
+              title={data.title}
+              description={data.description}
+              tags={data.tags}
+              websiteLink={data.websiteLink}
+              gitlabLink={data.gitlabLink}
+              githubLink={data.githubLink}
+            />
+          ))
+        }
+      </div>
+      <a
+        class="mt-12 flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110"
+        href="/projects"
+        aria-label="See more projects"
+      >
+        <p class="text-center text-lg text-skin-base sm:text-left sm:text-xl">
+          See more
+        </p>
+      </a>
     </Section>
     <Section title="Contact">
       <p

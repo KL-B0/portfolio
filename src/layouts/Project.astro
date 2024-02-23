@@ -1,0 +1,74 @@
+---
+import { SITE } from "@config";
+import { slugifyStr } from "@utils/slugify";
+import type { CollectionEntry } from "astro:content";
+import Base from "./Base.astro";
+import Header from "@components/Header.astro";
+import { Icon } from "astro-icon/components";
+import Footer from "@components/Footer.astro";
+
+export interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+
+const {
+  title,
+  description,
+  tags,
+  releaseDate,
+  websiteLink,
+  gitlabLink,
+  githubLink,
+  ogImage,
+  canonicalURL,
+} = project.data;
+
+const { Content } = await project.render();
+
+const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
+const ogUrl = new URL(
+  ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
+  Astro.url.origin
+).href;
+
+const baseProps = {
+  title: `${title} | ${SITE.title}`,
+  author: `${SITE.author}`,
+  description,
+  ogImage: ogUrl,
+  canonicalURL,
+  language: "en", // TODO localize template
+  releaseDate,
+};
+---
+
+<Base {...baseProps}>
+  <Header />
+  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+    <button
+      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
+      onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
+    >
+      <Icon name="lucide:chevron-left" />
+      <span>Go back</span>
+    </button>
+  </div>
+  <main id="main-content">
+    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <article id="article" role="article" class="mx-auto mt-8 max-w-3xl">
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main {
+    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+  }
+  .post-title {
+    @apply text-2xl font-semibold text-skin-accent;
+  }
+</style>
