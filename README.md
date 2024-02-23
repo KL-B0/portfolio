@@ -37,6 +37,7 @@ Huge thanks to the following projects, which have made mine possible:
 - [Astro](https://astro.build/)
 - [Astro Icon](https://www.astroicon.dev/)
 - [AstroPaper](https://astro-paper.pages.dev/)
+- [github-slugger](https://github.com/Flet/github-slugger)
 - [Lucide icons](https://lucide.dev/)
 - [Netlify](https://www.netlify.com/)
 - [React](https://react.dev/)
