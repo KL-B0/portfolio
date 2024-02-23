@@ -15,6 +15,7 @@ import LeftMilestone from "@components/milestone/LeftMilestone.astro";
 import RightMilestone from "@components/milestone/RightMilestone.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 import LinkButton from "@components/LinkButton.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const featuredProjects = await getCollection(
   "projects",
@@ -153,7 +154,7 @@ const featuredProjects = await getCollection(
       </div>
       <LinkButton
         text="See more"
-        href="/projects"
+        href={getRelativeLocaleUrl("en", "/projects")}
         ariaLabel="See more projects"
       />
     </Section>
