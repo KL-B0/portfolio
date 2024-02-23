@@ -1,0 +1,80 @@
+---
+import SocialButton from "./SocialButton.astro";
+import Tag from "./Tag.astro";
+
+export interface Props {
+  href: string;
+  title: string;
+  description: string;
+  tags?: string[];
+  websiteLink?: string;
+  gitlabLink?: string;
+  githubLink?: string;
+}
+
+const { href, title, description, tags, websiteLink, gitlabLink, githubLink } =
+  Astro.props;
+---
+
+<div class="project-container">
+  <div class="title-container">
+    <a href={href}>
+      <h3>{title}</h3>
+    </a>
+  </div>
+  <p>{description}</p>
+  <ul>
+    {tags?.map(tag => <Tag name={tag} />)}
+  </ul>
+  {
+    (websiteLink || gitlabLink || githubLink) && (
+      <div class="links-container">
+        {websiteLink && (
+          <SocialButton
+            href={websiteLink}
+            ariaLabel="Open the website project page"
+            icon="lucide:link"
+          />
+        )}
+        {gitlabLink && (
+          <SocialButton
+            href={gitlabLink}
+            ariaLabel="Open the GitLab project page"
+            icon="lucide:gitlab"
+          />
+        )}
+        {githubLink && (
+          <SocialButton
+            href={githubLink}
+            ariaLabel="Open the GitHub project page"
+            icon="lucide:github"
+          />
+        )}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .project-container {
+    @apply flex h-fit max-w-screen-xl flex-col gap-1 rounded-xl bg-skin-card p-4 shadow-xl;
+  }
+  .title-container {
+    @apply flex flex-row justify-center;
+  }
+  .project-container h3 {
+    @apply m-1 text-xl font-bold text-skin-base underline underline-offset-2 duration-75 hover:text-skin-accent sm:text-2xl;
+  }
+  .project-container p {
+    @apply py-3 text-base text-skin-base sm:text-xl;
+  }
+  .project-container ul {
+    @apply flex flex-row gap-4 text-sm text-skin-base;
+  }
+  .project-container ul li {
+    @apply text-skin-base;
+  }
+  .links-container {
+    @apply flex flex-row items-center justify-center gap-4;
+  }
+</style>

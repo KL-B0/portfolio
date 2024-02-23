@@ -1,0 +1,15 @@
+---
+export interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<li>{name}</li>
+
+<style>
+  li {
+    @apply rounded-xl bg-skin-accent px-3 py-1 text-sm text-skin-inverted sm:text-base;
+  }
+</style>
