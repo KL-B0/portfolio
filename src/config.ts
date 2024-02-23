@@ -19,11 +19,6 @@ export const MENU_ITEMS: MenuItems = [
     nameIt: "Progetti",
     url: "/projects/",
   },
-  {
-    name: "Tags",
-    nameIt: "Tags",
-    url: "/tags/",
-  },
 ];
 
 export const SOCIALS: SocialObjects = [
