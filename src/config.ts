@@ -34,7 +34,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     icon: "lucide:linkedin",
-    href: "https://www.linkedin.com/in/lorenzo-capalbo-0424b3229/",
+    href: "https://www.linkedin.com/in/lorenzo-capalbo/",
     linkTitle: `${SITE.author} on LinkedIn`,
   },
   {
