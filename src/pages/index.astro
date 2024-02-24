@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@config";
 import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 import Base from "@layouts/Base.astro";
 import Footer from "@components/Footer.astro";
@@ -15,7 +16,6 @@ import LeftMilestone from "@components/milestone/LeftMilestone.astro";
 import RightMilestone from "@components/milestone/RightMilestone.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 import LinkButton from "@components/LinkButton.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
 
 const featuredProjects = await getCollection(
   "projects",
