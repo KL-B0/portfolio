@@ -1,7 +1,13 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { href, ariaLabel, icon } = Astro.props;
+export interface Props {
+  href: string;
+  icon: string;
+  ariaLabel: string;
+}
+
+const { href, icon, ariaLabel } = Astro.props;
 ---
 
 <a
@@ -11,5 +17,11 @@ const { href, ariaLabel, icon } = Astro.props;
   rel="noopener noreferrer"
   aria-label={ariaLabel}
 >
-  <Icon class="text-skin-base hover:text-skin-accent" name={icon} />
+  <Icon class={`text-skin-base hover:text-skin-accent`} name={icon} />
 </a>
+
+<style>
+  [data-icon] {
+    @apply h-6 w-6;
+  }
+</style>
