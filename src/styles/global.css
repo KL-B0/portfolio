@@ -31,6 +31,10 @@
     @apply focus-outline;
   }
 
+  [data-icon] {
+    @apply h-6 w-6;
+  }
+
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
     display: none;

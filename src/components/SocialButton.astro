@@ -17,11 +17,5 @@ const { href, icon, ariaLabel } = Astro.props;
   rel="noopener noreferrer"
   aria-label={ariaLabel}
 >
-  <Icon class={`text-skin-base hover:text-skin-accent`} name={icon} />
+  <Icon class="text-skin-base hover:text-skin-accent" name={icon} />
 </a>
-
-<style>
-  [data-icon] {
-    @apply h-6 w-6;
-  }
-</style>

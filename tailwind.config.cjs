@@ -11,7 +11,7 @@ export default {
         skin: {
           base: color("--color-text-base"),
           accent: color("--color-accent"),
-          inverted: color("--color-card"),
+          inverted: color("--color-fill"),
         },
       },
       backgroundColor: {

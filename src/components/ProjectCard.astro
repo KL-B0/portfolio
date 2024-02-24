@@ -1,5 +1,4 @@
 ---
-import SocialButton from "./SocialButton.astro";
 import Tag from "./Tag.astro";
 
 export interface Props {
@@ -38,10 +37,7 @@ const { href, title, description, tags } = Astro.props;
     @apply text-base text-skin-base sm:text-xl;
   }
   .project-container ul {
-    @apply flex flex-row gap-4 text-sm text-skin-base opacity-90;
-  }
-  .project-container ul li {
-    @apply text-skin-base;
+    @apply flex flex-row gap-4 text-sm;
   }
   .links-container {
     @apply flex flex-row items-center justify-center gap-4;
