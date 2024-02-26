@@ -15,8 +15,7 @@ export const LOCALE = {
 
 export const MENU_ITEMS: MenuItems = [
   {
-    name: "Projects",
-    nameIt: "Progetti",
+    name: "nav.projects",
     url: "/projects/",
   },
 ];

@@ -9,7 +9,6 @@ export type Site = {
 
 export type MenuItems = {
   name: string;
-  nameIt: string;
   url: string;
 }[];
 

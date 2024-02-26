@@ -2,6 +2,9 @@
 import { MENU_ITEMS } from "@config";
 import { Icon } from "astro-icon/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { useTranslation } from "@utils/i18n";
+
+const t = useTranslation(Astro.currentLocale);
 
 export interface Props {
   activeNav?: "projects" | "tags";
@@ -53,29 +56,17 @@ const { activeNav } = Astro.props;
         <!-- Navigation items -->
         <ul id="menu-items" class="hidden sm:flex">
           {
-            Astro.currentLocale == "en"
-              ? MENU_ITEMS.map(item => (
-                  <li>
-                    <a
-                      href={getRelativeLocaleUrl("en", item.url)}
-                      class={activeNav === item.name ? "active" : ""}
-                      aria-label={`Navigate to the ${item.name} section`}
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))
-              : MENU_ITEMS.map(item => (
-                  <li>
-                    <a
-                      href={getRelativeLocaleUrl("it", item.url)}
-                      class={activeNav === item.name ? "active" : ""}
-                      aria-label={`Naviga alla sezione ${item.nameIt}`}
-                    >
-                      {item.nameIt}
-                    </a>
-                  </li>
-                ))
+            MENU_ITEMS.map(item => (
+              <li>
+                <a
+                  href={getRelativeLocaleUrl("en", item.url)}
+                  class={activeNav === item.name ? "active" : ""}
+                  aria-label={`Navigate to the ${item.name} section`}
+                >
+                  {t(item.name)}
+                </a>
+              </li>
+            ))
           }
 
           <!-- Locale toggler -->
