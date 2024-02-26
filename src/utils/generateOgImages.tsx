@@ -1,6 +1,8 @@
 import satori, { type SatoriOptions } from "satori";
 import { Resvg } from "@resvg/resvg-js";
+import projectOgImage from "./og-templates/project";
 import siteOgImage from "./og-templates/site";
+import type { CollectionEntry } from "astro:content";
 
 const fetchFonts = async () => {
   // Regular Font
@@ -42,6 +44,12 @@ const options: SatoriOptions = {
 
 function svgBufferToPngBuffer(svg: string) {
   return new Resvg(svg).render().asPng();
+}
+
+export async function generateOgImageForProject(
+  project: CollectionEntry<"projects">
+) {
+  return svgBufferToPngBuffer(await satori(projectOgImage(project), options));
 }
 
 export async function generateOgImageForSite() {

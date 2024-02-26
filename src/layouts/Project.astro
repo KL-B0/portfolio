@@ -6,6 +6,7 @@ import Base from "./Base.astro";
 import Header from "@components/Header.astro";
 import { Icon } from "astro-icon/components";
 import Footer from "@components/Footer.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export interface Props {
   project: CollectionEntry<"projects">;
@@ -29,7 +30,11 @@ const { Content } = await project.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
+  ogImageUrl ??
+    getRelativeLocaleUrl(
+      "en", // TODO adjust for italian
+      `${project.collection}/${project.slug.slice(3)}.png`
+    ),
   Astro.url.origin
 ).href;
 
