@@ -7,7 +7,7 @@ import { useTranslation } from "@utils/i18n";
 const t = useTranslation(Astro.currentLocale);
 
 export interface Props {
-  activeNav?: "projects" | "tags";
+  activeNav?: "nav.projects";
 }
 
 const { activeNav } = Astro.props;
@@ -152,7 +152,7 @@ const { activeNav } = Astro.props;
     @apply col-span-1;
   }
   nav a.active {
-    @apply underline decoration-wavy decoration-2 underline-offset-4;
+    @apply underline decoration-2 underline-offset-4;
   }
 
   nav button {

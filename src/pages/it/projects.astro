@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+import Base from "@layouts/Base.astro";
+import Main from "@layouts/Main.astro";
+
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+
+const projects = await getCollection("projects", ({ id }) =>
+  id.startsWith("it/")
+);
+---
+
+<Base>
+  <Header activeNav="nav.projects" />
+  <Main pageTitle="Projects" pageDescription="All the projects I've worked at">
+    <div>
+      {
+        projects.map(({ collection, data, slug }) => (
+          <ProjectCard
+            href={getRelativeLocaleUrl("it", `${collection}/${slug.slice(3)}`)}
+            title={data.title}
+            description={data.description}
+            tags={data.tags}
+          />
+        ))
+      }
+    </div>
+  </Main>
+  <Footer />
+</Base>
+
+<style>
+  div {
+    @apply mb-6 grid w-full max-w-xs grid-cols-1 gap-4 sm:mb-8 md:max-w-2xl md:grid-cols-2 xl:max-w-6xl xl:grid-cols-3;
+  }
+</style>

@@ -14,23 +14,23 @@ const { title, location, date, last = false } = Astro.props;
 {
   !last ? (
     <>
-      <div class="md:hidden">
+      <div class="xl:hidden">
         <span class="milestone-dot" />
         <span class="milestone-bar" />
       </div>
       <Milestone title={title} location={location} date={date} />
-      <div class="hidden md:block">
+      <div class="hidden xl:block">
         <span class="milestone-dot" />
         <span class="milestone-bar" />
       </div>
     </>
   ) : (
     <>
-      <div class="md:hidden">
+      <div class="xl:hidden">
         <span class="milestone-dot" />
       </div>
       <Milestone title={title} location={location} date={date} />
-      <div class="hidden md:block">
+      <div class="hidden xl:block">
         <span class="milestone-dot" />
       </div>
     </>

@@ -25,13 +25,13 @@ const { href, title, description, tags } = Astro.props;
 
 <style>
   .project-container {
-    @apply flex h-fit max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
+    @apply flex h-fit w-fit max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
   }
   .title-container {
     @apply flex flex-row justify-center;
   }
   .project-container h3 {
-    @apply m-1 text-xl font-bold text-skin-base underline underline-offset-2 duration-75 hover:text-skin-accent sm:text-2xl;
+    @apply m-1 text-xl font-bold text-skin-base underline underline-offset-4 duration-75 hover:text-skin-accent sm:text-2xl;
   }
   .project-container p {
     @apply text-base text-skin-base sm:text-xl;
