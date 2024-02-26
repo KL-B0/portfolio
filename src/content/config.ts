@@ -1,6 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
-const projects = defineCollection({
+const projectsCollection = defineCollection({
   type: "content",
   schema: ({ image }) =>
     z.object({
@@ -22,4 +22,6 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { projects };
+export const collections = {
+  projects: projectsCollection,
+};

@@ -9,15 +9,17 @@ export interface Props {
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
 
-  const projectResult = projects.map(project => ({
-    params: { slug: project.slug },
-    props: { project },
-  }));
+  const paths = projects.map(project => {
+    const [lang, ...slug] = project.slug.split("/");
+    return {
+      params: { lang, slug: slug.join("/") || undefined },
+      props: { project },
+    };
+  });
 
-  return [...projectResult];
+  return [...paths];
 }
 
-const { slug } = Astro.params;
 const { project } = Astro.props;
 ---
 

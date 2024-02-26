@@ -1,5 +1,7 @@
 ---
 import { SITE } from "@config";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 import Base from "@layouts/Base.astro";
 import Footer from "@components/Footer.astro";
@@ -12,14 +14,12 @@ import SocialsDesktop from "@components/SocialsDesktop.astro";
 import Skill from "@components/Skill.astro";
 import LeftMilestone from "@components/milestone/LeftMilestone.astro";
 import RightMilestone from "@components/milestone/RightMilestone.astro";
-import LinkButton from "@components/LinkButton.astro";
 import ProjectCard from "@components/ProjectCard.astro";
-import { getCollection } from "astro:content";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import LinkButton from "@components/LinkButton.astro";
 
 const featuredProjects = await getCollection(
   "projects",
-  ({ data, id }) => data.featured && id.startsWith("it/")
+  ({ data, id }) => data.featured && id.startsWith("en/")
 );
 ---
 
@@ -32,7 +32,7 @@ const featuredProjects = await getCollection(
         <p
           class="mb-4 text-center text-xl font-light text-skin-accent sm:mb-5 sm:text-2xl"
         >
-          Salve, sono
+          Greetings, I'm
         </p>
         <h1
           class="mb-5 text-center text-4xl font-semibold text-skin-base sm:mb-8 sm:text-6xl"
@@ -40,38 +40,37 @@ const featuredProjects = await getCollection(
           {SITE.author}
         </h1>
         <p class="text-center text-lg text-skin-base sm:text-2xl">
-          Progetto e sviluppo prodotti software
+          I design and build software products
         </p>
       </div>
     </section>
-    <Section title="Ciao, sono Lorenzo">
+    <Section title="Hi, I'm Lorenzo">
       <div class="max-w-4xl sm:ml-12">
         <p
           class="mb-4 text-center text-lg text-skin-base sm:mb-6 sm:text-left sm:text-xl"
         >
-          Ho iniziato a programmare quando ero ancora alle medie. Ho imparato lo
-          sviluppo web e le reti durante la scuola superiore, padroneggiando <b
-            >Django</b
-          > e <b>Bootstrap</b>.<br />
-          Ad oggi, sono iscritto a un <b>corso universitario</b>, dove sto
-          espandendo la mia conoscenza dell'IA e diventando un data scientist.<br
+          I began my programming journey in middle school, driven by curiosity.
+          Subsequently, I learned about networking and web development in high
+          school, mastering <b>Django </b>and <b>Bootstrap</b>.<br />
+          Moving to this day, I'm enrolled in a <b>university degree</b>,
+          seeking to expand my understanding of AI and become a data scientist.<br
           />
-          Sono curioso, capace del lavoro di squadra e volenteroso di migliorare
-          attraverso le mie esperienze.
+          I'm genuinely curious, capable of teamwork and willful to improve along
+          my experiences.
         </p>
       </div>
     </Section>
-    <Section title="Competenze">
+    <Section title="Skills">
       <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
         <Skill
           id="backend"
-          name="Sviluppo backend"
+          name="Backend developer"
           icon="lucide:database"
           items={["Linux", "Django", "Python", "Java", "SQL"]}
         />
         <Skill
           id="frontend"
-          name="Sviluppo frontend"
+          name="Frontend developer"
           icon="lucide:layout-template"
           items={[
             "HTML",
@@ -90,7 +89,7 @@ const featuredProjects = await getCollection(
         />
         <Skill
           id="gamedev"
-          name="Sviluppo videogiochi"
+          name="Game development"
           icon="lucide:gamepad-2"
           items={["Godot", "C++", "Pygame"]}
         />
@@ -108,34 +107,34 @@ const featuredProjects = await getCollection(
         />
       </div>
     </Section>
-    <Section title="Percorso">
+    <Section title="Journey">
       <div
         class="grid w-full max-w-xs grid-cols-journey gap-4 md:max-w-2xl md:grid-cols-journey-md"
       >
         <LeftMilestone
-          title="Tecnico informatico"
+          title="IT Technitian"
           location="ITT Ettore Molinari"
           date="2017 - 2019"
         />
         <RightMilestone
-          title="Studente d'interscambio"
-          location="Danimarca"
+          title="Exchange student"
+          location="Denmark"
           date="2019 - 2020"
         />
         <LeftMilestone
-          title="Tecnico informatico"
+          title="IT Technitian"
           location="ITT Ettore Molinari"
           date="2020 - 2021"
         />
         <RightMilestone
-          title="Dottore I.A."
-          location="Università di Pavia"
-          date="2021 - adesso"
+          title="AI Doctor"
+          location="University of Pavia"
+          date="2021 - now"
           last
         />
       </div>
     </Section>
-    <Section title="Progetti in evidenza">
+    <Section title="Featured projects">
       <div
         class="mb-6 grid w-full max-w-xs grid-cols-1 gap-4 sm:mb-8 xl:max-w-xl xl:grid-cols-2 2xl:max-w-6xl 2xl:grid-cols-3"
       >
@@ -143,7 +142,7 @@ const featuredProjects = await getCollection(
           featuredProjects.map(({ collection, data, slug }) => (
             <ProjectCard
               href={getRelativeLocaleUrl(
-                "it",
+                "en",
                 `${collection}/${slug.slice(3)}`
               )}
               title={data.title}
@@ -154,21 +153,21 @@ const featuredProjects = await getCollection(
         }
       </div>
       <LinkButton
-        text="Scopri di più"
-        href={getRelativeLocaleUrl("it", "/projects")}
-        ariaLabel="Scopri altri progetti"
+        text="See more"
+        href={getRelativeLocaleUrl("en", "/projects")}
+        ariaLabel="See more projects"
       />
     </Section>
-    <Section title="Contatti">
+    <Section title="Contact">
       <p
         class="mb-8 text-center text-lg text-skin-base sm:text-left sm:text-xl"
       >
-        Sei interessato a costruire qualcosa insieme?
+        Are you interested in building something together?
       </p>
       <LinkButton
-        text="Contattami"
+        text="Get in touch"
         href={`mailto:${SITE.mail}`}
-        ariaLabel="Contattami"
+        ariaLabel="Get in touch"
       />
     </Section>
   </main>
