@@ -8,11 +8,6 @@ export const SITE: Site = {
   title: "Lorenzo Capalbo",
 };
 
-export const LOCALE = {
-  lang: "en",
-  langTag: ["en-EN"],
-} as const;
-
 export const MENU_ITEMS: MenuItems = [
   {
     name: "nav.projects",
