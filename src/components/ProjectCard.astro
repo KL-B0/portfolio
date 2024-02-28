@@ -1,6 +1,4 @@
 ---
-import Tag from "./Tag.astro";
-
 export interface Props {
   href: string;
   title: string;
@@ -19,7 +17,7 @@ const { href, title, description, tags } = Astro.props;
   </div>
   <p>{description}</p>
   <ul>
-    {tags?.map(tag => <Tag name={tag} />)}
+    {tags?.map(tag => <li>{tag}</li>)}
   </ul>
 </div>
 
@@ -38,6 +36,9 @@ const { href, title, description, tags } = Astro.props;
   }
   .project-container ul {
     @apply flex flex-row gap-4 text-sm;
+  }
+  .project-container li {
+    @apply rounded-xl bg-skin-fill px-3 py-1 text-sm text-skin-base sm:text-base;
   }
   .links-container {
     @apply flex flex-row items-center justify-center gap-4;

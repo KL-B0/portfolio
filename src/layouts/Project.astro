@@ -8,6 +8,7 @@ import Base from "./Base.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import ScrollUp from "@components/ScrollUp.astro";
+import SocialButton from "@components/SocialButton.astro";
 
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -49,7 +50,6 @@ const baseProps = {
   description,
   ogImage: ogUrl,
   canonicalURL,
-  language: "en", // TODO localize template
   releaseDate,
 };
 
@@ -69,9 +69,44 @@ const t = useTranslation(Astro.currentLocale);
   </div>
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <div class="mt-4 flex flex-col items-center">
+      <ul>
+        {tags?.map(tag => <li>{tag}</li>)}
+      </ul>
+    </div>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
+    {
+      (websiteLink || gitlabLink || githubLink) && (
+        <div class="mt-8 flex flex-col items-center gap-3">
+          <p>{t("project.more")}</p>
+          <div class="links-container">
+            {websiteLink && (
+              <SocialButton
+                href={websiteLink}
+                ariaLabel={t("project.website")}
+                icon="lucide:link"
+              />
+            )}
+            {gitlabLink && (
+              <SocialButton
+                href={gitlabLink}
+                ariaLabel={t("project.gitlab")}
+                icon="lucide:gitlab"
+              />
+            )}
+            {githubLink && (
+              <SocialButton
+                href={githubLink}
+                ariaLabel={t("project.github")}
+                icon="lucide:github"
+              />
+            )}
+          </div>
+        </div>
+      )
+    }
   </main>
   <Footer />
   <ScrollUp />
@@ -81,7 +116,20 @@ const t = useTranslation(Astro.currentLocale);
   main {
     @apply mx-auto w-full max-w-3xl flex-1 flex-col px-4 pb-12;
   }
+  ul {
+    @apply flex flex-row gap-4 text-sm;
+  }
+  li {
+    @apply rounded-xl bg-skin-card px-3 py-1 text-sm text-skin-base sm:text-base;
+  }
+  p {
+    @apply text-base text-skin-base sm:text-lg;
+  }
+
   .post-title {
     @apply text-center text-3xl font-semibold text-skin-accent;
+  }
+  .links-container {
+    @apply flex flex-row gap-4;
   }
 </style>
