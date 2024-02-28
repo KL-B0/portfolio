@@ -1,12 +1,17 @@
 ---
 import { SITE } from "@config";
+import { useTranslation } from "@utils/i18n";
 import { slugifyStr } from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
+
 import Base from "./Base.astro";
+
 import Header from "@components/Header.astro";
-import { Icon } from "astro-icon/components";
 import Footer from "@components/Footer.astro";
+import ScrollUp from "@components/ScrollUp.astro";
+
+import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   project: CollectionEntry<"projects">;
@@ -47,6 +52,8 @@ const baseProps = {
   language: "en", // TODO localize template
   releaseDate,
 };
+
+const t = useTranslation(Astro.currentLocale);
 ---
 
 <Base {...baseProps}>
@@ -57,7 +64,7 @@ const baseProps = {
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
       <Icon name="lucide:chevron-left" />
-      <span>Go back</span>
+      <span>{t("project.back")}</span>
     </button>
   </div>
   <main id="main-content">
@@ -67,6 +74,7 @@ const baseProps = {
     </article>
   </main>
   <Footer />
+  <ScrollUp />
 </Base>
 
 <style>
@@ -74,6 +82,6 @@ const baseProps = {
     @apply mx-auto w-full max-w-3xl flex-1 flex-col px-4 pb-12;
   }
   .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+    @apply text-center text-3xl font-semibold text-skin-accent;
   }
 </style>
