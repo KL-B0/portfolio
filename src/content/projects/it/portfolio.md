@@ -7,9 +7,17 @@ tags:
   - react
 featured: true
 releaseDate: 2022-10-07
-gitlabLink: https://gitlab.com/KLB0/portfolio
+websiteLink: https://lorenzocapalbo.com/
+gitlabLink: https://gitlab.com/KL-B0/portfolio
+githubLink: https://github.com/KL-B0/portfolio
 ---
 
-## Titolo
+## Obiettivo
 
-Contenuto di prova in Italiano
+## Risorse
+
+## Tempistica
+
+## Risultato
+
+## Conclusioni
