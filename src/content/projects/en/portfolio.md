@@ -2,9 +2,9 @@
 title: Portfolio
 description: A pleasant presentation of my work, built to be responsive and quick to load.
 tags:
-  - astro
-  - tailwindcss
-  - react
+  - Astro
+  - TailwindCSS
+  - TypeScript
 featured: true
 releaseDate: 2022-10-07
 websiteLink: https://lorenzocapalbo.com/
@@ -20,8 +20,8 @@ It features:
 - Responsive layout
 - Accessibility
 - SEO
-- Light and dark modes
-- Localization (English + Italian)
+- Light and dark themes
+- Internationalization (English + Italian)
 
 ## Goal
 
@@ -36,7 +36,8 @@ The intent is to pick technologies which help me reach the goal in a reasonable 
 
 I opted for a Static Site Generator (SSG) since the website does not require frequent updates.
 I originally picked Hugo as the generator but later switched to Astro for ease of development.
-The switch came at a cost, but the tooling and final product quality made up for it. I am also more familiar with the JavaScript ecosystem than the Go one, which affected my decision. This meant I could integrate a front-end framework to add reactivity to the website.
+The switch came at a cost, but the tooling and final product quality made up for it.
+This meant I could integrate a front-end framework to add reactivity to the website.
 
 I picked TailwindCSS to build and maintain the styles.
 It is officially supported by the Astro framework, which simplifies its adoption.
@@ -65,3 +66,4 @@ If you are curious about how it works under the hood, you can find the links to 
 
 A personal website is an outstanding opportunity to showcase your own skills.
 It will make your work visible from a web search of your name, building relationships with new potential collaborators.
+I would call it a improved business card!
