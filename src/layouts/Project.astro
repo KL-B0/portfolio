@@ -1,7 +1,6 @@
 ---
 import { SITE } from "@config";
 import { useTranslation } from "@utils/i18n";
-import { slugifyStr } from "@utils/slugify";
 
 import Base from "./Base.astro";
 
@@ -68,11 +67,15 @@ const t = useTranslation(Astro.currentLocale);
     </button>
   </div>
   <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <div class="mt-4 flex flex-col items-center">
+    <div class="heading">
+      <h1 class="post-title">{title}</h1>
       <ul>
         {tags?.map(tag => <li>{tag}</li>)}
       </ul>
+      <div class="info-container">
+        <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
+        <p>{releaseDate.getFullYear()}</p>
+      </div>
     </div>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
@@ -126,10 +129,19 @@ const t = useTranslation(Astro.currentLocale);
     @apply text-base text-skin-base sm:text-lg;
   }
 
+  .heading {
+    @apply flex flex-col items-center gap-4;
+  }
   .post-title {
     @apply text-center text-3xl font-semibold text-skin-accent;
   }
   .links-container {
     @apply flex flex-row gap-4;
+  }
+  .info-container {
+    @apply flex flex-row items-center gap-2;
+  }
+  .info-container p {
+    @apply text-skin-base sm:text-lg;
   }
 </style>
