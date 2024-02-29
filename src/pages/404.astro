@@ -25,7 +25,7 @@ import LinkButton from "@components/LinkButton.astro";
       {
         Astro.currentLocale == "en" ? (
           <>
-            <h1 aria-label="404 Not Found">Looks like you're lost</h1>
+            <h1 aria-label="404 Not Found">Something has gone unexpectedly</h1>
             <p>The page you're looking for doesn't exist</p>
             <LinkButton
               text="Go back home"
@@ -35,7 +35,7 @@ import LinkButton from "@components/LinkButton.astro";
           </>
         ) : (
           <>
-            <h1 aria-label="404 Non Trovato">Sembra che tu ti sia perso</h1>
+            <h1 aria-label="404 Non Trovato">Qualcosa è andato storto</h1>
             <p>La pagina che stai cercando non esiste</p>
             <LinkButton
               text="Torna alla home"
@@ -53,7 +53,7 @@ import LinkButton from "@components/LinkButton.astro";
 
 <style>
   #main-content {
-    @apply mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center;
+    @apply mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center sm:max-w-6xl;
   }
   .not-found-wrapper {
     @apply mb-14 flex flex-col items-center justify-center;
