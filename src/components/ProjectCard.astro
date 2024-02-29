@@ -20,9 +20,11 @@ const { href, title, description, tags, date } = Astro.props;
   </div>
   <p>{description}</p>
   <div class="flex flex-col items-center gap-3">
-    <ul>
-      {tags?.map(tag => <li>{tag}</li>)}
-    </ul>
+    <div class="tags-container">
+      <ul>
+        {tags?.map(tag => <li>{tag}</li>)}
+      </ul>
+    </div>
     <div class="info-container">
       <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
       <p>{date.getFullYear()}</p>
@@ -32,7 +34,7 @@ const { href, title, description, tags, date } = Astro.props;
 
 <style>
   .project-container {
-    @apply flex h-fit w-fit max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
+    @apply flex h-fit max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
   }
   .title-container {
     @apply flex flex-row justify-center;
@@ -43,11 +45,14 @@ const { href, title, description, tags, date } = Astro.props;
   .project-container p {
     @apply text-base text-skin-base sm:text-lg;
   }
-  .project-container ul {
-    @apply flex flex-row gap-4 text-sm;
+  .tags-container {
+    @apply flex w-full items-center justify-center overflow-x-scroll;
   }
-  .project-container li {
-    @apply rounded-xl bg-skin-fill px-3 py-1 text-sm text-skin-base sm:text-base;
+  .tags-container ul {
+    @apply flex flex-row items-stretch gap-4 overflow-auto text-sm;
+  }
+  .tags-container li {
+    @apply h-fit w-fit rounded-xl bg-skin-fill px-3 py-1 text-sm text-skin-base sm:text-base;
   }
   .links-container {
     @apply flex flex-row items-center justify-center gap-4;
