@@ -6,7 +6,6 @@ import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { ViewTransitions } from "astro:transitions";
 
 const googleAnalytics = import.meta.env.PUBLIC_GOOGLE_ANALYTICS;
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
@@ -155,16 +154,6 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
         <meta
           property="article:modified_time"
           content={modificationDate.toISOString()}
-        />
-      )
-    }
-
-    <!-- Google Tag verification -->
-    {
-      googleSiteVerification && (
-        <meta
-          name="google-site-verification"
-          content={googleSiteVerification}
         />
       )
     }
