@@ -25,6 +25,7 @@ const projects = await getCollection("projects", ({ id }) =>
             title={data.title}
             description={data.description}
             tags={data.tags}
+            date={data.releaseDate}
           />
         ))
       }
