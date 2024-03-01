@@ -65,5 +65,5 @@ If you are curious about how it works under the hood, you can find the links to 
 ## Conclusion
 
 A personal website is an outstanding opportunity to showcase your own skills.
-It will make your work visible from a web search of your name, building relationships with new potential collaborators.
-I would call it a improved business card!
+It will make you visible from a web search of your name, building relationships with new potential collaborators.
+I would call it an improved business card!
