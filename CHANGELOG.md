@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-03-01
+
+### Added
+
+- Light/dark themes
+- Projects page
+- Gestore soci project page
+- Portfolio project page
+- Embothy project page
+
+### Changed
+
+- Moved framework from Hugo to Astro
+
 ## [1.0.3] - 2024-01-03
 
 ### Added
