@@ -83,7 +83,7 @@ const { activeNav } = Astro.props;
           <li>
             <a
               href={Astro.currentLocale == "en"
-                ? getRelativeLocaleUrl("it", Astro.url.pathname.slice(3))
+                ? getRelativeLocaleUrl("it", Astro.url.pathname)
                 : getRelativeLocaleUrl("en", Astro.url.pathname.slice(3))}
               aria-label="Switch language"
               class="focus-outline p-1"

@@ -90,7 +90,7 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
         <link
           rel="alternate"
           hreflang="it"
-          href={getAbsoluteLocaleUrl("it", Astro.url.pathname.slice(3))}
+          href={getAbsoluteLocaleUrl("it", Astro.url.pathname)}
         />
       ) : (
         <link

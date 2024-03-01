@@ -7,7 +7,9 @@ export interface Props {
 }
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects");
+  const projects = await getCollection("projects", ({ id }) =>
+    id.startsWith("en/")
+  );
 
   const paths = projects.map(project => {
     const [lang, ...slug] = project.slug.split("/");
