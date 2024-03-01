@@ -22,6 +22,7 @@ build:
     script:
         - npm install
         - npm run build
+        - echo '/* /.netlify/functions/entry 404' > dist/_redirects
 
 deploy:
     stage: deploy
