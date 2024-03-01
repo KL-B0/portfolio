@@ -1,6 +1,6 @@
 ---
 title: Gestore Soci
-description: A desktop application for Associazione NoiSea which handles associate data and services.
+description: A desktop application which handles associate data and services, built for Associazione NoiSea.
 tags:
   - Java
   - Swing

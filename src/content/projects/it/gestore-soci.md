@@ -1,6 +1,6 @@
 ---
 title: Gestore Soci
-description: Un applicativo desktop per l'Associazione NoiSea che gestisce dati e servizi per i soci.
+description: Un applicativo desktop per la gestione di dati e servizi per i soci dell'Associazione NoiSea.
 tags:
   - Java
   - Swing
