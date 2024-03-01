@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update routing strategy
+- Update Embothy italian translations
 
 ## [2.0.1] - 2024-03-01
 

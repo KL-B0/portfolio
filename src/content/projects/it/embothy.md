@@ -1,6 +1,6 @@
 ---
 title: Embothy
-description: Un gioco per telefono progettato per insegnare l'empatia ai propri utenti.
+description: Un gioco per smartphone progettato per insegnare l'empatia ai propri utenti.
 tags:
   - Godot
   - Android
@@ -10,12 +10,12 @@ releaseDate: 2020-12-04
 websiteLink: https://campbus.corriere.it/2020/
 ---
 
-È un videogioco per telefono costruito per insegnare l'empatia ai suoi utenti.
+È un videogioco per smartphone costruito per insegnare l'empatia ai suoi utenti.
 Ho sviluppato il progetto assieme a quattro compagni scolastici per l'edizione 2020 di [CampBus](https://campbus.corriere.it/), che presentava il tema "Empatia".
 
 ## Obiettivo
 
-L'obiettivo è di assemblare un applicativo per telefono che tratti di tematiche legate all'empatia.
+L'obiettivo è di assemblare un applicativo mobile che tratti di tematiche legate all'empatia.
 Deve contemporaneamente offrire un'esperienza gradevole e insegnare all'utente qualcosa di utile.
 
 ## Risorse
@@ -38,7 +38,7 @@ Abbiamo votato per l'idea del videogioco, che consisteva in una collezione di mi
 Abbiamo impiegato il tempo restante progettando un singolo mini-gioco da presentare alla giuria.
 
 Il mini-gioco consiste nel giocatore seduto a un tavolo insieme ad altri cinque NPCs.
-L'obiettivo è di prestare attenzione a questi personaggi mentre parlano inclinando il telefono.
+L'obiettivo è di prestare attenzione a questi personaggi mentre parlano inclinando lo smartphone.
 Loro diventeranno man mano più felici, portando il giocatore alla vittoria.
 
 ### Fase di sviluppo
