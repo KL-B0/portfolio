@@ -6,9 +6,9 @@ import type { APIRoute } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects").then(project =>
-    project.filter(({ data }) => !data.ogImage)
-  );
+  const projects = await getCollection("projects", ({ id }) =>
+    id.startsWith("en/")
+  ).then(project => project.filter(({ data }) => !data.ogImage));
 
   const paths = projects.map(project => {
     const [lang, ...slug] = project.slug.split("/");
