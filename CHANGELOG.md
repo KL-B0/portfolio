@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Fix uncased tags for Portfolio italian article
+- Fix mismatch of acronyms on homepage
+
 ## [2.1.0] - 2024-03-01
 
 ### Changed

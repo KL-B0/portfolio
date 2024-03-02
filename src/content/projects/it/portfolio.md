@@ -2,9 +2,9 @@
 title: Portfolio
 description: Una curata presentazione del mio lavoro, costruita per essere resposiva e rapida da caricare
 tags:
-  - astro
-  - tailwindcss
-  - react
+  - Astro
+  - TailwindCSS
+  - React
 featured: true
 releaseDate: 2022-10-07
 websiteLink: https://lorenzocapalbo.com/
