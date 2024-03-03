@@ -1,8 +1,21 @@
-# Portfolio
+<h1 align="center">
+  <br>
+  <img src="https://gitlab.com/KL-B0/portfolio/-/raw/trunk/public/favicon.svg?ref_type=heads" alt="Logo" width=200>
+  <br>
+  Portfolio
+  <br>
+</h1>
 
-My personal website, featuring projects that I've worked at.
+<h4 align="center">A pleasant presentation of my crafts and projects, built to be responsive and quick to load.</h4>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f5bd4038-68b5-4ffc-ba5e-d331dc060ee4/deploy-status)](https://app.netlify.com/sites/lorenzo-capalbo/deploys)
+<p align="center">
+  <a href="https://gitlab.com/KL-B0/portfolio/-/commits/trunk">
+    <img alt="Trunk pipeline status" src="https://gitlab.com/KL-B0/portfolio/badges/trunk/pipeline.svg">
+  </a>
+  <a href="https://gitlab.com/KL-B0/portfolio/-/releases">
+    <img alt="Latest release version" src="https://gitlab.com/KL-B0/portfolio/-/badges/release.svg">
+  </a>
+</p>
 
 ## Requirements
 
