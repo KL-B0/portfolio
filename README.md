@@ -1,21 +1,9 @@
-<h1 align="center">
-  <br>
-  <img src="https://gitlab.com/KL-B0/portfolio/-/raw/trunk/public/favicon.svg?ref_type=heads" alt="Logo" width=200>
-  <br>
-  Portfolio
-  <br>
-</h1>
+# Portfolio
 
-<h4 align="center">A pleasant presentation of my crafts and projects, built to be responsive and quick to load.</h4>
+A pleasant presentation of my crafts and projects, built to be responsive and quick to load.
 
-<p align="center">
-  <a href="https://gitlab.com/KL-B0/portfolio/-/commits/trunk">
-    <img alt="Trunk pipeline status" src="https://gitlab.com/KL-B0/portfolio/badges/trunk/pipeline.svg">
-  </a>
-  <a href="https://gitlab.com/KL-B0/portfolio/-/releases">
-    <img alt="Latest release version" src="https://gitlab.com/KL-B0/portfolio/-/badges/release.svg">
-  </a>
-</p>
+[![Trunk pipeline status](https://gitlab.com/KL-B0/portfolio/badges/trunk/pipeline.svg)](https://gitlab.com/KL-B0/portfolio/-/commits/trunk)
+[![Latest release version](https://gitlab.com/KL-B0/portfolio/-/badges/release.svg)](https://gitlab.com/KL-B0/portfolio/-/releases)
 
 ## Requirements
 
