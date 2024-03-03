@@ -1,18 +1,18 @@
 ---
 title: Portfolio
-description: Una curata presentazione del mio lavoro, costruita per essere resposiva e rapida da caricare
+description: Una curata presentazione della mia esperienza e del mio lavoro, costruita per essere resposiva e rapida da caricare
 tags:
   - Astro
   - TailwindCSS
   - React
 featured: true
 releaseDate: 2022-10-07
-websiteLink: https://lorenzocapalbo.com/
+websiteLink: https://lorenzocapalbo.com/it
 gitlabLink: https://gitlab.com/KL-B0/portfolio
 githubLink: https://github.com/KL-B0/portfolio
 ---
 
-È un sito web statico che presenta il mio lavoro, costruito per essere performante e responsivo.
+È un sito web statico che presenta la mia esperienza e il mio lavoro, costruito per essere performante e responsivo.
 
 Le sue caratteristiche sono:
 
@@ -25,7 +25,7 @@ Le sue caratteristiche sono:
 
 ## Obiettivo
 
-L'obiettivo è costruire un sito che ricopra tutti i progetti a cui ho lavorato.
+L'obiettivo è costruire un sito che presenti le mie competenze e i progetti a cui ho lavorato.
 Deve essere accessibile su qualunque dispositivo da una platea nazionale e internazionale.
 
 Il progetto deve essere semplice da mantenere; aggiungere nuovi contenuti dovrebbe richiedere un minimo sforzo.

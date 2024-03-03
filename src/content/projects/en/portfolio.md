@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-description: A pleasant presentation of my work, built to be responsive and quick to load.
+description: A pleasant presentation of my crafts and projects, built to be responsive and quick to load.
 tags:
   - Astro
   - TailwindCSS
@@ -12,7 +12,7 @@ gitlabLink: https://gitlab.com/KL-B0/portfolio
 githubLink: https://github.com/KL-B0/portfolio
 ---
 
-It's a static website which features my work, built to be performant and responsive.
+It’s a static website which features my projects and skills, built to be performant and responsive.
 
 It features:
 
@@ -25,7 +25,7 @@ It features:
 
 ## Goal
 
-The aim is to build a website which features all the projects I’ve worked on.
+The aim is to build a website which features my crafts and the projects I have worked on.
 It should be accessible from any device by a national and international audience.
 
 The project must also be easy to maintain; adding new content should require little effort.
