@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix uncased tags for Portfolio italian article
 - Fix mismatch of acronyms on homepage
+- Update Portfolio articles
+- Fix localized 404 page
 
 ## [2.1.0] - 2024-03-01
 

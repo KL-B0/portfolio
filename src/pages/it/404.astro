@@ -9,21 +9,20 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import LinkButton from "@components/LinkButton.astro";
 ---
 
-<Base title={`404 Not Found | ${SITE.title}`}>
+<Base title={`404 Non Trovato | ${SITE.title}`}>
   <Header />
-
   <main id="main-content">
     <div class="not-found-wrapper">
       <Icon
         class="mb-4 h-16 w-16 text-skin-accent sm:mb-6 sm:h-20 sm:w-20"
         name="lucide:file-question"
       />
-      <h1 aria-label="404 Not Found">Something has gone unexpectedly</h1>
-      <p>The page you're looking for doesn't exist</p>
+      <h1 aria-label="404 Non Trovato">Qualcosa è andato storto</h1>
+      <p>La pagina che stai cercando non esiste</p>
       <LinkButton
-        text="Go back home"
-        href={getRelativeLocaleUrl("en", "")}
-        ariaLabel="Go back to the homepage"
+        text="Torna alla home"
+        href={getRelativeLocaleUrl("it", "")}
+        ariaLabel="Torna alla homepage"
       />
     </div>
   </main>
