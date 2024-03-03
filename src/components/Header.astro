@@ -62,7 +62,7 @@ const { activeNav } = Astro.props;
                   <a
                     href={getRelativeLocaleUrl("en", item.url)}
                     class={activeNav === item.name ? "active" : ""}
-                    aria-label={`Navigate to the ${item.name} section`}
+                    aria-label={`Navigate to the ${t(item.name)} section`}
                   >
                     {t(item.name)}
                   </a>
@@ -70,7 +70,7 @@ const { activeNav } = Astro.props;
                   <a
                     href={getRelativeLocaleUrl("it", item.url)}
                     class={activeNav === item.name ? "active" : ""}
-                    aria-label={`Naviga alla sezione ${item.name}`}
+                    aria-label={`Naviga alla sezione ${t(item.name)}`}
                   >
                     {t(item.name)}
                   </a>

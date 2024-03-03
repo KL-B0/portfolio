@@ -1,33 +1,14 @@
 ---
-interface StringTitleProp {
+export interface Props {
   pageTitle: string;
   pageDescription?: string;
 }
-
-interface ArrayTitleProp {
-  pageTitle: [string, string];
-  titleTransition: string;
-  pageDescription?: string;
-}
-
-export type Props = StringTitleProp | ArrayTitleProp;
 
 const { props } = Astro;
 ---
 
 <main id="main-content">
-  {
-    "titleTransition" in props ? (
-      <h1>
-        {props.pageTitle[0]}
-        <span transition:name={props.titleTransition}>
-          {props.pageTitle[1]}
-        </span>
-      </h1>
-    ) : (
-      <h1>{props.pageTitle}</h1>
-    )
-  }
+  <h2>{props.pageTitle}</h2>
   <p>{props.pageDescription}</p>
   <slot />
 </main>
@@ -36,7 +17,7 @@ const { props } = Astro;
   #main-content {
     @apply mx-auto flex w-full max-w-6xl flex-1 flex-col items-center px-4 pb-4;
   }
-  #main-content h1 {
+  #main-content h2 {
     @apply text-center text-2xl font-semibold sm:text-3xl;
   }
   #main-content p {
