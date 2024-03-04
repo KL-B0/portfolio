@@ -12,25 +12,25 @@ export interface Props {
 const { href, title, description, tags, date } = Astro.props;
 ---
 
-<div class="project-container">
-  <div class="title-container">
-    <a href={href}>
+<a href={href}>
+  <div class="project-container">
+    <div class="title-container">
       <h3>{title}</h3>
-    </a>
-  </div>
-  <p>{description}</p>
-  <div class="flex flex-col items-center gap-3">
-    <div class="tags-container">
-      <ul>
-        {tags?.map(tag => <li>{tag}</li>)}
-      </ul>
     </div>
-    <div class="info-container">
-      <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
-      <p>{date.getFullYear()}</p>
+    <p>{description}</p>
+    <div class="flex flex-col items-center gap-3">
+      <div class="tags-container">
+        <ul>
+          {tags?.map(tag => <li>{tag}</li>)}
+        </ul>
+      </div>
+      <div class="info-container">
+        <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
+        <p>{date.getFullYear()}</p>
+      </div>
     </div>
   </div>
-</div>
+</a>
 
 <style>
   .project-container {

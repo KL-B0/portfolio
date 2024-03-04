@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Improve accessibility and SEO
+- Make whole project card clickable
 
 ## [2.1.1] - 2024-03-03
 
