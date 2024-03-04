@@ -2,7 +2,6 @@ image: node:18-alpine
 
 stages:
   - build
-  - preview
   - deploy
 
 build:
@@ -24,9 +23,22 @@ build:
         - npm run build
         - echo '/* /.netlify/functions/entry 404' > dist/_redirects
 
+check:
+    stage: build
+    cache:
+        key: 
+            files:
+                - package-lock.json
+        paths:
+          - node_modules/ 
+    script:
+        - npm install
+        - npx eslint .
+        - npx prettier . -c
+
 deploy:
     stage: deploy
-    needs: ["build"]
+    needs: ["build", "check"]
     cache:
         key: 
             files:
