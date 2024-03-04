@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.2] - 2024-03-04
+
 ### Changed
 
 - Improve accessibility and SEO
@@ -93,6 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SEO optimization
 
 [unreleased]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.3...HEAD
+[2.1.2]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.1.1...v2.1.2
 [2.1.1]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.1.0...v2.1.1
 [2.1.0]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.0.1...v2.1.0
 [2.0.1]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.0.0...v2.0.1
