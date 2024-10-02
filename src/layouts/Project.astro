@@ -92,18 +92,18 @@ const t = useTranslation(Astro.currentLocale);
                 icon="lucide:link"
               />
             )}
-            {gitlabLink && (
-              <SocialButton
-                href={gitlabLink}
-                ariaLabel={t("project.gitlab")}
-                icon="lucide:gitlab"
-              />
-            )}
             {githubLink && (
               <SocialButton
                 href={githubLink}
                 ariaLabel={t("project.github")}
                 icon="lucide:github"
+              />
+            )}
+            {gitlabLink && (
+              <SocialButton
+                href={gitlabLink}
+                ariaLabel={t("project.gitlab")}
+                icon="lucide:gitlab"
               />
             )}
           </div>

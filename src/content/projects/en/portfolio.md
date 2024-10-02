@@ -8,8 +8,8 @@ tags:
 featured: true
 releaseDate: 2022-10-07
 websiteLink: https://lorenzocapalbo.com/
-gitlabLink: https://gitlab.com/KL-B0/portfolio
 githubLink: https://github.com/KL-B0/portfolio
+gitlabLink: https://gitlab.com/KL-B0/portfolio
 ---
 
 It’s a static website which features my projects and skills, built to be performant and responsive.
