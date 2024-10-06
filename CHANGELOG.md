@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.3] - 2024-10-06
+
+### Changed
+
+- Update journey section and contacts
+
 ## [2.1.2] - 2024-03-04
 
 ### Changed
@@ -94,13 +100,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 404 page
 - SEO optimization
 
-[unreleased]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.3...HEAD
-[2.1.2]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.1.1...v2.1.2
-[2.1.1]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.1.0...v2.1.1
-[2.1.0]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.0.1...v2.1.0
-[2.0.1]: https://gitlab.com/KL-B0/portfolio/-/compare/v2.0.0...v2.0.1
-[2.0.0]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.3...v2.0.0
-[1.0.3]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.2...v1.0.3
-[1.0.2]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.1...v1.0.2
-[1.0.1]: https://gitlab.com/KL-B0/portfolio/-/compare/v1.0.0...v1.0.1
-[1.0.0]: https://gitlab.com/KL-B0/portfolio/-/tree/v1.0.0
+[unreleased]: https://github.com/KL-B0/portfolio/compare/v2.1.3...HEAD
+[2.1.3]: https://github.com/KL-B0/portfolio/compare/v2.1.2...v2.1.3
+[2.1.2]: https://github.com/KL-B0/portfolio/compare/v2.1.1...v2.1.2
+[2.1.1]: https://github.com/KL-B0/portfolio/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/KL-B0/portfolio/compare/v2.0.1...v2.1.0
+[2.0.1]: https://github.com/KL-B0/portfolio/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/KL-B0/portfolio/compare/v1.0.3...v2.0.0
+[1.0.3]: https://github.com/KL-B0/portfolio/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/KL-B0/portfolio/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/KL-B0/portfolio/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/KL-B0/portfolio/releases/tag/v1.0.0

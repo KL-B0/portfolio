@@ -3,7 +3,7 @@ import type { MenuItems, Site, SocialObjects } from "types";
 export const SITE: Site = {
   website: "https://lorenzocapalbo.com/",
   author: "Lorenzo Capalbo",
-  mail: "capalbo.lorenzo@tutanota.com",
+  mail: "contact@lorenzocapalbo.com",
   description: "I design and build software products",
   title: "Lorenzo Capalbo",
 };
@@ -17,14 +17,14 @@ export const MENU_ITEMS: MenuItems = [
 
 export const SOCIALS: SocialObjects = [
   {
-    icon: "lucide:gitlab",
-    href: "https://gitlab.com/KL-B0",
-    linkTitle: `${SITE.author} on GitLab`,
-  },
-  {
     icon: "lucide:github",
     href: "https://github.com/KL-B0",
     linkTitle: `${SITE.author} on GitHub`,
+  },
+  {
+    icon: "lucide:gitlab",
+    href: "https://gitlab.com/KL-B0",
+    linkTitle: `${SITE.author} on GitLab`,
   },
   {
     icon: "lucide:linkedin",
@@ -33,7 +33,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     icon: "lucide:mail",
-    href: "mailto:capalbo.lorenzo@tutanota.com",
+    href: "mailto:contact@lorenzocapalbo.com",
     linkTitle: `Send an email to ${SITE.author}`,
   },
 ];
