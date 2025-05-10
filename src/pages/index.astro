@@ -43,7 +43,7 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
           {SITE.author}
         </h1>
         <p class="text-center text-lg text-skin-base sm:text-2xl">
-          I design and build software products
+          I design and build digital products and services
         </p>
       </div>
     </section>
@@ -66,47 +66,40 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
     <Section title="Skills">
       <div class="grid gap-4 sm:mx-20 lg:grid-cols-2 2xl:grid-cols-3">
         <Skill
-          id="backend"
-          name="Backend developer"
-          icon="lucide:database"
-          items={["Linux", "Django", "Python", "Java", "SQL"]}
+          id="artificial_intelligence"
+          name="Artificial Intelligence"
+          icon="lucide:brain-circuit"
+          items={["Python", "PyTorch", "Transformers", "RDF & OWL", "SKLearn"]}
         />
         <Skill
-          id="frontend"
-          name="Frontend developer"
-          icon="lucide:layout-template"
-          items={[
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
-            "TailwindCSS",
-            "Bootstrap",
-          ]}
+          id="management"
+          name="Management"
+          icon="lucide:users"
+          items={["Project Management", "Agile & Scrum", "Innovation", "Finance", "Strategy"]}
         />
         <Skill
           id="dev_ops"
           name="DevOps"
           icon="lucide:container"
-          items={["CI/CD", "Docker", "Git", "GitHub", "GitLab"]}
+          items={["GitHub", "GitLab", "Git", "Docker"]}
+        />
+        <Skill
+          id="backend"
+          name="Back-end"
+          icon="lucide:database"
+          items={["Django", "Python", "Java", "SQL", "Linux"]}
+        />
+        <Skill
+          id="frontend"
+          name="Front-end"
+          icon="lucide:layout-template"
+          items={["HTML", "CSS", "JavaScript", "TailwindCSS", "TypeScript"]}
         />
         <Skill
           id="gamedev"
-          name="Game development"
+          name="Game Dev"
           icon="lucide:gamepad-2"
-          items={["Godot", "C++", "Pygame"]}
-        />
-        <Skill
-          id="machine_learning"
-          name="Machine Learning"
-          icon="lucide:brain-circuit"
-          items={["Pandas", "NumPy", "SKLearn", "RDF", "SPARQL", "Python"]}
-        />
-        <Skill
-          id="scrum"
-          name="Scrum"
-          icon="lucide:users"
-          items={["Product owner", "Scrum master"]}
+          items={["Pygame", "Godot", "C++"]}
         />
       </div>
     </Section>
@@ -120,7 +113,7 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
           date="2017 - 2019"
         />
         <RightMilestone
-          title="Exchange student"
+          title="Exchange Student"
           location="Denmark"
           date="2019 - 2020"
         />
