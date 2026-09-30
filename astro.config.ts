@@ -1,21 +1,14 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
-import react from "@astrojs/react";
-import { SITE } from "./src/config";
-import tailwind from "@astrojs/tailwind";
 
+import tailwindcss from "@tailwindcss/vite"
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "it"],
-  },
+  site: "https://lorenzocapalbo.com", // TODO Move to variable
   integrations: [
     icon(),
-    react(),
-    tailwind({ applyBaseStyles: false }),
     sitemap({
       i18n: {
         defaultLocale: "en",
@@ -26,11 +19,12 @@ export default defineConfig({
       },
     }),
   ],
-  scopedStyleStrategy: "where",
-  site: SITE.website,
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "it"],
+  },
+  // scopedStyleStrategy: "where",
   vite: {
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
+    plugins: [tailwindcss()]
   },
 });

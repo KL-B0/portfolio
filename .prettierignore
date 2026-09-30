@@ -9,5 +9,9 @@
 !astro.config.ts
 !package.json
 !.prettierrc
-!.eslintrc.js
+!eslint.config.js
 !README.md
+!.vscode
+
+# Ignore MDX files
+*.mdx
