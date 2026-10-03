@@ -1,0 +1,51 @@
+@plugin "@tailwindcss/typography";
+
+/* TODO Fix later */
+
+@layer base {
+  /* == Prose sections == */
+  .prose {
+    @apply prose-headings:!mb-3 prose-headings:! 
+    prose-h3:italic prose-p:! prose-a:!
+    prose-a:!decoration-dashed prose-a:underline-offset-8
+    prose-blockquote:!border-l-skin-accent prose-blockquote:border-opacity-50
+    prose-blockquote:opacity-80 prose-figcaption:!
+    prose-figcaption:opacity-70 prose-strong:!
+    prose-code:rounded
+    
+    prose-code:bg-opacity-75 
+    prose-code:p-1 prose-code:before:!content-none 
+    prose-code:after:!content-none prose-ol:!
+    prose-ul:overflow-x-clip 
+    prose-ul:! prose-table:
+    prose-th:border prose-th:border-skin-line
+    prose-td:border prose-td:border-skin-line 
+    prose-img:!my-2 prose-img:mx-auto 
+    prose-img:border-2 prose-img:border-skin-line 
+    prose-hr:!border-skin-line prose-p:sm:text-lg prose-li:sm:text-lg;
+  }
+  .prose a {
+    @apply break-words
+  }
+  .prose thead th:first-child,
+  tbody td:first-child,
+  tfoot td:first-child {
+    padding-left: 0.5714286em;
+  }
+  .prose details {
+    @apply inline-block cursor-pointer select-none ;
+  }
+  .prose summary {
+    @apply focus-outline;
+  }
+
+  /* == Scrollbar == */
+  html {
+    overflow-y: scroll;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+}

@@ -1,12 +1,12 @@
 ---
-import { SITE } from "@config";
-import Base from "@layouts/Base.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
+import { SITE } from "@/config";
+import Base from "@/layouts/Base.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 import { Icon } from "astro-icon/components";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
-import LinkButton from "@components/LinkButton.astro";
+import LinkButton from "@/components/LinkButton.astro";
 ---
 
 <Base title={`404 Not Found | ${SITE.title}`}>
@@ -15,7 +15,7 @@ import LinkButton from "@components/LinkButton.astro";
   <main id="main-content">
     <div class="not-found-wrapper">
       <Icon
-        class="mb-4 h-16 w-16 text-skin-accent sm:mb-6 sm:h-20 sm:w-20"
+        class="mb-4 h-16 w-16  sm:mb-6 sm:h-20 sm:w-20"
         name="lucide:file-question"
       />
       <h1 aria-label="404 Not Found">Something has gone unexpectedly</h1>
@@ -32,6 +32,8 @@ import LinkButton from "@components/LinkButton.astro";
 <Footer />
 
 <style>
+  @reference "tailwindcss";
+
   #main-content {
     @apply mx-auto flex max-w-3xl flex-1 flex-col items-center justify-center sm:max-w-6xl;
   }
@@ -39,12 +41,12 @@ import LinkButton from "@components/LinkButton.astro";
     @apply mb-14 flex flex-col items-center justify-center;
   }
   .not-found-wrapper h1 {
-    @apply mb-4 text-center text-3xl font-semibold text-skin-base sm:mb-6 sm:text-5xl;
+    @apply mb-4 text-center text-3xl font-semibold  sm:mb-6 sm:text-5xl;
   }
   .not-found-wrapper a {
-    @apply mt-5 flex flex-col gap-3 rounded-xl bg-skin-accent px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110 sm:mt-8;
+    @apply mt-5 flex flex-col gap-3 rounded-xl  px-4 py-2 shadow-xl duration-300 ease-in-out hover:scale-110 sm:mt-8;
   }
   .not-found-wrapper p {
-    @apply mb-4 text-center text-lg text-skin-base sm:mb-6 sm:text-left sm:text-xl;
+    @apply mb-4 text-center text-lg  sm:mb-6 sm:text-left sm:text-xl;
   }
 </style>

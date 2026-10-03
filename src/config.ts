@@ -1,5 +1,8 @@
 import type { MenuItems, Site, SocialObjects } from "types";
 
+const config = {};
+export default config;
+
 export const SITE: Site = {
   website: "https://lorenzocapalbo.com/",
   author: "Lorenzo Capalbo",

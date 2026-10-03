@@ -1,23 +1,23 @@
 ---
-import { SITE } from "@config";
+import { SITE } from "@/config";
 
-import Base from "@layouts/Base.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
-import ScrollUp from "@components/ScrollUp.astro";
+import Base from "@/layouts/Base.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import ScrollUp from "@/components/ScrollUp.astro";
 
-import Section from "@components/Section.astro";
-import SocialsDesktop from "@components/SocialsDesktop.astro";
+import Section from "@/components/Section.astro";
+import SocialsDesktop from "@/components/SocialsDesktop.astro";
 
-import Skill from "@components/Skill.astro";
-import LeftMilestone from "@components/milestone/LeftMilestone.astro";
-import RightMilestone from "@components/milestone/RightMilestone.astro";
-import LinkButton from "@components/LinkButton.astro";
-import ProjectCard from "@components/ProjectCard.astro";
+import Skill from "@/components/Skill.astro";
+import LeftMilestone from "@/components/milestone/LeftMilestone.astro";
+import RightMilestone from "@/components/milestone/RightMilestone.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-import getSortedProjects from "@utils/getSortedProjects";
+import getSortedProjects from "@/utils/getSortedProjects";
 
 const featuredProjects = await getCollection(
   "projects",
@@ -33,16 +33,16 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
     <section class="flex min-h-screen flex-col justify-center">
       <div class="mb-24 sm:mb-60">
         <p
-          class="mb-4 text-center text-xl font-light text-skin-accent sm:mb-5 sm:text-2xl"
+          class="mb-4 text-center text-xl font-light  sm:mb-5 sm:text-2xl"
         >
           Salve, sono
         </p>
         <h1
-          class="mb-5 text-center text-4xl font-semibold text-skin-base sm:mb-8 sm:text-6xl"
+          class="mb-5 text-center text-4xl font-semibold  sm:mb-8 sm:text-6xl"
         >
           {SITE.author}
         </h1>
-        <p class="text-center text-lg text-skin-base sm:text-2xl">
+        <p class="text-center text-lg  sm:text-2xl">
           Progetto e sviluppo prodotti e servizi digitali
         </p>
       </div>
@@ -50,7 +50,7 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
     <Section title="Ciao, sono Lorenzo">
       <div class="max-w-4xl sm:ml-12">
         <p
-          class="mb-4 text-center text-lg text-skin-base sm:mb-6 sm:text-left sm:text-xl"
+          class="mb-4 text-center text-lg  sm:mb-6 sm:text-left sm:text-xl"
         >
           Ho iniziato a programmare quando ero ancora alle medie. Ho imparato lo
           sviluppo web e le reti durante la scuola superiore, padroneggiando <b
@@ -163,7 +163,7 @@ const sortedFeaturedProjects = getSortedProjects(featuredProjects);
     </Section>
     <Section title="Contatti">
       <p
-        class="mb-8 text-center text-lg text-skin-base sm:text-left sm:text-xl"
+        class="mb-8 text-center text-lg  sm:text-left sm:text-xl"
       >
         Sei interessato a costruire qualcosa insieme?
       </p>

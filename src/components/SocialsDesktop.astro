@@ -1,5 +1,5 @@
 ---
-import { SOCIALS } from "@config";
+import { SOCIALS } from "@/config";
 import SocialButton from "./SocialButton.astro";
 ---
 
@@ -16,6 +16,8 @@ import SocialButton from "./SocialButton.astro";
 </div>
 
 <style>
+  @reference "tailwindcss";
+
   div {
     @apply mx-auto hidden h-full flex-col justify-center gap-3 sm:fixed sm:bottom-0 sm:left-10 sm:flex;
   }

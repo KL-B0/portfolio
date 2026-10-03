@@ -1,13 +1,13 @@
 ---
-import { SITE } from "@config";
-import { useTranslation } from "@utils/i18n";
+import { SITE } from "@/config";
+import { useTranslation } from "@/utils/i18n";
 
 import Base from "./Base.astro";
 
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import ScrollUp from "@components/ScrollUp.astro";
-import SocialButton from "@components/SocialButton.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import ScrollUp from "@/components/ScrollUp.astro";
+import SocialButton from "@/components/SocialButton.astro";
 
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -73,7 +73,7 @@ const t = useTranslation(Astro.currentLocale);
         {tags?.map(tag => <li>{tag}</li>)}
       </ul>
       <div class="info-container">
-        <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
+        <Icon class="w-5  sm:w-8" name="lucide:calendar-days" />
         <p>{releaseDate.getFullYear()}</p>
       </div>
     </div>
@@ -116,6 +116,8 @@ const t = useTranslation(Astro.currentLocale);
 </Base>
 
 <style>
+  @reference "tailwindcss";
+
   main {
     @apply mx-auto w-full max-w-3xl flex-1 flex-col px-4 pb-12;
   }
@@ -123,17 +125,17 @@ const t = useTranslation(Astro.currentLocale);
     @apply flex flex-row gap-4 text-sm;
   }
   li {
-    @apply rounded-xl bg-skin-card px-3 py-1 text-sm text-skin-base sm:text-base;
+    @apply rounded-xl  px-3 py-1 text-sm  sm:text-base;
   }
   p {
-    @apply text-base text-skin-base sm:text-lg;
+    @apply text-base  sm:text-lg;
   }
 
   .heading {
     @apply flex flex-col items-center gap-4;
   }
   .post-title {
-    @apply text-center text-3xl font-semibold text-skin-accent;
+    @apply text-center text-3xl font-semibold ;
   }
   .links-container {
     @apply flex flex-row gap-4;
@@ -142,6 +144,6 @@ const t = useTranslation(Astro.currentLocale);
     @apply flex flex-row items-center gap-2;
   }
   .info-container p {
-    @apply text-skin-base sm:text-lg;
+    @apply  sm:text-lg;
   }
 </style>

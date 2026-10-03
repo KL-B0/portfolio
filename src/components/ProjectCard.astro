@@ -25,7 +25,7 @@ const { href, title, description, tags, date } = Astro.props;
         </ul>
       </div>
       <div class="info-container">
-        <Icon class="w-5 text-skin-base sm:w-8" name="lucide:calendar-days" />
+        <Icon class="w-5  sm:w-8" name="lucide:calendar-days" />
         <p>{date.getFullYear()}</p>
       </div>
     </div>
@@ -33,17 +33,19 @@ const { href, title, description, tags, date } = Astro.props;
 </a>
 
 <style>
+  @reference "tailwindcss";
+
   .project-container {
-    @apply flex h-fit max-w-screen-xl flex-col gap-3 rounded-xl bg-skin-card p-4 shadow-xl;
+    @apply flex h-fit max-w-screen-xl flex-col gap-3 rounded-xl  p-4 shadow-xl;
   }
   .title-container {
     @apply flex flex-row justify-center;
   }
   .project-container h3 {
-    @apply m-1 text-xl font-bold text-skin-base underline underline-offset-4 duration-75 hover:text-skin-accent sm:text-2xl;
+    @apply m-1 text-xl font-bold  underline underline-offset-4 duration-75 sm:text-2xl;
   }
   .project-container p {
-    @apply text-base text-skin-base sm:text-lg;
+    @apply text-base  sm:text-lg;
   }
   .tags-container {
     @apply flex w-full items-center justify-center overflow-x-scroll;
@@ -52,7 +54,7 @@ const { href, title, description, tags, date } = Astro.props;
     @apply flex flex-row items-stretch gap-4 overflow-auto text-sm;
   }
   .tags-container li {
-    @apply h-fit w-fit rounded-xl bg-skin-fill px-3 py-1 text-sm text-skin-base sm:text-base;
+    @apply h-fit w-fit rounded-xl  px-3 py-1 text-sm  sm:text-base;
   }
   .links-container {
     @apply flex flex-row items-center justify-center gap-4;
@@ -65,6 +67,6 @@ const { href, title, description, tags, date } = Astro.props;
     @apply flex flex-row items-center gap-2;
   }
   .info-container p {
-    @apply text-skin-base sm:text-lg;
+    @apply  sm:text-lg;
   }
 </style>

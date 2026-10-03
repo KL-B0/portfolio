@@ -1,0 +1,36 @@
+/* Token registering for Tailwind v4 TODO setup font */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-muted: var(--card-muted);
+  --color-border: var(--border);
+}
+
+/* Light theme */
+:root {
+  color-scheme: light dark;
+
+  --background: #dcdfe5;
+  --foreground: #23272f;
+  --accent: #e62e3d;
+  --muted: #000000;
+  --card: #f6f7f9;
+  --card-muted: #f6f7f9;
+  --border: #ffffff0d;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #191c22;
+    --foreground: #f6f7f9;
+    --accent: #cc3340;
+    --muted: #000000;
+    --card: #23272f;
+    --card-muted: #23272f;
+    --border: #ffffff0d;
+  }
+}

@@ -1,9 +1,9 @@
 ---
-import Analytics from "@components/Analytics.astro";
-import { SITE } from "@config";
-import "@styles/global.css";
+import Analytics from "@/components/Analytics.astro";
+import { SITE } from "@/config";
+import "@/styles/global.css";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 const googleAnalytics = import.meta.env.PUBLIC_GOOGLE_ANALYTICS;
 
@@ -171,7 +171,7 @@ const socialImageURL = new URL(ogImage ?? "og.png", Astro.url.origin).href;
 
     <!-- Website specific -->
     <meta name="theme-color" content="" />
-    <ViewTransitions />
+    <ClientRouter />
     <script is:inline src="/theme.js"></script>
   </head>
   <body>

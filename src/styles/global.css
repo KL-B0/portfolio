@@ -1,130 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "./theme.css";
 
 @layer base {
-  :root,
-  html[data-theme="light"] {
-    --color-fill: #dcdfe5;
-    --color-text-base: #23272f;
-    --color-accent: #e62e3d;
-    --color-card: #f6f7f9;
-    --color-card-muted: #f6f7f9;
-    --color-border: #ffffff0d;
+  * {
+    @apply border-border outline-accent/75;
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-muted) transparent;
   }
 
-  html[data-theme="dark"] {
-    --color-fill: #191c22;
-    --color-text-base: #f6f7f9;
-    --color-accent: #cc3340;
-    --color-card: #23272f;
-    --color-card-muted: #23272f;
-    --color-border: #ffffff0d;
+  a,
+  button,
+  #main-content {
+    @apply outline-accent outline-offset-1 focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
 
-  body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-serif text-skin-base selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
-  }
-
-  a {
-    @apply focus-outline;
-  }
-
-  [data-icon] {
-    @apply h-6 w-6;
-  }
-
-  #sun-svg,
-  html[data-theme="dark"] #moon-svg {
-    display: none;
-  }
-
-  #moon-svg,
-  html[data-theme="dark"] #sun-svg {
-    display: block;
-  }
-
-  /* == Prose sections == */
-  .prose {
-    @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base
-    prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent
-    prose-blockquote:!border-l-skin-accent prose-blockquote:border-opacity-50
-    prose-blockquote:opacity-80 prose-figcaption:!text-skin-base
-    prose-figcaption:opacity-70 prose-strong:!text-skin-base
-    prose-code:rounded
-    
-    prose-code:bg-skin-card prose-code:bg-opacity-75 
-    prose-code:p-1 prose-code:before:!content-none 
-    prose-code:after:!content-none prose-ol:!text-skin-base
-    prose-ul:overflow-x-clip 
-    prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base
-    prose-th:border prose-th:border-skin-line
-    prose-td:border prose-td:border-skin-line 
-    prose-img:!my-2 prose-img:mx-auto 
-    prose-img:border-2 prose-img:border-skin-line 
-    prose-hr:!border-skin-line prose-p:sm:text-lg prose-li:sm:text-lg;
-  }
-  .prose a {
-    @apply break-words hover:!text-skin-accent;
-  }
-  .prose thead th:first-child,
-  tbody td:first-child,
-  tfoot td:first-child {
-    padding-left: 0.5714286em;
-  }
-  .prose details {
-    @apply inline-block cursor-pointer select-none text-skin-base;
-  }
-  .prose summary {
-    @apply focus-outline;
-  }
-
-  /* == Scrollbar == */
-  html {
-    overflow-y: scroll;
-  }
-
-  /* width */
-  ::-webkit-scrollbar {
-    @apply w-3;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    @apply bg-skin-fill;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    @apply bg-skin-card;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-skin-card-muted;
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 
-@layer components {
-  .focus-outline {
-    @apply rounded-md outline-4 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline;
-  }
+@utility max-w-app {
+  @apply max-w-3xl;
+}
 
-  .milestone-dot {
-    @apply inline-block h-4 w-4 translate-y-5 rounded-md bg-skin-accent;
-  }
+@utility app-layout {
+  @apply max-w-app mx-auto w-full px-4;
+}
 
-  .milestone-bar {
-    @apply block h-full w-1 translate-x-1.5 translate-y-3.5 bg-skin-card;
-  }
+@utility active-nav {
+  @apply underline decoration-wavy decoration-2 underline-offset-8;
+}
 
-  svg {
-    stroke: var(--color-text-base);
-    transition-duration: 75ms;
-  }
-
-  svg:hover {
-    stroke: var(--color-accent);
-  }
+:target {
+  scroll-margin-block: 1rem;
 }

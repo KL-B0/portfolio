@@ -1,7 +1,3 @@
-import {
-  generateOgImageForProject,
-  generateOgImageForSite,
-} from "@utils/generateOgImages";
 import type { APIRoute } from "astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 

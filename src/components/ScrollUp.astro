@@ -1,5 +1,5 @@
 ---
-import { useTranslation } from "@utils/i18n";
+import { useTranslation } from "@/utils/i18n";
 import { Icon } from "astro-icon/components";
 
 const t = useTranslation(Astro.currentLocale);
@@ -7,10 +7,10 @@ const t = useTranslation(Astro.currentLocale);
 
 <button
   id="scroll-top"
-  class="fixed -bottom-full right-4 rounded-xl bg-skin-card p-2 opacity-70 shadow-xl duration-300 ease-in-out hover:scale-110 sm:right-8"
+  class="fixed -bottom-full right-4 rounded-xl  p-2 opacity-70 shadow-xl duration-300 ease-in-out hover:scale-110 sm:right-8"
   aria-label={t("nav.scrollTop")}
 >
-  <Icon class="text-skin-base" name="lucide:chevron-up" />
+  <Icon class="" name="lucide:chevron-up" />
 </button>
 
 <script>

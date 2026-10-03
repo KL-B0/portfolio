@@ -1,4 +1,4 @@
-import { SITE } from "@config";
+import { SITE } from "@/config";
 import type { APIRoute } from "astro";
 
 const robotsTxt = `

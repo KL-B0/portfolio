@@ -1,8 +1,8 @@
 ---
-import { MENU_ITEMS } from "@config";
+import { MENU_ITEMS } from "@/config";
 import { Icon } from "astro-icon/components";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { useTranslation } from "@utils/i18n";
+import { useTranslation } from "@/utils/i18n";
 
 const t = useTranslation(Astro.currentLocale);
 
@@ -24,7 +24,7 @@ const { activeNav } = Astro.props;
         class="logo whitespace-nowrap"
         aria-label="Navigate back to the homepage"
       >
-        <Icon class="h-full w-full text-skin-accent" name="logo" />
+        <Icon class="h-full w-full " name="logo" />
       </a>
 
       <nav id="nav-menu">
@@ -89,7 +89,7 @@ const { activeNav } = Astro.props;
               class="focus-outline p-1"
             >
               <Icon
-                class="text-skin-base duration-75 hover:text-skin-accent"
+                class=" duration-75 hover:"
                 name="lucide:languages"
               />
             </a>
@@ -106,12 +106,12 @@ const { activeNav } = Astro.props;
             >
               <Icon
                 id="sun-svg"
-                class="text-skin-base duration-75 hover:text-skin-accent"
+                class=" duration-75 hover:"
                 name="lucide:sun"
               />
               <Icon
                 id="moon-svg"
-                class="text-skin-base duration-75 hover:text-skin-accent"
+                class=" duration-75 hover:"
                 name="lucide:moon"
               />
             </button>
@@ -123,8 +123,10 @@ const { activeNav } = Astro.props;
 </header>
 
 <style>
+  @reference "tailwindcss";
+
   #skip-to-content {
-    @apply absolute -top-full left-4 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
+    @apply absolute -top-full left-4 z-50  px-3 py-2  transition-all focus:top-4;
   }
   .nav-container {
     @apply mx-auto flex max-w-screen-2xl flex-col items-center justify-between sm:flex-row;
@@ -152,7 +154,7 @@ const { activeNav } = Astro.props;
     @apply col-span-2 flex items-center justify-center;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center text-xl font-medium text-skin-base duration-75 hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+    @apply w-full px-4 py-3 text-center text-xl font-medium  duration-75 sm:my-0 sm:px-2 sm:py-1;
   }
   nav ul li:nth-last-child(2) a {
     @apply w-auto;
