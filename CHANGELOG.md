@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade Astro to v7
+- Upgrade Tailwindcss to v4
+
+### Removed
+
+- Theme selector
+
 ## [2.1.3] - 2024-10-06
 
 ### Changed
